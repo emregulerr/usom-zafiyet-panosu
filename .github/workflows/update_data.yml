@@ -21,8 +21,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.10' # Kullandığınız Python sürümüne göre değiştirebilirsiniz
-
+          python-version: '3.13'
       # 3. Adım: requirements.txt dosyasında listelenen gerekli Python kütüphanelerini yükler.
       - name: Install dependencies
         run: |
