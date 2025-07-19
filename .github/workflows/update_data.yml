@@ -11,7 +11,8 @@ jobs:
   update-data:
     # Bu işin çalışacağı sanal makine tipi
     runs-on: ubuntu-latest
-
+    permissions:
+      contents: write
     steps:
       # 1. Adım: Proje dosyalarını çalışacak sanal makineye indirir.
       - name: Checkout repository
