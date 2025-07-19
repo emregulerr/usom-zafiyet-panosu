@@ -1,0 +1,48 @@
+name: Update Vulnerability Data
+
+on:
+  schedule:
+    # Her gün gece yarısı (UTC), yani Türkiye saati ile 03:00'te çalışır.
+    - cron: '0 0 * * *'
+  # GitHub arayüzünden "Run workflow" butonu ile manuel olarak tetiklemeye izin verir.
+  workflow_dispatch:
+
+jobs:
+  update-data:
+    # Bu işin çalışacağı sanal makine tipi
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Adım: Proje dosyalarını çalışacak sanal makineye indirir.
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # 2. Adım: Belirtilen Python sürümünü kurar.
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10' # Kullandığınız Python sürümüne göre değiştirebilirsiniz
+
+      # 3. Adım: requirements.txt dosyasında listelenen gerekli Python kütüphanelerini yükler.
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      # 4. Adım: Ana Python script'ini çalıştırır.
+      # Bu script, output/ klasöründeki CSV ve resim dosyalarını oluşturacak/güncelleyecektir.
+      - name: Run data fetch and analysis script
+        run: python main.py
+
+      # 5. Adım: Eğer output/ klasöründe bir değişiklik varsa (ki her gün olacak),
+      # bu değişiklikleri repoya otomatik olarak "commit"ler ve "push"lar.
+      - name: Commit and push if there are changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "📊 Veri ve görseller otomatik güncellendi"
+          # Sadece output klasöründeki değişiklikleri commit'le
+          file_pattern: 'output/*'
+          # Commit'i yapacak olan bot kullanıcının bilgileri
+          commit_user_name: "GitHub Actions Bot"
+          commit_user_email: "actions@github.com"
+          commit_author: "GitHub Actions Bot <actions@github.com>"
