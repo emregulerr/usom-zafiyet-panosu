@@ -102,7 +102,7 @@ Ayrıca, eklemek istediğiniz büyük değişiklikleri tartışmak için bir **i
 
 Projenin potansiyelini artırmak için üzerinde çalışılabilecek bazı fikirler:
 
-- [ ] **İnteraktif Arayüz:** [Streamlit](https://streamlit.io/) veya [Dash](https://plotly.com/dash/) kullanarak verilerin incelenebileceği interaktif bir web arayüzü oluşturmak.
+- [X] **İnteraktif Arayüz:** [Streamlit](https://streamlit.io/) veya [Dash](https://plotly.com/dash/) kullanarak verilerin incelenebileceği interaktif bir web arayüzü oluşturmak.
 - [ ] **Farklı Analizler:** Zafiyet başlıklarından bir kelime bulutu oluşturmak veya belirli CVE kodlarına göre gruplama yapmak.
 - [ ] **Veritabanı Entegrasyonu:** Verileri CSV yerine bir SQLite veya PostgreSQL veritabanında saklamak.
 - [ ] **Gelişmiş Filtreleme:** Ürün adına veya etikete göre filtreleme yapabilen argümanlar eklemek (`--tag "openssl"` gibi).
