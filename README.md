@@ -1,6 +1,7 @@
 # USOM Zafiyet Panosu
 
 [![Update Vulnerability Data](https://github.com/emregulerr/usom-zafiyet-panosu/actions/workflows/update_data.yml/badge.svg)](https://github.com/emregulerr/usom-zafiyet-panosu/actions/workflows/update_data.yml)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://usom-zafiyet-panosu.streamlit.app/)
 
 Bu proje, Türkiye Ulusal Siber Olaylara Müdahale Merkezi (USOM) tarafından yayınlanan zafiyetleri API aracılığıyla çeker, analiz eder ve bu sayfayı bir gösterge panosu olarak kullanarak görselleştirir. 🚀
 
