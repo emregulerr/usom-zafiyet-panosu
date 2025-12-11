@@ -1,4 +1,8 @@
 Başlık,Etiketler,Tarih
+tr-25-0439-wordpress-eklenti-gvenlik-bildirimi,wordpress,2025-12-10 08:10:21.914379
+tr-25-0438-adobe-coldfusion-gvenlik-bildirimi,coldfusion,2025-12-10 08:09:33.800524
+tr-25-0437-fortinet-oklu-rn-gvenlik-bildirimi,fortinet,2025-12-10 08:06:56.624549
+tr-25-0436-ivanti-gvenlik-bildirimi,ivanti,2025-12-10 08:01:59.370254
 tr-25-0432-google-android-gvenlik-bildirimi,google-android,2025-12-09 07:04:36.71456
 tr-25-0431-sap-oklu-rn-gvenlik-bildirimi,sap,2025-12-09 06:49:34.361405
 tr-25-0430-wordpress-eklenti-gvenlik-bildirimi,wordpress,2025-12-08 11:39:25.795138
@@ -26,7 +30,7 @@ tr-25-0405-microsoft-oklu-rn-gvenlik-bildirimi,microsoft,2025-11-21 06:32:16.080
 tr-25-0400-solarwinds-gvenlik-bildirimi,serv-u,2025-11-19 08:35:47.56897
 tr-25-0399-wordpress-eklenti-gvenlik-bildirimi,wordpress,2025-11-18 06:35:20.202229
 tr-25-0398-d-link-gvenlik-bildirimi,d-link,2025-11-17 07:22:34.053967
-tr-25-0397-fortinet-fortiweb-zafiyeti,fortiweb,2025-11-17 07:20:36.428353
+tr-25-0397-fortinet-fortiweb-gvenlik-bildirimi,fortiweb,2025-11-17 07:20:36.428353
 tr-25-0395-ibm-gvenlik-bildirimi,ibm,2025-11-14 11:41:10.787121
 tr-25-0394-dell-gvenlik-bildirimi,dell,2025-11-13 08:17:11.522051
 tr-25-0392-microsoft-gvenlik-bildirimi,microsoft,2025-11-12 07:40:04.064446
@@ -121,9 +125,3 @@ tr-25-0239-ubiquiti-gvenlik-bildirimi,uisp,2025-09-12 08:15:52.424433
 tr-25-0238-dell-gvenlik-bildirimi,dell,2025-09-12 06:50:55.117331
 tr-25-0237-ibm-gvenlik-bildirimi,ibm,2025-09-12 06:42:39.772316
 tr-25-0236-directus-gvenlik-zafiyeti,directus,2025-09-12 06:24:16.346804
-tr-25-0235-sophos-gvenlik-bildirimi,sophos,2025-09-11 14:27:12.011982
-tr-25-0234-ptzoptics-oklu-rn-gvenlik-bidirimi,ptzoptics,2025-09-11 11:32:44.409335
-tr-25-0233-adobe-oklu-rn-gvenlik-bildirimi,coldfusion,2025-09-11 08:51:38.305927
-tr-25-0232-d-link-oklu-rn-gvenlik-bildirimi,d-link,2025-09-11 08:48:52.958163
-tr-25-0231-siemens-gvenlik-bildirimi,simatic,2025-09-11 08:33:04.276372
-tr-25-0230-wordpress-eklenti-gvenlik-bildirimi,wordpress,2025-09-11 06:59:36.430721
