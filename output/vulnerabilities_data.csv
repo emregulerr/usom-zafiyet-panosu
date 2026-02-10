@@ -1,4 +1,29 @@
 Başlık,Etiketler,Tarih
+tr-26-0047-centreon-infra-monitoring-gvenlik-bildirimi,centreon,2026-02-09 15:34:34.698321
+tr-26-0046-sony-bravia-digital-signage-gvenlik-bildirimi,sony,2026-02-09 15:31:50.417496
+tr-26-0045-veeam-backup-replication-gvenlik-bildirimi,root,2026-02-09 15:28:42.562309
+tr-26-0044-zohocorp-manageengine-gvenlik-bildirimi,zohocorp,2026-02-09 15:23:40.384655
+tr-26-0043-ibm-gvenlik-bildirimi,ibm,2026-02-09 15:22:24.046274
+tr-26-0042-bearshare-lite-gvenlik-zafiyeti-,bearshare,2026-02-09 15:21:08.948645
+tr-26-0041-geogebra-cas-calculator-gvenlik-zafiyeti,geogebra,2026-02-09 15:18:18.674921
+tr-26-0040-microsoft-oklu-rn-gvenlik-bildirimi,microsoft,2026-02-09 15:15:41.055858
+tr-26-0039-canon-oklu-rn-gvenlik-bildirimi,satera,2026-02-09 15:12:29.263621
+tr-26-0038-sap-oklu-rn-gvenlik-bildirimi,sap,2026-02-09 15:05:27.35474
+tr-26-0037-eclipse-theia-gvenlik-bildirimi,eclipse,2026-02-09 15:00:28.783277
+tr-26-0036-gitlab-gvenlik-bildirimi-,gitlab,2026-02-09 14:59:28.351357
+tr-26-0035-oracle-oklu-rn-gvenlik-bildirimi,oracle,2026-02-09 14:53:21.384151
+tr-26-0034-apache-gvenlik-bildirimi,apache,2026-02-09 14:52:08.900176
+tr-26-0033-wago-750-8212-pfc200-gvenlik-zafiyeti,wago,2026-02-09 13:23:06.769895
+tr-26-0032-google-pixel-gvenlik-bildirimi,mmap,2026-02-09 13:20:06.599812
+tr-26-0031-zenitel-oklu-rn-gvenlik-bildirimi,vulnerability,2026-02-09 13:16:27.561954
+tr-26-0030-zoom-node-multimedia-routers-gvenlik-bildirimi,zoom,2026-02-09 13:11:17.513947
+tr-26-0029-unified-remote-gvenlik-zafiyeti,remote,2026-02-09 13:09:33.721811
+tr-26-0028-n8n-otomasyon-gvenlik-zafiyeti,n8n,2026-02-09 13:04:40.83567
+tr-26-0027-ivanti-endpoint-manager-mobile-gvenlik-bildirimi,ivanti,2026-02-09 12:59:31.323433
+tr-26-0026-jetbrains-hub-gvenlik-bildirimi,jetbrains,2026-02-09 12:54:09.771627
+tr-26-0025-edimax-ew-7438rpn-v3-mini-gvenlik-zafiyeti,edimax,2026-02-09 12:50:18.055363
+tr-26-0024-wordpress-eklenti-gvenlik-bildirimi,wordpress,2026-02-09 12:47:33.73475
+tr-26-0023-solarwinds-web-help-desk-gvenlik-bildirimi,solarwinds,2026-02-09 12:35:37.643874
 tr-25-0493-sound4-oklu-rn-gvenlik-zafiyeti,sound4,2025-12-31 08:15:36.573325
 tr-25-0492-akuvox-gvenlik-bildirimi,akuvox,2025-12-31 08:07:19.12599
 tr-25-0491-tenda-gvenlik-bildirimi,tenda,2025-12-31 07:46:48.055918
@@ -74,7 +99,3 @@ tr-25-0392-microsoft-gvenlik-bildirimi,microsoft,2025-11-12 07:40:04.064446
 tr-25-0391-avast-antivirus-gvenlik-zafiyeti,antivirus,2025-11-12 07:37:57.681171
 tr-25-0390-wordpress-eklenti-gvenlik-bildirimi,wordpress,2025-11-12 07:34:06.647077
 tr-25-0389-zohocorp-manageengine-gvenlik-bildirimi,zohocorp,2025-11-12 07:32:38.83104
-tr-25-0385-triofox-gvenlik-bildirimi,triofox,2025-11-11 07:03:01.680753
-tr-25-0384-jetbrains-youtrack-gvenlik-bildirimi,jetbrains,2025-11-11 06:52:51.518363
-tr-25-0383-sap-oklu-rn-gvenlik-bildirimi,sap,2025-11-11 06:49:06.168276
-tr-25-0382-wordpress-eklenti-gvenlik-bildirimi,wordpress,2025-11-11 06:47:28.219693
