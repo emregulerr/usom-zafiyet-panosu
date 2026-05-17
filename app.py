@@ -1,205 +1,228 @@
 import streamlit as st
 import datetime
 import os
-import pandas as pd
-import seaborn as sns
-import matplotlib.pyplot as plt
-import time
-import random
-import threading
-import locale
 import base64
+import pandas as pd
+import plotly.express as px
+import plotly.graph_objects as go
+
 from main import fetch_all_vulnerabilities, normalize, save_vulnerabilities_to_csv
 
-# --- Konfigürasyon ve Yardımcı Fonksiyonlar ---
+# --- Konfigürasyon ---
 
-st.set_page_config(layout="wide", page_title="USOM Zafiyet Panosu")
+st.set_page_config(layout="wide", page_title="USOM Zafiyet Panosu", page_icon="🛡️")
 
-# Grafiklerdeki ay isimlerini Türkçeleştirmek için yerel ayarı ayarla
-try:
-    locale.setlocale(locale.LC_TIME, 'tr_TR.UTF-8')
-except locale.Error:
-    try:
-        locale.setlocale(locale.LC_TIME, 'tr_TR')
-    except locale.Error:
-        st.warning("Türkçe yerel ayarı (locale) ayarlanamadı. Grafiklerdeki ay isimleri İngilizce olabilir.")
+API_URL = "https://www.usom.gov.tr/api/incident/index"
+OUTPUT_DIR = "output"
+CSV_FILENAME = "vulnerabilities_data.csv"
 
-# Beklerken gösterilecek eğlenceli mesajlar listesi
-FUN_MESSAGES = [
-    "🛰️ Siber uzayda zafiyet avına çıkılıyor...",
-    "🔑 API anahtarları doğrulanıyor, Matrix'e bağlanılıyor...",
-    "🚚 Veri paketleri yola çıktı, birazdan masanızda...",
-    "🎨 Grafikler için pikseller özenle boyanıyor...",
-    "☕ Lütfen bekleyin, makine kahvesini tazeliyor...",
-    "🤫 Sunuculara fısıldanıyor, sırlar ortaya çıkıyor...",
-    "🤖 1'ler ve 0'lar hizaya getiriliyor...",
-    "🛡️ Zafiyetler taranıyor, kalkanlar hazırlanıyor...",
-    "📡 Sinyal güçlendiriliyor, sabrınız için teşekkürler...",
-    "🍪 Byte'lar ayıklanıyor, en lezzetli olanlar seçiliyor...",
-    "🕵️‍♂️ Gizli geçitler ve arka kapılar kontrol ediliyor...",
-    "💻 Kod derleniyor, bug'lar eziliyor...",
-    "📈 Verileriniz görsel bir şölene dönüştürülüyor...",
-    "🔍 Zafiyetler inceleniyor, hackerlar için tuzaklar kuruluyor...",
-    "🧩 Parçalar birleştiriliyor, bulmacanın sonuna yaklaşılıyor...",
-    "🎉 Sonuçlar yolda, sabrınız için teşekkürler!",
-    "🚀 Veri uzayına fırlatılıyor, geri sayım başladı...",
-    "🧙‍♂️ Veri büyücüleri çalışıyor, sihirli dokunuşlar yapılıyor...",
-    "🕰️ Zaman yolculuğu yapılıyor, geçmişe dönülüyor...",
-    "🔄 Sonsuz döngüde bekleniyor, sabrınız için teşekkürler...",
-    "🧪 Deney tüpleri karıştırılıyor, yeni zafiyetler keşfediliyor...",
-    "📊 Grafikler çiziliyor, veriler dans ediyor...",
-    "🧭 Yön bulma cihazları ayarlanıyor, doğru yolda ilerliyoruz...",
-    "🧩 Zeka küpü çözülüyor, karmaşık veriler basitleştiriliyor..."
-]
 
-# En maliyetli işlem olan veri çekmeyi önbelleğe alıyoruz.
-@st.cache_data(show_spinner=False)
-def cached_fetch_data(start_date):
-    API_URL = "https://www.usom.gov.tr/api/incident/index"
-    return fetch_all_vulnerabilities(API_URL, start_date)
+# --- Veri Katmanı ---
 
-def generate_interactive_visuals(vulnerabilities, title_suffix=""):
-    # Bu fonksiyon önceki versiyonla aynı, bir değişiklik yok.
-    tags, date_counts = {}, {}
-    for vuln in vulnerabilities:
-        if vuln[1]:
-            for tag in vuln[1].split("|"):
-                tags[normalize(tag)] = tags.get(normalize(tag), 0) + 1
-        if vuln[2]:
-            date = vuln[2].split("T")[0]
-            date_counts[date[:7]] = date_counts.get(date[:7], 0) + 1
-
-    fig_ts, fig_tags, fig_heatmap = None, None, None
-    if date_counts:
-        sorted_date_counts = sorted(date_counts.items())
-        months, counts = [item[0] for item in sorted_date_counts], [item[1] for item in sorted_date_counts]
-        fig_ts, ax = plt.subplots(figsize=(12, 7))
-        ax.plot(months, counts, marker='o')
-        ax.set_title(f'Aya Göre Zafiyet Sayısı\n{title_suffix}')
-        plt.setp(ax.get_xticklabels(), rotation=90)
-        ax.grid(True)
-        plt.tight_layout()
-    if tags:
-        sorted_tags = sorted(tags.items(), key=lambda x: x[1], reverse=True)[:10]
-        df_tags = pd.DataFrame(sorted_tags, columns=['Etiket', 'Sayı'])
-        fig_tags, ax = plt.subplots(figsize=(12, 8))
-        sns.barplot(data=df_tags, x='Sayı', y='Etiket', palette='viridis', ax=ax)
-        ax.set_title(f'En Çok Kullanılan 10 Etiket\n{title_suffix}')
-        plt.tight_layout()
-
-        tags_by_month = {}
-        for vuln in vulnerabilities:
-            if vuln[1] and vuln[2]:
-                year_month = vuln[2].split("T")[0][:7]
-                if year_month not in tags_by_month: tags_by_month[year_month] = {}
-                for tag in vuln[1].split("|"):
-                    tags_by_month[year_month][normalize(tag)] = tags_by_month[year_month].get(normalize(tag), 0) + 1
-        top_10_tags = [tag for tag, count in sorted_tags]
-        heatmap_data = pd.DataFrame(index=sorted(tags_by_month.keys()), columns=top_10_tags).fillna(0)
-        for month, tags_in_month in tags_by_month.items():
-            for tag in top_10_tags:
-                heatmap_data.at[month, tag] = tags_in_month.get(tag, 0)
-        fig_heatmap, ax = plt.subplots(figsize=(14, 10))
-        sns.heatmap(heatmap_data.astype(int), cmap="YlGnBu", annot=True, fmt="d", ax=ax)
-        ax.set_title(f'Türkiye Zafiyet Sıcaklık Haritası\n{title_suffix}')
-        plt.tight_layout()
-    return fig_ts, fig_tags, fig_heatmap
-
-# Analiz işlemini yürütecek ve sonucu bir listeye koyacak fonksiyon
-def analysis_thread_function(start_date, end_date, results_list):
+@st.cache_data(ttl=3600, show_spinner=False)
+def cached_fetch_data(start_date: datetime.date):
+    """USOM'dan veriyi çeker. Sonuç 1 saat boyunca önbelleğe alınır."""
     start_date_dt = datetime.datetime.combine(start_date, datetime.time.min)
-    all_vulnerabilities = cached_fetch_data(start_date_dt)
+    return fetch_all_vulnerabilities(API_URL, start_date_dt)
 
-    end_date_dt = datetime.datetime.combine(end_date, datetime.time.max)
-    filtered_vulnerabilities = [v for v in all_vulnerabilities if start_date_dt.strftime("%Y-%m-%d") <= v.get("date", "")[:10] <= end_date_dt.strftime("%Y-%m-%d")]
 
-    OUTPUT_DIR = "output"; os.makedirs(OUTPUT_DIR, exist_ok=True)
-    csv_path = os.path.join(OUTPUT_DIR, "vulnerabilities_data.csv")
-    unique_vulnerabilities = save_vulnerabilities_to_csv(filtered_vulnerabilities, csv_path)
+def build_dataframe(raw_vulns, start_date: datetime.date, end_date: datetime.date) -> pd.DataFrame:
+    """Ham API verisini filtreleyip normalleştirilmiş bir DataFrame'e dönüştürür."""
+    start_s = start_date.strftime("%Y-%m-%d")
+    end_s = end_date.strftime("%Y-%m-%d")
+    filtered = [v for v in raw_vulns if start_s <= v.get("date", "")[:10] <= end_s]
 
-    if unique_vulnerabilities:
-        df = pd.read_csv(csv_path)
-        title_suffix = f"({start_date.strftime('%d.%m.%Y')} - {end_date.strftime('%d.%m.%Y')})"
-        figs = generate_interactive_visuals(unique_vulnerabilities, title_suffix)
-        results_list.append({'df': df, 'figs': figs, 'count': len(unique_vulnerabilities)})
+    os.makedirs(OUTPUT_DIR, exist_ok=True)
+    csv_path = os.path.join(OUTPUT_DIR, CSV_FILENAME)
+    unique = save_vulnerabilities_to_csv(filtered, csv_path)
+    if not unique:
+        return pd.DataFrame(columns=["Başlık", "Etiketler", "Tarih"])
+
+    df = pd.DataFrame(unique, columns=["Başlık", "Etiketler", "Tarih"])
+    df["Tarih"] = pd.to_datetime(df["Tarih"], errors="coerce")
+    df["Ay"] = df["Tarih"].dt.strftime("%Y-%m")
+    df["Etiket Listesi"] = df["Etiketler"].fillna("").apply(
+        lambda s: [normalize(t) for t in s.split("|") if t]
+    )
+    return df
+
+
+def filter_by_tags(df: pd.DataFrame, selected_tags: list[str]) -> pd.DataFrame:
+    if not selected_tags:
+        return df
+    mask = df["Etiket Listesi"].apply(lambda tags: any(t in tags for t in selected_tags))
+    return df[mask]
+
+
+# --- Görselleştirme (Plotly) ---
+
+def fig_time_series(df: pd.DataFrame) -> go.Figure | None:
+    if df.empty:
+        return None
+    counts = df.groupby("Ay").size().reset_index(name="Zafiyet Sayısı").sort_values("Ay")
+    fig = px.line(
+        counts, x="Ay", y="Zafiyet Sayısı", markers=True,
+        title="Aya Göre Zafiyet Sayısı",
+    )
+    fig.update_layout(xaxis_tickangle=-45, hovermode="x unified", height=420)
+    return fig
+
+
+def fig_top_tags(df: pd.DataFrame, top_n: int = 10) -> tuple[go.Figure | None, list[str]]:
+    tags = df.explode("Etiket Listesi")
+    tags = tags[tags["Etiket Listesi"].astype(bool)]
+    if tags.empty:
+        return None, []
+    top = tags["Etiket Listesi"].value_counts().head(top_n).reset_index()
+    top.columns = ["Etiket", "Sayı"]
+    fig = px.bar(
+        top, x="Sayı", y="Etiket", orientation="h",
+        title=f"En Çok Kullanılan {top_n} Etiket",
+        color="Sayı", color_continuous_scale="Viridis",
+    )
+    fig.update_layout(yaxis={"categoryorder": "total ascending"}, height=460, coloraxis_showscale=False)
+    return fig, top["Etiket"].tolist()
+
+
+def fig_heatmap(df: pd.DataFrame, top_tags: list[str]) -> go.Figure | None:
+    if df.empty or not top_tags:
+        return None
+    exploded = df.explode("Etiket Listesi")
+    exploded = exploded[exploded["Etiket Listesi"].isin(top_tags)]
+    if exploded.empty:
+        return None
+    pivot = (
+        exploded.groupby(["Ay", "Etiket Listesi"]).size()
+        .unstack(fill_value=0).reindex(columns=top_tags, fill_value=0)
+        .sort_index()
+    )
+    fig = px.imshow(
+        pivot, text_auto=True, aspect="auto",
+        color_continuous_scale="YlGnBu",
+        labels=dict(x="Etiket", y="Ay", color="Sayı"),
+        title="Aylık Zafiyet Yoğunluğu (Isı Haritası)",
+    )
+    fig.update_layout(height=520)
+    return fig
+
+
+# --- UI ---
+
+st.title("🛡️ USOM İnteraktif Zafiyet Panosu")
+st.caption("USOM tarafından yayınlanan zafiyet bildirimlerinin canlı analiz panosu")
+
+with st.sidebar:
+    st.header("Filtreler")
+
+    today = datetime.date.today()
+    preset = st.radio(
+        "Hızlı Aralık",
+        ["Son 7 gün", "Son 30 gün", "Son 90 gün", "Özel"],
+        index=1,
+        horizontal=False,
+    )
+    preset_days = {"Son 7 gün": 7, "Son 30 gün": 30, "Son 90 gün": 90}
+
+    if preset == "Özel":
+        start_date = st.date_input("Başlangıç Tarihi", today - datetime.timedelta(days=30))
+        end_date = st.date_input("Bitiş Tarihi", today)
     else:
-        results_list.append(None)
+        start_date = today - datetime.timedelta(days=preset_days[preset])
+        end_date = today
+        st.caption(f"📅 {start_date} → {end_date}")
 
+    st.divider()
+    st.markdown("Geliştiren: **Emre Güler**")
 
-# --- STREAMLIT ARAYÜZÜ ---
-
-st.title("USOM İnteraktif Zafiyet Panosu")
-
-st.sidebar.header("Filtreler")
-default_start_date = datetime.date.today() - datetime.timedelta(days=30)
-start_date = st.sidebar.date_input("Başlangıç Tarihi", default_start_date)
-end_date = st.sidebar.date_input("Bitiş Tarihi", datetime.date.today())
-
-st.sidebar.divider()
-st.sidebar.markdown(
-    "Geliştiren: **Emre Güler**",
-    unsafe_allow_html=False,
-)
-
-github_svg = """
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-  <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-</svg>
-"""
-b64_svg = base64.b64encode(github_svg.encode('utf-8')).decode("utf-8")
-
-st.sidebar.markdown(
-    f"""
-    <a href="https://github.com/emregulerr/usom-zafiyet-panosu" target="_blank" style="text-decoration: none; color: inherit; display: flex; align-items: center; height: 24px;">
-        <img src="data:image/svg+xml;base64,{b64_svg}" style="height: 100%; width: auto; margin-right: 8px; max-width: 24px;">
-        <span style="line-height: 24px;">GitHub Repo</span>
-    </a>
-    """,
-    unsafe_allow_html=True,
-)
+    github_svg = """
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+      <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+    </svg>
+    """
+    b64_svg = base64.b64encode(github_svg.encode("utf-8")).decode("utf-8")
+    st.markdown(
+        f"""
+        <a href="https://github.com/emregulerr/usom-zafiyet-panosu" target="_blank"
+           style="text-decoration: none; color: inherit; display: flex; align-items: center; height: 24px;">
+            <img src="data:image/svg+xml;base64,{b64_svg}"
+                 style="height: 100%; width: auto; margin-right: 8px; max-width: 24px;">
+            <span style="line-height: 24px;">GitHub Repo</span>
+        </a>
+        """,
+        unsafe_allow_html=True,
+    )
 
 if start_date > end_date:
-    st.sidebar.error("Hata: Başlangıç tarihi, bitiş tarihinden sonra olamaz.")
+    st.error("Başlangıç tarihi, bitiş tarihinden sonra olamaz.")
+    st.stop()
+
+with st.spinner("🛰️ USOM'dan veriler çekiliyor (önbellek 1 saat geçerli)..."):
+    raw = cached_fetch_data(start_date)
+
+df = build_dataframe(raw, start_date, end_date)
+
+if df.empty:
+    st.warning("Belirtilen tarih aralığında zafiyet bulunamadı.")
+    st.stop()
+
+# --- Etiket filtresi (canlı süzme) ---
+all_tags = sorted({t for tags in df["Etiket Listesi"] for t in tags})
+selected_tags = st.sidebar.multiselect(
+    "Etikete göre filtrele",
+    options=all_tags,
+    help="Bir veya birden fazla etiket seçerek tabloyu ve grafikleri süzebilirsin.",
+)
+df_view = filter_by_tags(df, selected_tags)
+
+# --- KPI Kartları ---
+total = len(df_view)
+days = max((end_date - start_date).days, 1)
+daily_avg = total / days
+
+if not df_view.empty:
+    top_tag_series = df_view.explode("Etiket Listesi")["Etiket Listesi"]
+    top_tag_series = top_tag_series[top_tag_series.astype(bool)]
+    top_tag = top_tag_series.value_counts().idxmax() if not top_tag_series.empty else "—"
+    unique_tag_count = top_tag_series.nunique()
+    last_date = df_view["Tarih"].max().strftime("%d.%m.%Y") if df_view["Tarih"].notna().any() else "—"
 else:
-    results_container = []  # Arka plandaki işin sonucunu tutmak için
+    top_tag, unique_tag_count, last_date = "—", 0, "—"
 
-    # Analizi arka planda (thread) başlat
-    analysis_thread = threading.Thread(
-        target=analysis_thread_function,
-        args=(start_date, end_date, results_container)
-    )
-    analysis_thread.start()
+k1, k2, k3, k4, k5 = st.columns(5)
+k1.metric("Toplam Zafiyet", f"{total:,}")
+k2.metric("Günlük Ortalama", f"{daily_avg:.1f}")
+k3.metric("Eşsiz Etiket", f"{unique_tag_count:,}")
+k4.metric("En Popüler Etiket", top_tag)
+k5.metric("Son Kayıt", last_date)
 
-    # Geçici mesajlar için bir yer tutucu oluştur
-    placeholder = st.empty()
+st.divider()
 
-    # Analiz bitene kadar eğlenceli mesajları döngüde göster
-    while analysis_thread.is_alive():
-        message = random.choice(FUN_MESSAGES)
-        with placeholder.container():
-            st.info(f"{message}")
-        time.sleep(5)
+# --- Grafikler ---
+ts_fig = fig_time_series(df_view)
+tags_fig, top_tag_names = fig_top_tags(df_view)
+heat_fig = fig_heatmap(df_view, top_tag_names)
 
-    # Analiz bittiğinde (döngüden çıktığında) yer tutucuyu temizle
-    placeholder.empty()
+c1, c2 = st.columns(2)
+with c1:
+    if ts_fig:
+        st.plotly_chart(ts_fig, use_container_width=True)
+with c2:
+    if tags_fig:
+        st.plotly_chart(tags_fig, use_container_width=True)
 
-    # Sonuçları göster
-    if results_container and results_container[0] is not None:
-        result = results_container[0]
-        df = result['df']
-        fig_ts, fig_tags, fig_heatmap = result['figs']
-        count = result['count']
+if heat_fig:
+    st.plotly_chart(heat_fig, use_container_width=True)
 
-        st.success(f"Analiz tamamlandı! Belirtilen aralıkta {count} adet eşsiz zafiyet bulundu.")
-        st.header("Görsel Çıktılar")
-        col1, col2 = st.columns(2)
-        with col1:
-            if fig_ts: st.pyplot(fig_ts)
-        with col2:
-            if fig_tags: st.pyplot(fig_tags)
-        if fig_heatmap: st.pyplot(fig_heatmap)
+# --- Veri Tablosu + İndirme ---
+st.subheader("📋 Zafiyet Verileri")
+display_df = df_view[["Başlık", "Etiketler", "Tarih"]].copy()
+display_df["Tarih"] = display_df["Tarih"].dt.strftime("%Y-%m-%d")
+st.dataframe(display_df, use_container_width=True, hide_index=True)
 
-        st.header("Zafiyet Verileri")
-        st.dataframe(df)
-    else:
-        st.warning("Belirtilen tarih aralığında herhangi bir zafiyet bulunamadı.")
+csv_bytes = display_df.to_csv(index=False).encode("utf-8")
+st.download_button(
+    "⬇️ CSV olarak indir",
+    data=csv_bytes,
+    file_name=f"usom_zafiyet_{start_date}_{end_date}.csv",
+    mime="text/csv",
+)
