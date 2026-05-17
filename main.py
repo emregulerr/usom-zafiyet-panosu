@@ -18,9 +18,12 @@ IMAGES_DIR = os.path.join(OUTPUT_DIR, "images")
 OUTPUT_CSV_FILENAME = "vulnerabilities_data.csv"
 
 # API Rate Limiting
-REQUESTS_PER_MINUTE = 40
-REQUESTS_PER_SECOND = 20
-DELAY_SECOND = 1 / REQUESTS_PER_SECOND
+# USOM resmi bir rate-limit yayınlamıyor ve X-RateLimit-* header'ı döndürmüyor.
+# Empirik olarak ~20 istek/dk üzerinde HTTP 429 alınıyor; bu yüzden istekler
+# arası 3 saniye bekliyor, 429 alındığında exponential backoff uyguluyoruz.
+REQUESTS_PER_MINUTE = 20
+DELAY_SECOND = 60 / REQUESTS_PER_MINUTE  # 3 sn
+MAX_RETRIES = 5
 
 def valid_date(s):
     """Tarih formatını (YYYY-MM-DD) kontrol eden yardımcı fonksiyon."""
@@ -35,23 +38,44 @@ def valid_date(s):
 def fetch_vulnerabilities(api_url, page, date_gte=None):
     """
     API'den belirli bir sayfadan ve tarihten itibaren zafiyet verilerini çeker.
+    HTTP 429 durumunda Retry-After header'ına (yoksa exponential backoff'a) uyar.
 
     :param api_url: API URL'si
     :param page: Çekilecek sayfa numarası
     :param date_gte: Bu tarihten sonra çekilecek zafiyetler
-    :return: JSON formatında zafiyet verileri
+    :return: JSON formatında zafiyet verileri veya None
     """
     params = {"page": page, "per-page": 50}
     if date_gte:
         params["date_gte"] = date_gte
-    try:
-        response = requests.get(api_url, params=params)
-        response.raise_for_status()
+
+    for attempt in range(1, MAX_RETRIES + 1):
+        try:
+            response = requests.get(api_url, params=params, timeout=30)
+        except requests.RequestException as e:
+            backoff = min(60, 2 ** attempt)
+            print(f"İstek hatası (deneme {attempt}/{MAX_RETRIES}): {e}. {backoff}s bekleniyor.")
+            time.sleep(backoff)
+            continue
+
+        if response.status_code == 429:
+            retry_after = response.headers.get("Retry-After")
+            wait = int(retry_after) if retry_after and retry_after.isdigit() else min(120, 2 ** attempt * 5)
+            print(f"429 alındı (deneme {attempt}/{MAX_RETRIES}). {wait}s bekleniyor.")
+            time.sleep(wait)
+            continue
+
+        try:
+            response.raise_for_status()
+        except requests.RequestException as e:
+            print(f"API'den veri alınırken hata oluştu: {e}")
+            return None
+
         time.sleep(DELAY_SECOND)
         return response.json()
-    except requests.RequestException as e:
-        print(f"API'den veri alınırken hata oluştu: {e}")
-        return None
+
+    print(f"Sayfa {page} için maksimum yeniden deneme aşıldı; bu sayfa atlanıyor.")
+    return None
 
 def fetch_all_vulnerabilities(api_url, date_gte):
     """
@@ -63,27 +87,20 @@ def fetch_all_vulnerabilities(api_url, date_gte):
     """
     vulnerabilities = []
     current_page = 1
-    total_requests = 0
-    start_time = time.time()
     print(f"{date_gte.strftime('%Y-%m-%d')} tarihinden itibaren zafiyetler alınıyor...")
 
+    # Her istek arasında DELAY_SECOND uygulanıyor; ayrı bir dakika bekçisine gerek yok.
     while True:
-        if total_requests >= REQUESTS_PER_MINUTE:
-            elapsed_time = time.time() - start_time
-            if elapsed_time < 60:
-                time_to_wait = 60 - elapsed_time
-                print(f"Rate limit aşıldı: {time_to_wait:.2f} saniye bekleniyor")
-                time.sleep(time_to_wait)
-            total_requests = 0
-            start_time = time.time()
-
         page_data = fetch_vulnerabilities(api_url, current_page, date_gte.strftime("%Y-%m-%d"))
-        if page_data and page_data.get("models"):
-            vulnerabilities.extend(page_data.get("models", []))
-            current_page += 1
-            total_requests += 1
-        else:
+        if page_data is None:
+            # Tüm denemeler başarısız oldu; veri eksik kalmasın diye çekimi durduruyoruz.
+            print(f"Sayfa {current_page} alınamadı, çekim durduruluyor.")
             break
+        models = page_data.get("models") or []
+        if not models:
+            break
+        vulnerabilities.extend(models)
+        current_page += 1
 
     return vulnerabilities
 
