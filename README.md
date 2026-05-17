@@ -9,6 +9,8 @@ Bu proje, Türkiye Ulusal Siber Olaylara Müdahale Merkezi (USOM) tarafından ya
 
 Bu repo, **GitHub Actions** kullanılarak **her gün otomatik olarak güncellenmektedir**. Bu sayede aşağıdaki görseller ve `output` klasöründeki veriler, son 3 ayın verilerini yansıtacak şekilde her zaman güncel kalır.
 
+> **API Etiği:** USOM resmi bir rate-limit dokümanı yayınlamadığı ve `X-RateLimit-*` başlığı döndürmediği için sunucuya yük bindirmemek adına istekler arasında **3 saniye** bekleniyor (~20 istek/dk). HTTP 429 alınırsa `Retry-After` başlığına uyuluyor, yoksa üstel geri çekilme (exponential backoff) uygulanıyor.
+
 ## 📊 Görsel Çıktılar
 
 <table>
@@ -104,8 +106,11 @@ Ayrıca, eklemek istediğiniz büyük değişiklikleri tartışmak için bir **i
 Projenin potansiyelini artırmak için üzerinde çalışılabilecek bazı fikirler:
 
 - [X] **İnteraktif Arayüz:** [Streamlit](https://streamlit.io/) veya [Dash](https://plotly.com/dash/) kullanarak verilerin incelenebileceği interaktif bir web arayüzü oluşturmak.
+- [X] **Dayanıklı API İstemcisi:** HTTP 429 ve ağ hatalarına karşı `Retry-After` desteği ve exponential backoff ile yeniden deneme.
+- [ ] **Artımlı (Incremental) Çekim:** Her çalıştırmada tüm 3 ayı baştan çekmek yerine sadece son çekimden bu yana eklenen kayıtları almak.
+- [ ] **Veritabanı Entegrasyonu:** Verileri CSV yerine bir SQLite veya PostgreSQL veritabanında saklayarak tarihsel veriyi biriktirmek.
+- [ ] **AI ile Zenginleştirme:** Her zafiyet için LLM (örn. Claude Haiku) ile kısa Türkçe özet ve 1–10 risk skoru üretmek; CVE/CWE eşleme.
 - [ ] **Farklı Analizler:** Zafiyet başlıklarından bir kelime bulutu oluşturmak veya belirli CVE kodlarına göre gruplama yapmak.
-- [ ] **Veritabanı Entegrasyonu:** Verileri CSV yerine bir SQLite veya PostgreSQL veritabanında saklamak.
 - [ ] **Gelişmiş Filtreleme:** Ürün adına veya etikete göre filtreleme yapabilen argümanlar eklemek (`--tag "openssl"` gibi).
 
 ## 📜 Lisans
