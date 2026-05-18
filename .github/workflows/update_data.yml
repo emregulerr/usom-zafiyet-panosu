@@ -11,18 +11,21 @@ jobs:
   update-data:
     # Bu işin çalışacağı sanal makine tipi
     runs-on: ubuntu-latest
+    timeout-minutes: 45
     permissions:
       contents: write
     steps:
       # 1. Adım: Proje dosyalarını çalışacak sanal makineye indirir.
+      # Node.js 24 uyumluluğu için v5 (Haziran 2026 deprecation deadline).
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
-      # 2. Adım: Belirtilen Python sürümünü kurar.
+      # 2. Adım: Belirtilen Python sürümünü kurar (Node.js 24 uyumlu v6).
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
-          python-version: '3.13.2'
+          python-version: '3.13'
+          cache: 'pip'
 
       # 3. Adım: requirements.txt dosyasında listelenen gerekli Python kütüphanelerini yükler.
       - name: Install dependencies

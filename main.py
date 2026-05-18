@@ -77,30 +77,36 @@ def fetch_vulnerabilities(api_url, page, date_gte=None):
     print(f"Sayfa {page} için maksimum yeniden deneme aşıldı; bu sayfa atlanıyor.")
     return None
 
-def fetch_all_vulnerabilities(api_url, date_gte):
+def fetch_all_vulnerabilities(api_url, date_gte, max_pages=500):
     """
-    API'den belirli bir tarihten itibaren tüm zafiyet verilerini çeker.
+    API'den belirli bir tarihten itibaren zafiyet verilerini çeker.
 
-    :param api_url: API URL'si
-    :param date_gte: Bu tarihten sonra çekilecek zafiyetler
-    :return: Tüm zafiyet verilerinin listesi
+    USOM API `date_gte` parametresini güvenilir biçimde uygulamadığı için
+    sayfa içindeki en eski kayıt `date_gte`'den önceyse erken çıkıyoruz.
+    Ayrıca runner'ı süresiz çalıştırmamak için `max_pages` güvenlik tavanı var.
     """
     vulnerabilities = []
-    current_page = 1
-    print(f"{date_gte.strftime('%Y-%m-%d')} tarihinden itibaren zafiyetler alınıyor...")
+    cutoff = date_gte.strftime("%Y-%m-%d")
+    print(f"{cutoff} tarihinden itibaren zafiyetler alınıyor (max {max_pages} sayfa)...")
 
-    # Her istek arasında DELAY_SECOND uygulanıyor; ayrı bir dakika bekçisine gerek yok.
-    while True:
-        page_data = fetch_vulnerabilities(api_url, current_page, date_gte.strftime("%Y-%m-%d"))
+    for current_page in range(1, max_pages + 1):
+        page_data = fetch_vulnerabilities(api_url, current_page, cutoff)
         if page_data is None:
-            # Tüm denemeler başarısız oldu; veri eksik kalmasın diye çekimi durduruyoruz.
             print(f"Sayfa {current_page} alınamadı, çekim durduruluyor.")
             break
         models = page_data.get("models") or []
         if not models:
             break
         vulnerabilities.extend(models)
-        current_page += 1
+
+        # API kayıtları tarih azalan sırada döndürüyor. Sayfadaki en eski kayıt
+        # cutoff'tan önceyse istenen pencereyi geçtik, devam etmenin anlamı yok.
+        page_min_date = min((m.get("date", "")[:10] for m in models if m.get("date")), default="")
+        if page_min_date and page_min_date < cutoff:
+            print(f"Sayfa {current_page}: cutoff ({cutoff}) öncesine geçildi, durduruluyor.")
+            break
+    else:
+        print(f"max_pages={max_pages} tavanına ulaşıldı; veri kesilmiş olabilir.")
 
     return vulnerabilities
 
