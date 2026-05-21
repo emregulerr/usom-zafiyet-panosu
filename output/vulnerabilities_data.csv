@@ -1,4 +1,18 @@
 Başlık,Etiketler,Tarih
+tr-26-0274-microsoft-edge-gvenlik-bildirimi,microsoft,2026-05-20 17:43:05.574262
+tr-26-0273-samsung-open-source-walrusescargot-gvenlik-bildirimi,samsung,2026-05-20 17:41:41.837412
+tr-26-0272-mattermost-uygulama-gvenlik-bildirimi,mattermost,2026-05-20 17:38:59.640842
+tr-26-0271-dell-smartfabric-storage-software-gvenlik-bildirimi,dell,2026-05-20 17:37:18.946633
+tr-26-0270-red-hat-keycloak-gvenlik-bildirimi,keycloak,2026-05-20 17:36:03.434453
+tr-26-0269-openharmony-gvenlik-zafiyeti,openharmony,2026-05-20 17:34:25.752781
+tr-26-0268-edimax-br-6428ns-gvenlik-zafiyeti,edimax,2026-05-20 17:31:50.13524
+tr-26-0267-hcl-oklu-rn-gvenlik-bildirimi,hcl,2026-05-20 17:29:03.734937
+tr-26-0266-broadcom-automic-automation-agent-gvenlik-bildirimi,broadcom,2026-05-20 17:22:01.057855
+tr-26-0265-nvidia-trt-llmtriton-inference-server-gvenlik-bildirimi,nvidia,2026-05-20 17:19:35.339356
+tr-26-0264-wordpress-eklenti-gvenlik-bildirimi,wordpress,2026-05-20 17:14:03.248613
+tr-26-0261-apache-ofbiz-gvenlik-bildirimi,apache,2026-05-20 08:16:01.245278
+tr-26-0260-drupal-gvenlik-bildirimi-,drupal,2026-05-20 07:34:23.036704
+tr-26-0259-qlik-talend-gvenlik-bildirimi,talend,2026-05-20 07:29:08.977179
 tr-26-0257-lenovo-personal-cloud-storage-gvenlik-bildirimi,lenovo,2026-05-15 07:37:59.053564
 tr-26-0256-grafana-gvenlik-bildirimi,grafana,2026-05-15 07:33:10.082585
 tr-26-0255-misp-gvenlik-zafiyeti,misp,2026-05-15 07:30:22.645282
@@ -149,5 +163,3 @@ tr-26-0093-mozilla-firefoxthunderbird-gvenlik-bildirimi,firefox,2026-04-09 08:53
 tr-26-0092-totolink-a7100ru-gvenlik-bildirimi,totolink,2026-04-09 08:46:49.541216
 tr-26-0091-the-progress-sharefile-gvenlik-bildirimi,sharefile,2026-04-09 08:39:06.037735
 tr-26-0090-wordpress-eklenti-gvenlik-bildirimi,wordpress,2026-04-09 08:30:51.673561
-tr-26-0080-aida64-engineer-gvenlik-zafiyeti,aida64,2026-02-19 13:12:46.428577
-tr-26-0079-wordpress-eklenti-gvenlik-bildirimi,wordpress,2026-02-19 13:07:21.054381
