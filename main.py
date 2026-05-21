@@ -18,7 +18,9 @@ import matplotlib.pyplot as plt
 # Geçiş döneminde eski usom.gov.tr endpoint'i hâlâ çalıştığı için USOM_API_URL
 # ortam değişkeni ile override edilebilir (GitHub Actions tarafında repo secret).
 DEFAULT_API_URL = "https://siberguvenlik.gov.tr/api/incident/index"
-API_URL = os.environ.get("USOM_API_URL", DEFAULT_API_URL)
+# `or` kullanıyoruz: GitHub Actions tanımsız secret'ı boş string olarak geçirir,
+# `os.environ.get(..., DEFAULT)` ise boş string'i "tanımlı" sayıp default'a düşmez.
+API_URL = os.environ.get("USOM_API_URL") or DEFAULT_API_URL
 
 # File/Directory Paths
 OUTPUT_DIR = "output"
