@@ -2,6 +2,7 @@
 
 [![Update Vulnerability Data](https://github.com/emregulerr/usom-zafiyet-panosu/actions/workflows/update_data.yml/badge.svg)](https://github.com/emregulerr/usom-zafiyet-panosu/actions/workflows/update_data.yml)
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://usom-zafiyet-panosu.streamlit.app/)
+[![Interactive Dashboard](https://img.shields.io/badge/📈-İnteraktif%20Pano-2563eb)](https://emregulerr.github.io/usom-zafiyet-panosu/)
 
 Bu proje, Türkiye Ulusal Siber Olaylara Müdahale Merkezi (USOM) tarafından yayınlanan zafiyetleri API aracılığıyla çeker, analiz eder ve bu sayfayı bir gösterge panosu olarak kullanarak görselleştirir. 🚀
 
@@ -32,6 +33,8 @@ Bu repo, **GitHub Actions** kullanılarak **her gün otomatik olarak güncellenm
     </td>
   </tr>
 </table>
+
+> 📈 **Hover/zoom/filtre isteyen kullanıcılar için:** [İnteraktif HTML pano](https://emregulerr.github.io/usom-zafiyet-panosu/) (GitHub Pages, her gün otomatik güncelleniyor) veya [Streamlit canlı sürümü](https://usom-zafiyet-panosu.streamlit.app/) (filtreli, CSV indirme).
 
 ## ⚙️ Kurulum
 

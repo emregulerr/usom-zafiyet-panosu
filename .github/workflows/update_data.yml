@@ -44,13 +44,25 @@ jobs:
 
       # 5. Adım: Eğer output/ klasöründe bir değişiklik varsa (ki her gün olacak),
       # bu değişiklikleri repoya otomatik olarak "commit"ler ve "push"lar.
+      # Not: output/charts/ .gitignore ile dışlanır; sadece CSV ve PNG'ler commit'lenir.
       - name: Commit and push if there are changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "📊 Veri ve görseller otomatik güncellendi"
-          # Sadece output klasöründeki değişiklikleri commit'le
-          file_pattern: 'output/*'
-          # Commit'i yapacak olan bot kullanıcının bilgileri
+          file_pattern: 'output/vulnerabilities_data.csv output/images/*'
           commit_user_name: "GitHub Actions Bot"
           commit_user_email: "actions@github.com"
           commit_author: "GitHub Actions Bot <actions@github.com>"
+
+      # 6. Adım: İnteraktif HTML panoyu (output/charts/) GitHub Pages'e deploy et.
+      # Settings → Pages → Source: "Deploy from a branch" + branch: "gh-pages" / "/" olarak
+      # bir kez yapılandırılmalı. URL: https://<user>.github.io/<repo>/
+      - name: Deploy interactive dashboard to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./output/charts
+          publish_branch: gh-pages
+          user_name: "GitHub Actions Bot"
+          user_email: "actions@github.com"
+          commit_message: "🚀 İnteraktif pano güncellendi"

@@ -8,6 +8,7 @@ import argparse
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
+import plotly.express as px
 
 # --- CONFIGURATION ---
 # 17 Mayıs 2026 duyurusu: USOM içerikleri Siber Güvenlik Başkanlığı'nın yeni
@@ -25,6 +26,7 @@ API_URL = os.environ.get("USOM_API_URL") or DEFAULT_API_URL
 # File/Directory Paths
 OUTPUT_DIR = "output"
 IMAGES_DIR = os.path.join(OUTPUT_DIR, "images")
+CHARTS_DIR = os.path.join(OUTPUT_DIR, "charts")  # Plotly HTML çıktıları (gh-pages için)
 OUTPUT_CSV_FILENAME = "vulnerabilities_data.csv"
 
 # API Rate Limiting
@@ -254,6 +256,118 @@ def generate_visualizations(vulnerabilities, title_suffix="", save_dir=None):
         print("Belirtilen aralıkta veri bulunamadı, etiket ve sıcaklık haritası grafikleri oluşturulamadı.")
 
 
+def generate_interactive_html(vulnerabilities, title_suffix, save_dir, start_date, end_date):
+    """
+    Plotly ile interaktif HTML grafikler üretir (GitHub Pages için).
+
+    Plotly.js CDN'den yüklendiği için her HTML ~50 KB; tüm pano <200 KB.
+    Çıktılar: time_series_chart.html, top_tags_chart.html, heatmap.html, index.html
+    """
+    os.makedirs(save_dir, exist_ok=True)
+    plotly_kwargs = {"include_plotlyjs": "cdn", "full_html": True}
+
+    # Zaman serisi
+    if vulnerabilities:
+        date_counts = {}
+        for v in vulnerabilities:
+            if v[2]:
+                ym = v[2].split("T")[0][:7]
+                date_counts[ym] = date_counts.get(ym, 0) + 1
+        if date_counts:
+            df_ts = pd.DataFrame(
+                sorted(date_counts.items()), columns=["Ay", "Zafiyet Sayısı"]
+            )
+            fig = px.line(
+                df_ts, x="Ay", y="Zafiyet Sayısı", markers=True,
+                title=f"Aya Göre Zafiyet Sayısı<br><sub>{title_suffix}</sub>",
+            )
+            fig.update_layout(hovermode="x unified", height=460)
+            fig.write_html(os.path.join(save_dir, "time_series_chart.html"), **plotly_kwargs)
+
+    # Top etiketler + ısı haritası
+    tag_counts = {}
+    tags_by_month = {}
+    for v in vulnerabilities:
+        if not v[1]:
+            continue
+        ym = v[2].split("T")[0][:7] if v[2] else None
+        for tag in v[1].split("|"):
+            tag = normalize(tag)
+            tag_counts[tag] = tag_counts.get(tag, 0) + 1
+            if ym:
+                tags_by_month.setdefault(ym, {}).setdefault(tag, 0)
+                tags_by_month[ym][tag] += 1
+
+    top_tags = []
+    if tag_counts:
+        sorted_tags = sorted(tag_counts.items(), key=lambda x: x[1], reverse=True)[:10]
+        df_tags = pd.DataFrame(sorted_tags, columns=["Etiket", "Sayı"])
+        fig = px.bar(
+            df_tags, x="Sayı", y="Etiket", orientation="h",
+            color="Sayı", color_continuous_scale="Viridis",
+            title=f"En Çok Kullanılan 10 Etiket<br><sub>{title_suffix}</sub>",
+        )
+        fig.update_layout(
+            yaxis={"categoryorder": "total ascending"}, height=460, coloraxis_showscale=False,
+        )
+        fig.write_html(os.path.join(save_dir, "top_tags_chart.html"), **plotly_kwargs)
+        top_tags = [t for t, _ in sorted_tags]
+
+    if tags_by_month and top_tags:
+        pivot = pd.DataFrame(index=sorted(tags_by_month.keys()), columns=top_tags).fillna(0)
+        for month, tags_in_month in tags_by_month.items():
+            for tag in top_tags:
+                pivot.at[month, tag] = tags_in_month.get(tag, 0)
+        fig = px.imshow(
+            pivot.astype(int), text_auto=True, aspect="auto",
+            color_continuous_scale="YlGnBu",
+            labels=dict(x="Etiket", y="Ay", color="Sayı"),
+            title=f"Aylık Zafiyet Yoğunluğu (Isı Haritası)<br><sub>{title_suffix}</sub>",
+        )
+        fig.update_layout(height=560)
+        fig.write_html(os.path.join(save_dir, "heatmap.html"), **plotly_kwargs)
+
+    # Kapsayıcı index.html — 3 grafiği iframe'le gömer ve meta bilgi gösterir.
+    last_updated = datetime.datetime.now().strftime("%d.%m.%Y %H:%M UTC")
+    index_html = f"""<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>USOM Zafiyet Panosu — İnteraktif</title>
+  <style>
+    body {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            max-width: 1200px; margin: 1.5em auto; padding: 0 1em; color: #1f2937; }}
+    h1 {{ color: #0f172a; margin-bottom: .25em; }}
+    .meta {{ color: #6b7280; font-size: .9em; margin-bottom: 1.5em; }}
+    .meta a {{ color: #2563eb; text-decoration: none; }}
+    .meta a:hover {{ text-decoration: underline; }}
+    iframe {{ width: 100%; border: 1px solid #e5e7eb; border-radius: 8px;
+              margin-bottom: 1.5em; background: #fff; }}
+    .chart-ts, .chart-tags {{ height: 500px; }}
+    .chart-heat {{ height: 600px; }}
+  </style>
+</head>
+<body>
+  <h1>🛡️ USOM İnteraktif Zafiyet Panosu</h1>
+  <p class="meta">
+    Tarih aralığı: <strong>{start_date.strftime('%d.%m.%Y')} – {end_date.strftime('%d.%m.%Y')}</strong> ·
+    Son güncelleme: <strong>{last_updated}</strong> ·
+    Veri kaynağı: <a href="https://siberguvenlik.gov.tr">Siber Güvenlik Başkanlığı</a><br>
+    <a href="https://github.com/emregulerr/usom-zafiyet-panosu">📦 GitHub repo</a> ·
+    <a href="https://usom-zafiyet-panosu.streamlit.app/">🚀 Tam pano (Streamlit, filtreli)</a>
+  </p>
+  <iframe src="time_series_chart.html" class="chart-ts" title="Zaman serisi"></iframe>
+  <iframe src="top_tags_chart.html" class="chart-tags" title="En çok etiket"></iframe>
+  <iframe src="heatmap.html" class="chart-heat" title="Isı haritası"></iframe>
+</body>
+</html>
+"""
+    with open(os.path.join(save_dir, "index.html"), "w", encoding="utf-8") as f:
+        f.write(index_html)
+    print(f"İnteraktif HTML pano kaydedildi: {save_dir}/index.html")
+
+
 def main():
     """Ana çalışma fonksiyonu, verileri çekip kaydeder ve görselleştirir."""
     parser = argparse.ArgumentParser(
@@ -297,6 +411,9 @@ def main():
 
     title_suffix = f"({start_date.strftime('%d.%m.%Y')} - {end_date.strftime('%d.%m.%Y')})"
     generate_visualizations(unique_vulnerabilities, title_suffix, IMAGES_DIR)
+    generate_interactive_html(
+        unique_vulnerabilities, title_suffix, CHARTS_DIR, start_date, end_date
+    )
 
     print("\nİşlem tamamlandı.")
 

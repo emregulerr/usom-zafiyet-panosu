@@ -1,0 +1,16 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+
+# İnteraktif HTML grafikleri her run'da fresh üretilip gh-pages branch'ine
+# deploy edilir; main branch'e commit etmiyoruz (repo şişmesin).
+output/charts/
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
