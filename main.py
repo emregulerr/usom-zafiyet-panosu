@@ -256,116 +256,314 @@ def generate_visualizations(vulnerabilities, title_suffix="", save_dir=None):
         print("Belirtilen aralıkta veri bulunamadı, etiket ve sıcaklık haritası grafikleri oluşturulamadı.")
 
 
+_CHART_LAYOUT_DEFAULTS = dict(
+    margin=dict(l=10, r=10, t=40, b=10),
+    paper_bgcolor="rgba(0,0,0,0)",
+    plot_bgcolor="rgba(0,0,0,0)",
+    font=dict(family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif"),
+    title=None,  # Başlık dış kart başlığında zaten var; çift göstermiyoruz.
+)
+
+
 def generate_interactive_html(vulnerabilities, title_suffix, save_dir, start_date, end_date):
     """
-    Plotly ile interaktif HTML grafikler üretir (GitHub Pages için).
-
-    Plotly.js CDN'den yüklendiği için her HTML ~50 KB; tüm pano <200 KB.
-    Çıktılar: time_series_chart.html, top_tags_chart.html, heatmap.html, index.html
+    Tek sayfa, modern, koyu-açık tema duyarlı, KPI kartlı interaktif pano üretir.
+    Plotly.js tek seferlik CDN load + her grafik aynı sayfada <div> olarak gömülür
+    (iframe yok — daha hızlı, tutarlı stil, çift scroll yok).
     """
     os.makedirs(save_dir, exist_ok=True)
-    plotly_kwargs = {"include_plotlyjs": "cdn", "full_html": True}
 
-    # Zaman serisi
-    if vulnerabilities:
-        date_counts = {}
-        for v in vulnerabilities:
-            if v[2]:
-                ym = v[2].split("T")[0][:7]
-                date_counts[ym] = date_counts.get(ym, 0) + 1
-        if date_counts:
-            df_ts = pd.DataFrame(
-                sorted(date_counts.items()), columns=["Ay", "Zafiyet Sayısı"]
-            )
-            fig = px.line(
-                df_ts, x="Ay", y="Zafiyet Sayısı", markers=True,
-                title=f"Aya Göre Zafiyet Sayısı<br><sub>{title_suffix}</sub>",
-            )
-            fig.update_layout(hovermode="x unified", height=460)
-            fig.write_html(os.path.join(save_dir, "time_series_chart.html"), **plotly_kwargs)
+    # --- KPI hesaplama ---
+    total = len(vulnerabilities)
+    days = max((end_date - start_date).days, 1)
+    daily_avg = round(total / days, 1)
 
-    # Top etiketler + ısı haritası
     tag_counts = {}
     tags_by_month = {}
-    for v in vulnerabilities:
-        if not v[1]:
-            continue
-        ym = v[2].split("T")[0][:7] if v[2] else None
-        for tag in v[1].split("|"):
-            tag = normalize(tag)
-            tag_counts[tag] = tag_counts.get(tag, 0) + 1
-            if ym:
-                tags_by_month.setdefault(ym, {}).setdefault(tag, 0)
-                tags_by_month[ym][tag] += 1
+    date_counts = {}
+    latest_date = ""
 
-    top_tags = []
-    if tag_counts:
-        sorted_tags = sorted(tag_counts.items(), key=lambda x: x[1], reverse=True)[:10]
-        df_tags = pd.DataFrame(sorted_tags, columns=["Etiket", "Sayı"])
+    for v in vulnerabilities:
+        if v[2]:
+            day = v[2].split("T")[0]
+            ym = day[:7]
+            date_counts[ym] = date_counts.get(ym, 0) + 1
+            if day > latest_date:
+                latest_date = day
+        if v[1]:
+            ym = v[2].split("T")[0][:7] if v[2] else None
+            for tag in v[1].split("|"):
+                tag = normalize(tag)
+                if not tag:
+                    continue
+                tag_counts[tag] = tag_counts.get(tag, 0) + 1
+                if ym:
+                    tags_by_month.setdefault(ym, {}).setdefault(tag, 0)
+                    tags_by_month[ym][tag] += 1
+
+    sorted_tags = sorted(tag_counts.items(), key=lambda x: x[1], reverse=True)
+    top_tag_name = sorted_tags[0][0] if sorted_tags else "—"
+    unique_tags = len(tag_counts)
+
+    # --- Plotly figürleri (tek sayfaya gömmek için full_html=False, plotly.js yok) ---
+    def to_div(fig):
+        return fig.to_html(include_plotlyjs=False, full_html=False, div_id=None)
+
+    ts_div = "<p class='empty'>Veri yok.</p>"
+    if date_counts:
+        df_ts = pd.DataFrame(sorted(date_counts.items()), columns=["Ay", "Zafiyet Sayısı"])
+        fig = px.line(df_ts, x="Ay", y="Zafiyet Sayısı", markers=True)
+        fig.update_traces(line=dict(width=3, color="#2563eb"), marker=dict(size=8))
+        fig.update_layout(height=380, hovermode="x unified", **_CHART_LAYOUT_DEFAULTS)
+        ts_div = to_div(fig)
+
+    tags_div = "<p class='empty'>Veri yok.</p>"
+    if sorted_tags:
+        df_tags = pd.DataFrame(sorted_tags[:10], columns=["Etiket", "Sayı"])
         fig = px.bar(
             df_tags, x="Sayı", y="Etiket", orientation="h",
-            color="Sayı", color_continuous_scale="Viridis",
-            title=f"En Çok Kullanılan 10 Etiket<br><sub>{title_suffix}</sub>",
+            color="Sayı", color_continuous_scale="Blues",
         )
         fig.update_layout(
-            yaxis={"categoryorder": "total ascending"}, height=460, coloraxis_showscale=False,
+            height=420, coloraxis_showscale=False,
+            yaxis={"categoryorder": "total ascending"},
+            **_CHART_LAYOUT_DEFAULTS,
         )
-        fig.write_html(os.path.join(save_dir, "top_tags_chart.html"), **plotly_kwargs)
-        top_tags = [t for t, _ in sorted_tags]
+        tags_div = to_div(fig)
 
-    if tags_by_month and top_tags:
-        pivot = pd.DataFrame(index=sorted(tags_by_month.keys()), columns=top_tags).fillna(0)
+    heat_div = "<p class='empty'>Veri yok.</p>"
+    if tags_by_month and sorted_tags:
+        top_10 = [t for t, _ in sorted_tags[:10]]
+        pivot = pd.DataFrame(index=sorted(tags_by_month.keys()), columns=top_10).fillna(0)
         for month, tags_in_month in tags_by_month.items():
-            for tag in top_tags:
+            for tag in top_10:
                 pivot.at[month, tag] = tags_in_month.get(tag, 0)
         fig = px.imshow(
             pivot.astype(int), text_auto=True, aspect="auto",
-            color_continuous_scale="YlGnBu",
+            color_continuous_scale="Blues",
             labels=dict(x="Etiket", y="Ay", color="Sayı"),
-            title=f"Aylık Zafiyet Yoğunluğu (Isı Haritası)<br><sub>{title_suffix}</sub>",
         )
-        fig.update_layout(height=560)
-        fig.write_html(os.path.join(save_dir, "heatmap.html"), **plotly_kwargs)
+        fig.update_layout(height=460, **_CHART_LAYOUT_DEFAULTS)
+        heat_div = to_div(fig)
 
-    # Kapsayıcı index.html — 3 grafiği iframe'le gömer ve meta bilgi gösterir.
-    last_updated = datetime.datetime.now().strftime("%d.%m.%Y %H:%M UTC")
-    index_html = f"""<!DOCTYPE html>
+    # --- Sayfa şablonu (CSS curly brace'lerinden kaçınmak için .replace) ---
+    last_updated_dt = datetime.datetime.now()
+    template = """<!DOCTYPE html>
 <html lang="tr">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>USOM Zafiyet Panosu — İnteraktif</title>
+  <meta name="description" content="Türkiye USOM zafiyet bildirimlerinin canlı interaktif panosu. Her gün otomatik güncellenir.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%9B%A1%EF%B8%8F%3C/text%3E%3C/svg%3E">
+  <script src="https://cdn.plot.ly/plotly-2.35.2.min.js" charset="utf-8"></script>
   <style>
-    body {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-            max-width: 1200px; margin: 1.5em auto; padding: 0 1em; color: #1f2937; }}
-    h1 {{ color: #0f172a; margin-bottom: .25em; }}
-    .meta {{ color: #6b7280; font-size: .9em; margin-bottom: 1.5em; }}
-    .meta a {{ color: #2563eb; text-decoration: none; }}
-    .meta a:hover {{ text-decoration: underline; }}
-    iframe {{ width: 100%; border: 1px solid #e5e7eb; border-radius: 8px;
-              margin-bottom: 1.5em; background: #fff; }}
-    .chart-ts, .chart-tags {{ height: 500px; }}
-    .chart-heat {{ height: 600px; }}
+    :root {
+      --bg: #f8fafc;
+      --surface: #ffffff;
+      --text: #0f172a;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+      --accent: #2563eb;
+      --shadow: 0 1px 3px rgba(0,0,0,.05), 0 1px 2px rgba(0,0,0,.04);
+      --shadow-lg: 0 10px 25px -5px rgba(0,0,0,.1), 0 8px 10px -6px rgba(0,0,0,.05);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0b1220;
+        --surface: #131c2e;
+        --text: #f1f5f9;
+        --text-muted: #94a3b8;
+        --border: #1f2a3f;
+        --shadow: 0 1px 3px rgba(0,0,0,.4);
+        --shadow-lg: 0 10px 25px -5px rgba(0,0,0,.5);
+      }
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif;
+      background: var(--bg); color: var(--text); line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+    .container { max-width: 1280px; margin: 0 auto; padding: 0 1.5rem; }
+    header {
+      background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 60%, #020617 100%);
+      color: #f1f5f9; padding: 2.5rem 0 4rem;
+      position: relative; overflow: hidden;
+    }
+    header::before {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(circle at 80% 20%, rgba(37,99,235,.25), transparent 50%);
+      pointer-events: none;
+    }
+    header h1 {
+      margin: 0 0 .35rem; font-size: 2.25rem; font-weight: 700; letter-spacing: -.02em;
+      position: relative;
+    }
+    header .subtitle {
+      margin: 0; color: #cbd5e1; font-size: 1rem; position: relative;
+    }
+    .badges {
+      margin-top: 1.25rem; display: flex; gap: .5rem; flex-wrap: wrap;
+      position: relative;
+    }
+    .badge {
+      display: inline-flex; align-items: center; gap: .35rem;
+      padding: .4rem .85rem; background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 999px; font-size: .82rem; color: #f1f5f9;
+      text-decoration: none; transition: background .15s, border-color .15s;
+      backdrop-filter: blur(8px);
+    }
+    .badge:hover { background: rgba(255,255,255,.16); border-color: rgba(255,255,255,.25); }
+    main { padding-bottom: 3rem; }
+    .kpis {
+      display: grid; gap: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      margin-top: -2.5rem; margin-bottom: 2rem; position: relative; z-index: 2;
+    }
+    .kpi {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 14px; padding: 1.25rem 1.4rem;
+      box-shadow: var(--shadow-lg);
+      transition: transform .15s ease;
+    }
+    .kpi:hover { transform: translateY(-2px); }
+    .kpi-label {
+      font-size: .72rem; color: var(--text-muted);
+      text-transform: uppercase; letter-spacing: .08em; font-weight: 600;
+    }
+    .kpi-value {
+      font-size: 2rem; font-weight: 700; margin-top: .35rem;
+      color: var(--text); line-height: 1.1;
+      font-feature-settings: 'tnum';
+    }
+    .kpi-value.accent { color: var(--accent); }
+    .kpi-value.small { font-size: 1.15rem; line-height: 1.3; word-break: break-word; }
+    .chart-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 14px; padding: 1.5rem; margin-bottom: 1.5rem;
+      box-shadow: var(--shadow);
+    }
+    .chart-card h2 {
+      margin: 0 0 .25rem; font-size: 1.05rem; font-weight: 600;
+      color: var(--text); display: flex; align-items: center; gap: .5rem;
+    }
+    .chart-card .chart-sub {
+      margin: 0 0 1rem; color: var(--text-muted); font-size: .85rem;
+    }
+    .empty { color: var(--text-muted); text-align: center; padding: 2rem; }
+    footer {
+      border-top: 1px solid var(--border); padding: 1.5rem 0;
+      color: var(--text-muted); font-size: .85rem; margin-top: 2rem;
+    }
+    footer a { color: var(--accent); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+    .meta-row {
+      display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem;
+      align-items: center;
+    }
+    /* Plotly modebar dark uyumu */
+    @media (prefers-color-scheme: dark) {
+      .js-plotly-plot .plotly .modebar { filter: invert(.85); }
+    }
+    @media (max-width: 640px) {
+      header { padding: 2rem 0 3.5rem; }
+      header h1 { font-size: 1.75rem; }
+      .kpi-value { font-size: 1.6rem; }
+    }
   </style>
 </head>
 <body>
-  <h1>🛡️ USOM İnteraktif Zafiyet Panosu</h1>
-  <p class="meta">
-    Tarih aralığı: <strong>{start_date.strftime('%d.%m.%Y')} – {end_date.strftime('%d.%m.%Y')}</strong> ·
-    Son güncelleme: <strong>{last_updated}</strong> ·
-    Veri kaynağı: <a href="https://siberguvenlik.gov.tr">Siber Güvenlik Başkanlığı</a><br>
-    <a href="https://github.com/emregulerr/usom-zafiyet-panosu">📦 GitHub repo</a> ·
-    <a href="https://usom-zafiyet-panosu.streamlit.app/">🚀 Tam pano (Streamlit, filtreli)</a>
-  </p>
-  <iframe src="time_series_chart.html" class="chart-ts" title="Zaman serisi"></iframe>
-  <iframe src="top_tags_chart.html" class="chart-tags" title="En çok etiket"></iframe>
-  <iframe src="heatmap.html" class="chart-heat" title="Isı haritası"></iframe>
+  <header>
+    <div class="container">
+      <h1>🛡️ USOM Zafiyet Panosu</h1>
+      <p class="subtitle">Türkiye'nin güvenlik bildirimleri — her gün otomatik güncellenir</p>
+      <div class="badges">
+        <a class="badge" href="https://github.com/emregulerr/usom-zafiyet-panosu">📦 GitHub</a>
+        <a class="badge" href="https://usom-zafiyet-panosu.streamlit.app/">🚀 Streamlit (filtreli)</a>
+        <a class="badge" href="https://siberguvenlik.gov.tr">🔗 Veri kaynağı</a>
+        <a class="badge" href="./vulnerabilities_data.csv">⬇️ CSV indir</a>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <section class="kpis" aria-label="Anahtar metrikler">
+      <div class="kpi">
+        <div class="kpi-label">Toplam Zafiyet</div>
+        <div class="kpi-value accent">__TOTAL__</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">Günlük Ortalama</div>
+        <div class="kpi-value">__DAILY__</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">Eşsiz Etiket</div>
+        <div class="kpi-value">__TAGS__</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">En Popüler Etiket</div>
+        <div class="kpi-value small">__TOP_TAG__</div>
+      </div>
+    </section>
+
+    <article class="chart-card">
+      <h2>📈 Aylara Göre Zafiyet Sayısı</h2>
+      <p class="chart-sub">Yayınlanan bildirimlerin zaman içindeki dağılımı.</p>
+      __TS_DIV__
+    </article>
+
+    <article class="chart-card">
+      <h2>🏷️ En Çok Kullanılan 10 Etiket</h2>
+      <p class="chart-sub">Hangi ürün/teknoloji ailelerinde en yoğun zafiyet duyurusu var?</p>
+      __TAGS_DIV__
+    </article>
+
+    <article class="chart-card">
+      <h2>🔥 Aylık Etiket Yoğunluğu</h2>
+      <p class="chart-sub">Hangi etiketin hangi ayda öne çıktığını gösteren ısı haritası.</p>
+      __HEAT_DIV__
+    </article>
+  </main>
+  <footer>
+    <div class="container meta-row">
+      <div>
+        Aralık: <strong>__START__ – __END__</strong> · Son güncelleme: <strong>__UPDATED__</strong>
+      </div>
+      <div>
+        Geliştiren <a href="https://github.com/emregulerr">Emre Güler</a> · MIT
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
 """
-    with open(os.path.join(save_dir, "index.html"), "w", encoding="utf-8") as f:
-        f.write(index_html)
-    print(f"İnteraktif HTML pano kaydedildi: {save_dir}/index.html")
+    html = (
+        template
+        .replace("__TOTAL__", f"{total:,}".replace(",", "."))
+        .replace("__DAILY__", f"{daily_avg:.1f}".rstrip("0").rstrip(".") or "0")
+        .replace("__TAGS__", f"{unique_tags:,}".replace(",", "."))
+        .replace("__TOP_TAG__", top_tag_name)
+        .replace("__TS_DIV__", ts_div)
+        .replace("__TAGS_DIV__", tags_div)
+        .replace("__HEAT_DIV__", heat_div)
+        .replace("__START__", start_date.strftime("%d.%m.%Y"))
+        .replace("__END__", end_date.strftime("%d.%m.%Y"))
+        .replace("__UPDATED__", last_updated_dt.strftime("%d.%m.%Y %H:%M"))
+    )
+
+    index_path = os.path.join(save_dir, "index.html")
+    with open(index_path, "w", encoding="utf-8") as f:
+        f.write(html)
+
+    # CSV'yi de Pages'e kopyala — header'daki "CSV indir" linki için.
+    csv_src = os.path.join(OUTPUT_DIR, OUTPUT_CSV_FILENAME)
+    if os.path.exists(csv_src):
+        import shutil
+        shutil.copy2(csv_src, os.path.join(save_dir, OUTPUT_CSV_FILENAME))
+
+    print(f"İnteraktif HTML pano kaydedildi: {index_path}")
 
 
 def main():
