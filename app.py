@@ -6,13 +6,11 @@ import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 
-from main import fetch_all_vulnerabilities, normalize, save_vulnerabilities_to_csv
+from main import API_URL, fetch_all_vulnerabilities, normalize, save_vulnerabilities_to_csv
 
 # --- Konfigürasyon ---
 
 st.set_page_config(layout="wide", page_title="USOM Zafiyet Panosu", page_icon="🛡️")
-
-API_URL = "https://www.usom.gov.tr/api/incident/index"
 OUTPUT_DIR = "output"
 CSV_FILENAME = "vulnerabilities_data.csv"
 

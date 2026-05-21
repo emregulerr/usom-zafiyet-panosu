@@ -35,7 +35,11 @@ jobs:
 
       # 4. Adım: Ana Python script'ini çalıştırır.
       # Bu script, output/ klasöründeki CSV ve resim dosyalarını oluşturacak/güncelleyecektir.
+      # USOM_API_URL secret'ı tanımlıysa default usom.gov.tr endpoint'ini
+      # override eder (siberguvenlik.gov.tr'ye geçiş için).
       - name: Run data fetch and analysis script
+        env:
+          USOM_API_URL: ${{ secrets.USOM_API_URL }}
         run: python main.py
 
       # 5. Adım: Eğer output/ klasöründe bir değişiklik varsa (ki her gün olacak),
