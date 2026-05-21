@@ -18,10 +18,13 @@ CSV_FILENAME = "vulnerabilities_data.csv"
 # --- Veri Katmanı ---
 
 @st.cache_data(ttl=3600, show_spinner=False)
-def cached_fetch_data(start_date: datetime.date):
-    """USOM'dan veriyi çeker. Sonuç 1 saat boyunca önbelleğe alınır."""
+def cached_fetch_data(start_date: datetime.date, api_url: str = API_URL):
+    """USOM/Siber Güvenlik Başkanlığı API'sinden veriyi çeker. 1 saat cache.
+
+    `api_url` cache key'inin parçası — USOM_API_URL değişirse otomatik invalidate.
+    """
     start_date_dt = datetime.datetime.combine(start_date, datetime.time.min)
-    return fetch_all_vulnerabilities(API_URL, start_date_dt)
+    return fetch_all_vulnerabilities(api_url, start_date_dt)
 
 
 def build_dataframe(raw_vulns, start_date: datetime.date, end_date: datetime.date) -> pd.DataFrame:

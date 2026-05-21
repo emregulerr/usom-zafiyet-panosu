@@ -10,13 +10,14 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 
 # --- CONFIGURATION ---
-# 17 Mayıs 2026 duyurusu: USOM içerikleri www.siberguvenlik.gov.tr adresine
-# taşındı; API servisleri ise duyuruda "sürekliliği önceliğimiz" denerek hâlâ
-# www.usom.gov.tr üzerinde tutuluyor. Yeni endpoint açıklandığında tek satır
-# kod değişikliğine gerek kalmaması için URL ortam değişkeniyle override
-# edilebilir; GitHub Actions tarafında repo secret olarak USOM_API_URL set
-# ederek geçiş yapılabilir.
-DEFAULT_API_URL = "https://www.usom.gov.tr/api/incident/index"
+# 17 Mayıs 2026 duyurusu: USOM içerikleri Siber Güvenlik Başkanlığı'nın yeni
+# domain'ine taşındı. API artık siberguvenlik.gov.tr apex domain'i üzerinden
+# JSON döndürüyor (şema usom.gov.tr ile birebir aynı: totalCount/pageCount/models).
+# Önemli not: `www.` subdomain'i Angular SPA'ya gidiyor ve tüm bilinmeyen path'ler
+# için HTML döndürdüğü için kullanılamaz; apex domain (www.'siz) zorunlu.
+# Geçiş döneminde eski usom.gov.tr endpoint'i hâlâ çalıştığı için USOM_API_URL
+# ortam değişkeni ile override edilebilir (GitHub Actions tarafında repo secret).
+DEFAULT_API_URL = "https://siberguvenlik.gov.tr/api/incident/index"
 API_URL = os.environ.get("USOM_API_URL", DEFAULT_API_URL)
 
 # File/Directory Paths

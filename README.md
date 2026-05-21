@@ -11,7 +11,7 @@ Bu repo, **GitHub Actions** kullanılarak **her gün otomatik olarak güncellenm
 
 > **API Etiği:** USOM resmi bir rate-limit dokümanı yayınlamadığı ve `X-RateLimit-*` başlığı döndürmediği için sunucuya yük bindirmemek adına istekler arasında **3 saniye** bekleniyor (~20 istek/dk). HTTP 429 alınırsa `Retry-After` başlığına uyuluyor, yoksa üstel geri çekilme (exponential backoff) uygulanıyor.
 
-> **API Geçişi (Mayıs 2026):** Siber Güvenlik Başkanlığı, USOM içeriklerinin [www.siberguvenlik.gov.tr](https://www.siberguvenlik.gov.tr)'ye taşındığını ancak API servislerinin sürekliliğinin korunduğunu duyurdu. Bu sebeple varsayılan endpoint hâlâ `www.usom.gov.tr/api/incident/index`. Yeni API URL'i resmi olarak duyurulduğunda **`USOM_API_URL`** ortam değişkeni (veya GitHub Actions secret'ı) ile tek satır kod değişikliği yapmadan geçiş yapılabilir.
+> **API Geçişi (Mayıs 2026):** Siber Güvenlik Başkanlığı'nın 17 Mayıs 2026 duyurusunun ardından varsayılan API endpoint'i [`siberguvenlik.gov.tr/api/incident/index`](https://siberguvenlik.gov.tr/api/incident/index)'e taşındı (şema USOM ile birebir aynı). **Dikkat:** API yalnızca apex domain'de hizmet veriyor; `www.` subdomain'i SPA frontend'ine gittiği için HTML döndürür. Geçiş döneminde eski `www.usom.gov.tr` endpoint'i hâlâ çalışıyor; gerektiğinde **`USOM_API_URL`** ortam değişkeni (veya GitHub Actions secret'ı) ile override edilebilir.
 
 ## 📊 Görsel Çıktılar
 
