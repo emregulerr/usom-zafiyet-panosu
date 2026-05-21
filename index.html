@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>USOM Zafiyet Panosu — İnteraktif</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            max-width: 1200px; margin: 1.5em auto; padding: 0 1em; color: #1f2937; }
+    h1 { color: #0f172a; margin-bottom: .25em; }
+    .meta { color: #6b7280; font-size: .9em; margin-bottom: 1.5em; }
+    .meta a { color: #2563eb; text-decoration: none; }
+    .meta a:hover { text-decoration: underline; }
+    iframe { width: 100%; border: 1px solid #e5e7eb; border-radius: 8px;
+              margin-bottom: 1.5em; background: #fff; }
+    .chart-ts, .chart-tags { height: 500px; }
+    .chart-heat { height: 600px; }
+  </style>
+</head>
+<body>
+  <h1>🛡️ USOM İnteraktif Zafiyet Panosu</h1>
+  <p class="meta">
+    Tarih aralığı: <strong>20.02.2026 – 21.05.2026</strong> ·
+    Son güncelleme: <strong>21.05.2026 09:33 UTC</strong> ·
+    Veri kaynağı: <a href="https://siberguvenlik.gov.tr">Siber Güvenlik Başkanlığı</a><br>
+    <a href="https://github.com/emregulerr/usom-zafiyet-panosu">📦 GitHub repo</a> ·
+    <a href="https://usom-zafiyet-panosu.streamlit.app/">🚀 Tam pano (Streamlit, filtreli)</a>
+  </p>
+  <iframe src="time_series_chart.html" class="chart-ts" title="Zaman serisi"></iframe>
+  <iframe src="top_tags_chart.html" class="chart-tags" title="En çok etiket"></iframe>
+  <iframe src="heatmap.html" class="chart-heat" title="Isı haritası"></iframe>
+</body>
+</html>
