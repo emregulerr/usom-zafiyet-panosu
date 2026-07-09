@@ -1,4 +1,15 @@
 Başlık,Etiketler,Tarih
+tr-26-0515-traefik-proxy-gvenlik-zafiyeti,traefik,2026-07-08 06:56:19.094257
+tr-26-0514-openvpn-gvenlik-bildirimi,openvpn,2026-07-08 06:52:48.338455
+tr-26-0513-seiko-epson-gvenlik-bildirimi,seiko,2026-07-08 06:49:26.290467
+tr-26-0512-msi-feature-manager-gvenlik-zafiyeti-,msi,2026-07-08 06:47:52.289222
+tr-26-0511-esri-arcgis-gvenlik-bildirimi,arcgis,2026-07-08 06:43:59.597442
+tr-26-0510-dell-powerprotect-data-domain-gvenlik-bildirimi,dell,2026-07-08 06:37:52.801395
+tr-26-0509-gimp-gnu-image-manipulation-program-gvenlik-zafiyeti,gimp,2026-07-08 06:35:56.386564
+tr-26-0508-microsoft-edge-gvenlik-bildirimi,microsoft,2026-07-08 06:30:17.594524
+tr-26-0507-coolify-gvenlik-zafiyeti,coolify,2026-07-08 06:13:55.593809
+tr-26-0506-gitea-gvenlik-zafiyeti,gitea,2026-07-08 06:09:57.992943
+tr-26-0505-wordpress-eklenti-gvenlik-bildirimi,wordpress,2026-07-08 06:03:14.499593
 tr-26-0496-apache-lucene-net-gvenlik-bildirimi,apache,2026-07-03 12:34:02.594703
 tr-26-0495-microsoft-entra-provisioning-service-syncfabric-gvenlik-bildirimi,microsoft,2026-07-03 12:32:38.493368
 tr-26-0494-microsoft-exchange-online-gvenlik-bildirimi,exchange,2026-07-03 12:31:35.89558
@@ -351,10 +362,3 @@ tr-26-0100-sap-gvenlik-bildirimi,sap,2026-04-14 06:57:25.689992
 tr-26-0099-wordpress-eklenti-gvenlik-bildirimi,wordpress,2026-04-14 06:55:28.65575
 tr-26-0098-qlik-talend-gvenlik-bildirimi,talend,2026-04-14 06:53:58.608222
 tr-26-0097-totolink-a7100ru-gvenlik-bildirimi,totolink,2026-04-10 13:02:38.696739
-tr-26-0096-canonical-lxd-gvenlik-bildirimi,canonical,2026-04-09 10:52:29.886986
-tr-26-0095-ibm-oklu-rn-gvenlik-bildirimi,ibm,2026-04-09 10:49:04.317757
-tr-26-0094-samsung-oklu-rn-gvenlik-bildirimi,samsung,2026-04-09 10:46:43.786403
-tr-26-0093-mozilla-firefoxthunderbird-gvenlik-bildirimi,firefox,2026-04-09 08:53:23.639145
-tr-26-0092-totolink-a7100ru-gvenlik-bildirimi,totolink,2026-04-09 08:46:49.541216
-tr-26-0091-the-progress-sharefile-gvenlik-bildirimi,sharefile,2026-04-09 08:39:06.037735
-tr-26-0090-wordpress-eklenti-gvenlik-bildirimi,wordpress,2026-04-09 08:30:51.673561
