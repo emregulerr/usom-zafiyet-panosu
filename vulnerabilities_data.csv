@@ -1,4 +1,21 @@
 Başlık,Etiketler,Tarih
+tr-26-0545-microsoft-dynamics-365-gvenlik-bildirimi,dynamics,2026-07-13 08:18:00.494851
+tr-26-0544-palo-alto-prismacortex-gvenlik-bildirimi-,palo,2026-07-13 08:14:57.193095
+tr-26-0543-microsoft-edge-gvenlik-bildirimi,microsoft,2026-07-13 08:13:09.997383
+tr-26-0542-ibm-api-connect-gvenlik-bildirimi,ibm,2026-07-13 08:11:57.803678
+tr-26-0541-apache-iotdbgravitino-gvenlik-bildirimi,apache,2026-07-13 08:10:35.490971
+tr-26-0540-dell-powerflex-managerunisphere-gvenlik-bildirimi,dell,2026-07-13 08:08:42.196494
+tr-26-0539-progress-software-moveit-gvenlik-bildirimi,moveit,2026-07-13 08:06:20.51789
+tr-26-0538-zitadel-gvenlik-zafiyeti,zitadel,2026-07-13 08:04:34.713764
+tr-26-0537-freerdp-gvenlik-zafiyeti,freerdp,2026-07-13 08:00:45.39309
+tr-26-0536-siemens-sicam-8-gvenlik-bildirimi,sicore,2026-07-13 07:57:14.796853
+tr-26-0535-xenserver-xapi-gvenlik-bildirimi,cve-xapi,2026-07-13 07:53:56.698125
+tr-26-0534-gigabyte-technology-mbstorage-dram-gvenlik-bildirimi,gigabyte,2026-07-13 07:48:14.992061
+tr-26-0533-qiling-disk-master-gvenlik-bildirimi,qiling,2026-07-13 07:44:41.990946
+tr-26-0532-rabbitmq-gvenlik-zafiyeti,rabbitmq,2026-07-13 07:42:28.392361
+tr-26-0531-litellm-gvenlik-zafiyeti,litellm,2026-07-13 07:39:06.890763
+tr-26-0530-praisonai-gvenlik-zafiyeti-,praisonai,2026-07-13 07:35:50.898173
+tr-26-0529-wordpress-eklenti-gvenlik-bildirimi,wordpress,2026-07-13 07:31:44.115831
 tr-26-0515-traefik-proxy-gvenlik-zafiyeti,traefik,2026-07-08 06:56:19.094257
 tr-26-0514-openvpn-gvenlik-bildirimi,openvpn,2026-07-08 06:52:48.338455
 tr-26-0513-seiko-epson-gvenlik-bildirimi,seiko,2026-07-08 06:49:26.290467
@@ -355,9 +372,3 @@ tr-26-0108-oauth2-proxy-gvenlik-zafiyeti,oauth2,2026-04-16 12:57:24.2337
 tr-26-0107-fortinet-fortisandbox-gvenlik-bildirimi,fortinet,2026-04-16 12:54:07.246782
 tr-26-0106-cisco-oklu-rn-gvenlik-bildirimi,cisco,2026-04-16 12:52:03.317929
 tr-26-0105-adobe-coldfusion-connect-gvenlik-bildirimi-,adobe,2026-04-16 12:48:44.150663
-tr-26-0103-totolink-a7100ru-gvenlik-bildirimi,totolink,2026-04-14 07:14:33.876053
-tr-26-0102-adobe-acrobat-reader-gvenlik-bildirimi-,acrobat,2026-04-14 07:05:22.090009
-tr-26-0101-unifi-play-gvenlik-bildirimi,unifi,2026-04-14 07:02:14.649061
-tr-26-0100-sap-gvenlik-bildirimi,sap,2026-04-14 06:57:25.689992
-tr-26-0099-wordpress-eklenti-gvenlik-bildirimi,wordpress,2026-04-14 06:55:28.65575
-tr-26-0098-qlik-talend-gvenlik-bildirimi,talend,2026-04-14 06:53:58.608222
