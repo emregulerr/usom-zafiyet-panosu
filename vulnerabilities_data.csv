@@ -1,4 +1,12 @@
 Başlık,Etiketler,Tarih
+tr-26-0592-zohocorp-manageengine-gvenlik-bildirimi,zohocorp,2026-07-21 11:24:15.997541
+tr-26-0591-hcl-devops-plan-gvenlik-bildirimi,hcl,2026-07-21 11:22:12.193682
+tr-26-0590-linux-kernel-gvenlik-bildirimi,kernel,2026-07-21 11:20:02.411944
+tr-26-0589-d-link-dns-320-gvenlik-bildirimi,d-link,2026-07-21 11:18:37.101312
+tr-26-0588-google-chrome-gvenlik-bildirimi,chrome,2026-07-21 11:15:46.699412
+tr-26-0587-tenda-ac10-gvenlik-bildirimi,tenda,2026-07-21 11:12:01.092692
+tr-26-0586-apache-syncope-gvenlik-bildirimi,apache,2026-07-21 11:10:07.909296
+tr-26-0585-wordpress-eklenti-gvenlik-bildirimi,wordpress,2026-07-21 11:06:42.718116
 tr-26-0581-microsoft-windows-rdp-gvenlik-bildirimi,windows,2026-07-20 08:28:27.100858
 tr-26-0580-microsoft-edge-gvenlik-bildirimi,edge,2026-07-20 08:27:16.498239
 tr-26-0579-red-hat-keycloak-gvenlik-bildirimi,keycloak,2026-07-20 08:23:42.908358
@@ -386,16 +394,3 @@ tr-26-0125-delta-electronics-as320t-gvenlik-bildirimi,delta,2026-04-28 08:42:06.
 tr-26-0124-apache-oklu-rn-gvenlik-bildirimi,apache,2026-04-28 08:38:50.609975
 tr-26-0123-wordpress-eklenti-gvenlik-bildirimi,wordpress,2026-04-28 08:28:23.450688
 tr-26-0122-totolink-a8000ru-gvenlik-bildirimi,totolink,2026-04-28 08:24:37.798354
-tr-26-0121-flowise-ai-gvenlik-zafiyeti,flowise,2026-04-22 13:08:39.811535
-tr-26-0120-microsoft-asp-net-core-gvenlik-bildirimi,asp-net,2026-04-22 13:04:30.394619
-tr-26-0119-openclaw-gvenlik-zafiyeti,openclaw,2026-04-22 13:02:27.048602
-tr-26-0118-electric-sql-gvenlik-bildirimi,electric,2026-04-22 12:59:18.670768
-tr-26-0117-anviz-cx2-litecx7-gvenlik-zafiyeti,anviz-cx2,2026-04-22 12:55:50.32518
-tr-26-0116-crafty-controller-gvenlik-zafiyeti,crafty,2026-04-22 12:52:23.318538
-tr-26-0115-silex-technology-sd-330ac-gvenlik-bildirimi,silex,2026-04-22 12:39:39.532704
-tr-26-0114-oauth2-proxy-gvenlik-zafiyeti,oauth2,2026-04-22 12:34:33.661237
-tr-26-0113-apache-kafka-gvenlik-bildirimi,apache,2026-04-22 12:33:11.078747
-tr-26-0112-wordpress-eklenti-gvenlik-bildirimi,wordpress,2026-04-22 12:31:38.635729
-tr-26-0111-esri-arcgis-gvenlik-bildirimi,arcgis,2026-04-22 12:29:36.467536
-tr-26-0110-firebird-rdbms-gvenlik-zafiyeti,firebird,2026-04-22 12:25:36.347736
-tr-26-0109-oracle-oklu-rn-gvenlik-bildirimi,oracle,2026-04-22 12:17:19.177735
