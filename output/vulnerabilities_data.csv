@@ -1,4 +1,15 @@
 Başlık,Etiketler,Tarih
+tr-26-0646-apereo-cas-gvenlik-zafiyeti,apereo,2026-07-27 11:37:10.597665
+tr-26-0645-eclipse-basyx-go-components-gvenlik-bildirimi,eclipse,2026-07-27 11:35:47.596671
+tr-26-0644-apache-oklu-rn-gvenlik-bildirimi,apache,2026-07-27 11:33:39.996071
+tr-26-0643-eset-gvenlik-bildirimi,escalation-potentially,2026-07-27 11:31:15.597008
+tr-26-0642-red-hat-keycloak-gvenlik-bildirimi,keycloak,2026-07-27 11:27:49.294067
+tr-26-0641-wordpress-eklenti-gvenlik-bildirimi,wordpress,2026-07-27 11:25:04.634625
+tr-26-0640-microsoft-azure-gvenlik-bildirimi,azure,2026-07-27 11:23:54.397474
+tr-26-0639-microsoft-edge-gvenlik-bildirimi,edge,2026-07-27 11:22:26.092953
+tr-26-0638-google-cloud-looker-gvenlik-bildirimi,looker,2026-07-27 11:20:44.289008
+tr-26-0637-loytec-oklu-rn-gvenlik-bildirimi,loytec,2026-07-27 11:17:20.799702
+tr-26-0636-linux-kernel-gvenlik-bildirimi,kernel,2026-07-27 11:14:00.901222
 tr-26-0633-bosch-configuration-managerip-camera-gvenlik-bildirimi,bosch,2026-07-24 07:26:34.994452
 tr-26-0632-microsoft-azure-gvenlik-bildirimi,azure,2026-07-24 07:23:35.49428
 tr-26-0631-amazon-aws-gvenlik-bildirimi,aws,2026-07-24 07:20:50.292476
@@ -424,8 +435,3 @@ tr-26-0130-d-link-gvenlik-bildirimi,d-link,2026-04-29 07:40:53.791009
 tr-26-0129-mozilla-firefoxthunderbirdesr-gvenlik-bildirimi,firefox,2026-04-29 07:39:20.339959
 tr-26-0128-openclaw-gvenlik-zafiyeti,openclaw,2026-04-29 07:36:40.967421
 tr-26-0127-nvidia-nvflare-dashboard-gvenlik-bildirimi,nvidia,2026-04-29 07:33:27.35774
-tr-26-0126-geovision-gv-ip-device-utility-gvenlik-zafiyeti,geovision,2026-04-28 08:46:38.074518
-tr-26-0125-delta-electronics-as320t-gvenlik-bildirimi,delta,2026-04-28 08:42:06.763422
-tr-26-0124-apache-oklu-rn-gvenlik-bildirimi,apache,2026-04-28 08:38:50.609975
-tr-26-0123-wordpress-eklenti-gvenlik-bildirimi,wordpress,2026-04-28 08:28:23.450688
-tr-26-0122-totolink-a8000ru-gvenlik-bildirimi,totolink,2026-04-28 08:24:37.798354
