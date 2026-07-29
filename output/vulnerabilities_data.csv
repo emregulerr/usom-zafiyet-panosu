@@ -1,4 +1,20 @@
 Başlık,Etiketler,Tarih
+tr-26-0662-erlangotp-gvenlik-zafiyeti,erlang-otp,2026-07-28 07:47:13.888221
+tr-26-0661-honeywell-s35-serisi-gvenlik-zafiyeti,honeywell,2026-07-28 07:43:27.691856
+tr-26-0660-tp-link-router-firmware-gvenlik-bildirimi,tp-link,2026-07-28 07:40:39.189594
+tr-26-0659-nitroshare-gvenlik-zafiyeti,nitroshare,2026-07-28 07:38:04.339477
+tr-26-0658-gimp-gnu-image-manipulation-program-gvenlik-zafiyeti,gimp,2026-07-28 07:35:47.089608
+tr-26-0657-nvidia-nemo-gvenlik-bildirimi,nvidia,2026-07-28 07:30:27.395338
+tr-26-0656-mattermost-uygulama-gvenlik-bildirimi,mattermost,2026-07-28 07:28:58.893376
+tr-26-0655-synopsys-designware-i2c-gvenlik-bildirimi,synopsys,2026-07-28 07:27:50.192855
+tr-26-0654-ericsson-packet-core-controller-pcc-gvenlik-bildirimi,ericsson,2026-07-28 07:25:57.798234
+tr-26-0653-react-rnleri-gvenlik-zafiyeti-,react,2026-07-28 07:23:23.30467
+tr-26-0652-progress-software-oklu-rn-gvenlik-bildirimi,progress,2026-07-28 07:20:08.196942
+tr-26-0651-jfrog-artifactoryplatform-gvenlik-bildirimi,jfrog,2026-07-28 07:18:01.992735
+tr-26-0650-mercusys-mb115-4g-gvenlik-zafiyeti,mercusys,2026-07-28 07:12:10.997902
+tr-26-0649-linux-kernel-gvenlik-bildirimi,kernel,2026-07-28 07:10:45.50186
+tr-26-0648-apache-oklu-rn-gvenlik-bildirimi,apache,2026-07-28 07:09:51.394574
+tr-26-0647-apple-oklu-rn-gvenlik-bildirimi,macos,2026-07-28 07:04:20.9032
 tr-26-0646-apereo-cas-gvenlik-zafiyeti,apereo,2026-07-27 11:37:10.597665
 tr-26-0645-eclipse-basyx-go-components-gvenlik-bildirimi,eclipse,2026-07-27 11:35:47.596671
 tr-26-0644-apache-oklu-rn-gvenlik-bildirimi,apache,2026-07-27 11:33:39.996071
@@ -431,7 +447,3 @@ tr-26-0135-tenda-gvenlik-bildirimi,tenda,2026-04-30 08:14:23.056617
 tr-26-0134-wireshark-gvenlik-bildirimi,wireshark,2026-04-30 08:10:45.53722
 tr-26-0133-jenkins-gvenlik-bildirimi,jenkins,2026-04-30 08:03:35.865766
 tr-26-0132-google-chrome-gvenlik-bildirimi,chrome,2026-04-30 08:00:16.940388
-tr-26-0130-d-link-gvenlik-bildirimi,d-link,2026-04-29 07:40:53.791009
-tr-26-0129-mozilla-firefoxthunderbirdesr-gvenlik-bildirimi,firefox,2026-04-29 07:39:20.339959
-tr-26-0128-openclaw-gvenlik-zafiyeti,openclaw,2026-04-29 07:36:40.967421
-tr-26-0127-nvidia-nvflare-dashboard-gvenlik-bildirimi,nvidia,2026-04-29 07:33:27.35774
