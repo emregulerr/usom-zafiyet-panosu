@@ -1,4 +1,17 @@
 Başlık,Etiketler,Tarih
+tr-26-0678-moodle-gvenlik-bildirimi,moodle,2026-07-29 08:06:17.498098
+tr-26-0677-microsoft-edge-gvenlik-bildirimi,edge,2026-07-29 08:03:46.194215
+tr-26-0676-xen-project-gvenlik-bildirimi,xen,2026-07-29 08:02:12.692493
+tr-26-0675-sap-netweaver-application-server-gvenlik-bildirimi,netweaver,2026-07-29 07:59:32.06368
+tr-26-0674-elecom-gvenlik-bildirimi,elecom,2026-07-29 07:55:42.294469
+tr-26-0673-nvidia-dcgm-exporter-gvenlik-bildirimi,nvidia,2026-07-29 07:53:40.3119
+tr-26-0672-anchore-enterprise-gvenlik-bildirimi,anchore,2026-07-29 07:51:46.716946
+tr-26-0671-misp-gvenlik-zafiyeti,misp,2026-07-29 07:44:39.591304
+tr-26-0670-apache-oklu-rn-gvenlik-bildirimi,apache,2026-07-29 07:43:26.396121
+tr-26-0669-samsung-mobile-gvenlik-bildirimi,smr,2026-07-29 07:40:44.992324
+tr-26-0668-adobe-photoshopbridge-gvenlik-bildirimi-,adobe,2026-07-29 07:29:24.198221
+tr-26-0667-ibm-oklu-rn-gvenlik-bildirimi,ibm,2026-07-29 07:26:27.706375
+tr-26-0666-wordpress-eklenti-gvenlik-bildirimi,wordpress,2026-07-29 07:22:23.00555
 tr-26-0662-erlangotp-gvenlik-zafiyeti,erlang-otp,2026-07-28 07:47:13.888221
 tr-26-0661-honeywell-s35-serisi-gvenlik-zafiyeti,honeywell,2026-07-28 07:43:27.691856
 tr-26-0660-tp-link-router-firmware-gvenlik-bildirimi,tp-link,2026-07-28 07:40:39.189594
@@ -439,11 +452,3 @@ tr-26-0146-wordpress-eklenti-gvenlik-bildirimi,wordpress,2026-05-04 08:24:29.865
 tr-26-0145-absolute-secure-access-gvenlik-bildirimi,secure,2026-05-04 08:20:55.678434
 tr-26-0144-apache-neethi-gvenlik-bildirimi,apache,2026-05-04 08:13:10.312807
 tr-26-0143-linux-kernel-gvenlik-bildirimi,linux,2026-05-04 07:44:08.562617
-tr-26-0139-dell-disk-libraryidrac10-gvenlik-bildirimi,dell,2026-04-30 08:26:36.465236
-tr-26-0138-elastic-package-registry-gvenlik-bildirimi,elastic,2026-04-30 08:23:55.599331
-tr-26-0137-wazuh-gvenlik-zafiyeti,wazuh,2026-04-30 08:22:15.310738
-tr-26-0136-sonicwall-sonicos-gvenlik-bildirimi-,sonicos,2026-04-30 08:19:12.616294
-tr-26-0135-tenda-gvenlik-bildirimi,tenda,2026-04-30 08:14:23.056617
-tr-26-0134-wireshark-gvenlik-bildirimi,wireshark,2026-04-30 08:10:45.53722
-tr-26-0133-jenkins-gvenlik-bildirimi,jenkins,2026-04-30 08:03:35.865766
-tr-26-0132-google-chrome-gvenlik-bildirimi,chrome,2026-04-30 08:00:16.940388
