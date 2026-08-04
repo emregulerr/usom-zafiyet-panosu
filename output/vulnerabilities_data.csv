@@ -1,4 +1,15 @@
 Başlık,Etiketler,Tarih
+tr-26-0728-canon-prismaproduction-gvenlik-bildirimi,prismaproduction,2026-08-03 08:15:19.991767
+tr-26-0727-gimp-gnu-image-manipulation-program-gvenlik-zafiyeti,gimp,2026-08-03 08:13:06.695023
+tr-26-0726-zephyr-project-gvenlik-zafiyeti,zephyr,2026-08-03 08:00:57.79946
+tr-26-0725-traefik-gvenlik-zafiyeti,traefik,2026-08-03 07:58:38.693731
+tr-26-0724-tp-link-axe75-v1-gvenlik-bildirimi,tp-link,2026-08-03 07:56:48.303637
+tr-26-0723-wazuh-gvenlik-zafiyeti,wazuh,2026-08-03 07:55:16.894333
+tr-26-0722-freerdp-gvenlik-zafiyeti,freerdp,2026-08-03 07:52:47.394767
+tr-26-0721-better-auth-gvenlik-zafiyeti,better,2026-08-03 07:50:12.692137
+tr-26-0720-jupyterlab-gvenlik-zafiyeti,jupyterlab,2026-08-03 07:47:07.594695
+tr-26-0719-wordpress-eklenti-gvenlik-bildirimi,wordpress,2026-08-03 07:45:02.105531
+tr-26-0718-axios-http-client-gvenlik-bildirimi,axios,2026-08-03 07:42:27.800344
 tr-26-0716-google-mcp-toolbox-gvenlik-zafiyeti,google,2026-07-31 12:25:04.19693
 tr-26-0715-vmware-vcenteresx-gvenlik-bildirimi,vmware,2026-07-31 12:21:38.802769
 tr-26-0714-red-hat-advanced-cluster-security-gvenlik-bildirimi,cluster,2026-07-31 12:18:57.299969
@@ -463,15 +474,3 @@ tr-26-0171-linux-kernel-gvenlik-bildirimi,kernel,2026-05-06 08:16:58.979128
 tr-26-0170-papercut-hive-ricohmf-gvenlik-bildirimi,papercut,2026-05-06 08:14:52.395397
 tr-26-0169-wordpress-eklenti-gvenlik-bildirimi,wordpress,2026-05-06 08:11:52.543479
 tr-26-0168-openclaw-gvenlik-bildirimi,openclaw,2026-05-06 07:30:41.469354
-tr-26-0167-linux-kernel-gvenlik-bildirimi,kernel,2026-05-05 08:29:11.652052
-tr-26-0166-progress-software-moveit-gvenlik-bildirimi,progress,2026-05-05 08:27:34.789742
-tr-26-0165-apache-oklu-rn-gvenlik-bildirimi,apache,2026-05-05 08:22:01.97865
-tr-26-0164-traefik-proxy-gvenlik-zafiyeti,traefik,2026-05-05 08:17:50.121874
-tr-26-0163-oracle-mcp-server-helper-tool-gvenlik-bildirimi,oracle,2026-05-05 08:14:23.618608
-tr-26-0162-nix-ve-lix-paket-yneticisi-gvenlik-zafiyeti,nix,2026-05-05 08:09:56.245729
-tr-26-0161-d-link-oklu-rn-gvenlik-bildirimi,d-link,2026-05-05 08:01:51.623777
-tr-26-0160-oppo-coloros-assistant-gvenlik-zafiyeti,coloros,2026-05-05 07:58:04.158231
-tr-26-0159-gnutls-gvenlik-bildirimi,gnutls,2026-05-05 07:52:06.335262
-tr-26-0158-notepad-gvenlik-bildirimi,notepad,2026-05-05 07:48:29.438189
-tr-26-0157-n8n-otomasyon-gvenlik-zafiyeti,n8n,2026-05-05 07:45:17.830348
-tr-26-0156-wordpress-eklenti-gvenlik-bildirimi,wordpress,2026-05-05 07:41:45.5426
