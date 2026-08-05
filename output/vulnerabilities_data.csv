@@ -1,4 +1,12 @@
 Başlık,Etiketler,Tarih
+tr-26-0739-dell-monitor-driverdisplay-and-peripheral-manager-ddpm-gvenlik-bildirimi,dell,2026-08-04 10:14:55.20124
+tr-26-0738-zyxel-atp-gvenlik-bildirimi-,zyxel,2026-08-04 10:11:56.599243
+tr-26-0736-line-android-gvenlik-zafiyeti,line,2026-08-04 07:03:05.098076
+tr-26-0735-opnsense-gvenlik-zafiyeti,opnsense,2026-08-04 07:01:23.289746
+tr-26-0734-amazon-strands-agents-tools-gvenlik-bildirimi,amazon,2026-08-04 06:56:53.090335
+tr-26-0733-gl-inet-gl-mt3000-gvenlik-zafiyeti,gl-inet,2026-08-04 06:51:03.713551
+tr-26-0732-unisoc​​-gvenlik-bildirimi,modem,2026-08-04 06:47:28.79218
+tr-26-0731-node-js-gvenlik-bildirimi-,node-js,2026-08-04 06:44:18.292504
 tr-26-0728-canon-prismaproduction-gvenlik-bildirimi,prismaproduction,2026-08-03 08:15:19.991767
 tr-26-0727-gimp-gnu-image-manipulation-program-gvenlik-zafiyeti,gimp,2026-08-03 08:13:06.695023
 tr-26-0726-zephyr-project-gvenlik-zafiyeti,zephyr,2026-08-03 08:00:57.79946
@@ -463,14 +471,3 @@ tr-26-0185-linux-kernel-gvenlik-bildirimi,kernel,2026-05-07 11:58:10.794013
 tr-26-0184-cisco-oklu-rn-gvenlik-bildirimi,cisco,2026-05-07 11:57:03.776141
 tr-26-0183-google-chrome-gvenlik-bildirimi,chrome,2026-05-07 11:22:18.084461
 tr-26-0179-palo-alto-networks-pan-os-gvenlik-bildirimi,being,2026-05-07 06:53:09.172604
-tr-26-0178-d-link-di-8100-gvenlik-bildirimi,d-link,2026-05-06 08:53:20.730856
-tr-26-0177-open-vswitch-gvenlik-gncellemesi,vswitch,2026-05-06 08:38:22.284046
-tr-26-0176-frappe-framework-erpnext-gvenlik-zafiyeti,erpnext,2026-05-06 08:33:37.054056
-tr-26-0175-jupyter-server-gvenlik-zafiyeti,jupyter,2026-05-06 08:30:21.280089
-tr-26-0174-apache-oklu-rn-gvenlik-bildirimi,apache,2026-05-06 08:27:14.577667
-tr-26-0173-unisoc-oklu-rn-gvenlik-bildirimi,ims,2026-05-06 08:25:00.034517
-tr-26-0172-eclipse-oklu-rn-gvenlik-bildirimi,eclipse,2026-05-06 08:19:23.294835
-tr-26-0171-linux-kernel-gvenlik-bildirimi,kernel,2026-05-06 08:16:58.979128
-tr-26-0170-papercut-hive-ricohmf-gvenlik-bildirimi,papercut,2026-05-06 08:14:52.395397
-tr-26-0169-wordpress-eklenti-gvenlik-bildirimi,wordpress,2026-05-06 08:11:52.543479
-tr-26-0168-openclaw-gvenlik-bildirimi,openclaw,2026-05-06 07:30:41.469354
