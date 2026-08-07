@@ -1,4 +1,19 @@
 Başlık,Etiketler,Tarih
+tr-26-0768-rclone-gvelik-zafiyeti,rclone,2026-08-06 08:27:56.458348
+tr-26-0767-milvus-database-gvenlik-zafiyeti,milvus,2026-08-06 08:25:20.895981
+tr-26-0766-sonicwall-sonicos-gvenlik-bildirimi-,sonicos,2026-08-06 08:22:25.998333
+tr-26-0765-ghost-cms-gvenlik-zafiyeti,ghost,2026-08-06 08:20:26.608097
+tr-26-0764-amazon-aws-transform-mcp-server-gvenlik-bildirimi,amazon,2026-08-06 08:16:13.300449
+tr-26-0763-directus-gvenlik-zafiyeti,directus,2026-08-06 08:13:14.493385
+tr-26-0762-wordpress-eklenti-gvenlik-bildirimi,wordpress,2026-08-06 08:11:33.70284
+tr-26-0761-red-hat-keycloak-gvenlik-bildirimi,keycloak,2026-08-06 08:08:33.201681
+tr-26-0760-red-hat-openshiftoauth-proxy-gvenlik-bildirimi,openshift-oauth-proxy,2026-08-06 08:06:58.403089
+tr-26-0759-ibm-oklu-rn-gvenlik-bildirimi,ibm,2026-08-06 08:04:18.496308
+tr-26-0758-gitea-gvenlik-zafiyeti,gitea,2026-08-06 08:01:31.794887
+tr-26-0757-electron-framework-gvenlik-zafiyeti,electron,2026-08-06 07:59:06.997127
+tr-26-0756-hdf5-gvenlik-zafiyeti,hdf5,2026-08-06 07:56:26.300394
+tr-26-0755-apache-answer-gvenlik-bildirimi,apache,2026-08-06 07:54:02.696838
+tr-26-0754-cisco-oklu-bileen-gvenlik-bildirimi,cisco,2026-08-06 07:52:42.109195
 tr-26-0752-mozilla-firefox-gvenlik-bildirimi,firefox,2026-08-05 13:27:52.796263
 tr-26-0751-h3c-nx15-gvenlik-zafiyeti,h3c,2026-08-05 13:26:47.422561
 tr-26-0750-open-webui-gvenlik-bildirimi,webui,2026-08-05 13:24:15.802398
@@ -459,12 +474,3 @@ tr-26-0208-d-link-dir-816-gvenlik-bildirimi,d-link,2026-05-12 06:41:06.827386
 tr-26-0207-taiga-proje-ynetim-platformu-gvenlik-bildirimi-,taiga,2026-05-12 06:39:31.728107
 tr-26-0206-sap-oklu-rn-gvenlik-bildirimi,sap,2026-05-12 06:33:52.173575
 tr-26-0205-apple-i̇letim-sistemi-gvenlik-bildirimi,ios,2026-05-12 06:31:14.000367
-tr-26-0204-nuclei-gvenlik-bildirimi,nuclei,2026-05-08 08:06:29.028727
-tr-26-0203-mozilla-firefoxesr-gvenlik-bildirimi,firefox,2026-05-08 08:01:28.237943
-tr-26-0202-go-project-gvenlik-bildirimi-,amp-quot-go,2026-05-08 07:58:54.747407
-tr-26-0201-argo-cd-gvenlik-bildirimi,argo,2026-05-08 07:53:01.901319
-tr-26-0200-axios-http-client-gvenlik-bildirimi,axios,2026-05-08 07:21:14.350574
-tr-26-0199-ivanti-epmm-gvenlik-bildirimi,ivanti,2026-05-08 07:19:38.054722
-tr-26-0198-github-enterprise-server-gvenlik-bildirimi,github,2026-05-08 07:16:59.005795
-tr-26-0197-open5gs-gvenlik-zafiyeti,open5gs,2026-05-08 07:13:46.436292
-tr-26-0196-linux-kernel-gvenlik-bildirimi,kernel,2026-05-08 07:10:30.887622
