@@ -1,4 +1,12 @@
 Başlık,Etiketler,Tarih
+tr-26-0798-msi-radix-axe6600-gvenlik-zafiyeti-,msi,2026-08-10 09:54:55.399619
+tr-26-0797-datadog-android-gvenlik-bildirimi,datadog,2026-08-10 09:49:29.158944
+tr-26-0796-plesk-gvenlik-bildirimi-,plesk,2026-08-10 08:06:54.976995
+tr-26-0795-linux-kernel-gvenlik-bildirimi,kernel,2026-08-10 08:03:28.49666
+tr-26-0794-frappe-framework-gvenlik-zafiyeti,frappe,2026-08-10 08:01:54.494105
+tr-26-0793-hashicorp-consul-gvenlik-bildirimi,consul,2026-08-10 07:59:49.690815
+tr-26-0792-d-link-dwr-m961-gvenlik-bildirimi,d-link,2026-08-10 07:54:33.228658
+tr-26-0791-wordpress-eklenti-gvenlik-bildirimi,wordpress,2026-08-10 07:48:17.723995
 tr-26-0790-microsoft-office-sharepoint-gvenlik-bildirimi,sharepoint,2026-08-07 11:26:45.994805
 tr-26-0789-imagination-tech-gpu-driver-gvenlik-bildirimi,gpu,2026-08-07 11:24:44.49807
 tr-26-0788-autodesk-bileenleri-gvenlik-bildirimi,autodesk,2026-08-07 08:30:20.604322
@@ -475,20 +483,3 @@ tr-26-0229-apache-tomcat-gvenlik-bildirimi,apache,2026-05-13 11:43:04.427547
 tr-26-0228-siemens-ruggedcom-gvenlik-bildirimi,ruggedcom,2026-05-13 11:41:22.971104
 tr-26-0227-claris-filemaker-cloud-gvenlik-bildirimi,claris,2026-05-13 11:37:27.862137
 tr-26-0226-hpe-aruba-networking-aos-gvenlik-bildirimi,aos-8,2026-05-13 11:26:23.609106
-tr-26-0221-n8n-mcp-gvenlik-bildirimi,n8n-mcp,2026-05-12 07:41:10.135106
-tr-26-0220-cpanel-gvenlik-bildirimi,cpanel,2026-05-12 07:38:31.36913
-tr-26-0219-hikvision-gvenlik-bildirimi,hikvision,2026-05-12 07:33:20.734685
-tr-26-0218-open5gs-gvenlik-zafiyeti,open5gs,2026-05-12 07:25:48.738639
-tr-26-0217-apache-oklu-rn-gvenlik-bildirimi,apache,2026-05-12 07:21:21.396168
-tr-26-0216-angular-project-gvenlik-bildirimi,angular,2026-05-12 07:16:22.364676
-tr-26-0215-wordpress-eklenti-gvenlik-bildirimi,wordpress,2026-05-12 07:12:53.905546
-tr-26-0214-moodle-gvenlik-bildirimi,moodle,2026-05-12 07:11:02.455434
-tr-26-0213-linux-kernel-gvenlik-bildirimi,kernel,2026-05-12 07:09:11.874405
-tr-26-0212-dell-ecsobjectscale-gvenlik-bildirimi,dell,2026-05-12 07:01:51.267695
-tr-26-0211-wikimedia-foundation-mediawiki-gvenlik-zafiyeti,mediawiki,2026-05-12 06:59:23.127298
-tr-26-0210-openclaw-gvenlik-bildirimi,openclaw,2026-05-12 06:50:57.65963
-tr-26-0209-wso2-oklu-rn-gvenlik-bildirimi-,wso2,2026-05-12 06:44:55.123394
-tr-26-0208-d-link-dir-816-gvenlik-bildirimi,d-link,2026-05-12 06:41:06.827386
-tr-26-0207-taiga-proje-ynetim-platformu-gvenlik-bildirimi-,taiga,2026-05-12 06:39:31.728107
-tr-26-0206-sap-oklu-rn-gvenlik-bildirimi,sap,2026-05-12 06:33:52.173575
-tr-26-0205-apple-i̇letim-sistemi-gvenlik-bildirimi,ios,2026-05-12 06:31:14.000367
