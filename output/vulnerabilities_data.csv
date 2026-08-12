@@ -1,4 +1,15 @@
 Başlık,Etiketler,Tarih
+tr-26-0810-asus-gpu-gvenlik-bildirimi-,asus,2026-08-11 08:38:21.504605
+tr-26-0809-tp-link-aginet-gvenlik-bildirimi,tp-link,2026-08-11 08:36:09.268766
+tr-26-0808-grafana-gvenlik-bildirimi,grafana,2026-08-11 08:33:37.024395
+tr-26-0807-samsung-contactsdialer-gvenlik-bildirimi,samsung,2026-08-11 08:31:03.909344
+tr-26-0806-gnu-emacscpio-gvenlik-zafiyeti,gnu,2026-08-11 08:28:59.873762
+tr-26-0805-misp-gvenlik-zafiyeti,misp,2026-08-11 08:23:25.329194
+tr-26-0804-dokploy-paas-gvenlik-bildirimi,dokploy,2026-08-11 07:28:03.216654
+tr-26-0803-tbea-tlogger-gvenlik-zafiyeti,tbea,2026-08-11 07:22:57.880273
+tr-26-0802-sap-oklu-rn-gvenlik-bildirimi,sap,2026-08-11 07:19:50.974076
+tr-26-0801-apache-oklu-rn-gvenlik-bildirimi,apache,2026-08-11 07:11:38.377653
+tr-26-0800-linux-kernel-gvenlik-bildirimi,kernel,2026-08-11 07:04:10.718911
 tr-26-0798-msi-radix-axe6600-gvenlik-zafiyeti-,msi,2026-08-10 09:54:55.399619
 tr-26-0797-datadog-android-gvenlik-bildirimi,datadog,2026-08-10 09:49:29.158944
 tr-26-0796-plesk-gvenlik-bildirimi-,plesk,2026-08-10 08:06:54.976995
@@ -472,14 +483,3 @@ tr-26-0245-hcl-bigfix-gvenlik-bildirimi,hcl,2026-05-15 06:51:29.949091
 tr-26-0244-amd-gvenlik-bildirimi,amd,2026-05-15 06:49:16.884553
 tr-26-0243-palo-alto-networks-oklu-rn-gvenlik-bildirimi,palo,2026-05-15 06:45:50.637229
 tr-26-0242-gitlab-gvenlik-bildirimi-,gitlab,2026-05-15 06:39:54.420182
-tr-26-0236-hashicorp-nomad-gvenlik-bildirimi-,hashicorp,2026-05-13 12:37:05.668417
-tr-26-0235-deskflow-gvenlik-zafiyeti,deskflow,2026-05-13 12:29:07.81715
-tr-26-0234-intel-oklu-rn-gvenlik-bildirimi,intel,2026-05-13 12:26:15.640841
-tr-26-0233-adobe-after-effects-gvenlik-bildirimi-,effects,2026-05-13 12:21:33.115629
-tr-26-0232-adobe-media-encoder-gvenlik-bildirimi,encoder,2026-05-13 11:56:40.380498
-tr-26-0231-mongodb-gvenlik-bildirimi,mongodb,2026-05-13 11:54:04.13543
-tr-26-0230-intel-data-center-graphics-driver-gvenlik-bildirimi,intel-r,2026-05-13 11:49:19.168748
-tr-26-0229-apache-tomcat-gvenlik-bildirimi,apache,2026-05-13 11:43:04.427547
-tr-26-0228-siemens-ruggedcom-gvenlik-bildirimi,ruggedcom,2026-05-13 11:41:22.971104
-tr-26-0227-claris-filemaker-cloud-gvenlik-bildirimi,claris,2026-05-13 11:37:27.862137
-tr-26-0226-hpe-aruba-networking-aos-gvenlik-bildirimi,aos-8,2026-05-13 11:26:23.609106
