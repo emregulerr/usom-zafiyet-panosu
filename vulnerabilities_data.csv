@@ -1,4 +1,20 @@
 Başlık,Etiketler,Tarih
+tr-26-0981-github-enterprise-server-gvenlik-bildirimi,github,2026-09-02 08:33:20.670731
+tr-26-0980-dell-powerstore-gvenlik-bildirimi,dell,2026-09-02 08:30:33.883356
+tr-26-0979-elasticsearch-gvenlik-bildirimi,elasticsearch,2026-09-02 08:28:10.096879
+tr-26-0978-nvidia-megatron-bridge-gvenlik-bildirimi,nvidia,2026-09-02 08:25:51.72748
+tr-26-0977-schneider-electric-oklu-rn-gvenlik-bildirimi,netbotz,2026-09-02 08:21:33.816003
+tr-26-0976-openai-codex-gvenlik-bildirimi,openai,2026-09-02 08:18:05.249831
+tr-26-0975-rockwell-automation-rslinx-classic-gvenlik-bildirimi,rslinx,2026-09-02 08:15:34.596317
+tr-26-0974-rockwell-automation-factorytalk-gvenlik-bildirimi,factorytalk,2026-09-02 08:13:25.421499
+tr-26-0973-mozilla-firefox-gvenlik-bildirimi,firefox,2026-09-02 07:44:45.381149
+tr-26-0972-google-chrome-gvenlik-bildirimi,chrome,2026-09-02 07:42:39.845744
+tr-26-0971-erlangotp-gvenlik-zafiyeti,erlang-otp,2026-09-02 07:41:24.320999
+tr-26-0970-hpe-arubaos-cx-aos-cx-gvenlik-bildirimi,aos-cx,2026-09-02 07:37:57.503716
+tr-26-0969-kibana-gvenlik-bildirimi,kibana,2026-09-02 07:34:22.503832
+tr-26-0968-filament-ui-framework-gvenlik-zafiyeti,filament,2026-09-02 07:29:55.005537
+tr-26-0967-wordpress-eklenti-gvenlik-bildirimi,wordpress,2026-09-02 07:26:11.399875
+tr-26-0966-hpe-networking-fabric-composer-gvenlik-bildirimi,hpe,2026-09-02 07:21:58.663143
 tr-26-0961-cpanel-gvenlik-bildirimi,cpanel,2026-09-01 11:27:59.10288
 tr-26-0960-plesk-gvenlik-bildirimi-,plesk,2026-09-01 11:22:17.706902
 tr-26-0959-cobham-satcom-vsat7090-gvenlik-bildirimi,cobham,2026-09-01 11:19:40.597077
@@ -549,13 +565,3 @@ tr-26-0314-wordpress-eklenti-gvenlik-bildirimi,wordpress,2026-06-05 07:16:53.510
 tr-26-0313-samsung-open-source-rlottie-gvenlik-bildirimi,samsung,2026-06-05 07:13:44.898114
 tr-26-0312-mobatek-mobaxterm-gvenlik-bildirimi,mobaxterm,2026-06-05 07:11:24.461
 tr-26-0311-arista-eos-gvenlik-bildirimi,arista,2026-06-05 07:09:18.998983
-tr-26-0308-acer-connect-m6e-router-gvenlik-bildirimi,esim,2026-06-04 08:20:28.069566
-tr-26-0307-django-gvenlik-zafiyeti,django,2026-06-04 08:16:32.073563
-tr-26-0306-synology-hyper-backup-gvenlik-bildirimi,synology,2026-06-04 08:12:57.570067
-tr-26-0305-nvidia-nvtabular-gvenlik-bildirimi,nvidia,2026-06-04 08:10:42.571727
-tr-26-0304-solarwinds-web-help-desk-gvenlik-bildirimi,solarwinds,2026-06-04 08:07:48.470091
-tr-26-0303-react-router-gvenlik-zafiyeti-,react,2026-06-04 08:05:37.070144
-tr-26-0302-opentelemetry-gvenlik-bildirimi-,opentelemetry,2026-06-04 08:03:33.869665
-tr-26-0301-librechat-gvenlik-zafiyeti,librechat,2026-06-04 07:59:28.672095
-tr-26-0300-playstation-4-firmware-gvenlik-zafiyeti,playstation,2026-06-04 07:55:31.670053
-tr-26-0299-wordpress-eklenti-gvenlik-bildirimi,wordpress,2026-06-04 07:53:29.673962
