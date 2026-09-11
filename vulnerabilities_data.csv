@@ -1,4 +1,13 @@
 Başlık,Etiketler,Tarih
+tr-26-1060-vlc-media-player-gvenlik-bildirimi,vlc,2026-09-10 07:28:40.59813
+tr-26-1059-linux-kernel-gvenlik-bildirimi,kernel,2026-09-10 07:24:30.011017
+tr-26-1058-wordpress-eklenti-gvenlik-bildirimi,wordpress,2026-09-10 07:23:51.497486
+tr-26-1057-open-webui-gvenlik-bildirimi,webui,2026-09-10 07:22:56.716969
+tr-26-1056-palo-alto-pan-os-gvenlik-bildirimi-,palo,2026-09-10 07:21:35.905081
+tr-26-1055-schneider-electric-gvenlik-bildirimi,cwe-88,2026-09-10 07:19:28.807592
+tr-26-1054-hpe-aruba-networking-oklu-rn-gvenlik-bildirimi,cppm,2026-09-10 07:15:40.576755
+tr-26-1053-amazon-aws-labs-gvenlik-bildirimi,amazon,2026-09-10 07:12:07.810771
+tr-26-1052-dell-oklu-rn-gvenlik-bildirimi,dell,2026-09-10 07:10:20.107862
 tr-26-1050-adobe-photoshop-gvenlik-bildirimi-,photoshop,2026-09-09 13:33:58.207618
 tr-26-1049-ivanti-neurons-gvenlik-bildirimi,ivanti,2026-09-09 13:32:32.177009
 tr-26-1048-microsoft-active-directory-gvenlik-bildirimi,directory,2026-09-09 13:31:26.719743
@@ -568,9 +577,3 @@ tr-26-0380-mobatek-mobaxterm-gvenlik-bildirimi,mobaxterm,2026-06-15 08:23:40.393
 tr-26-0379-grafana-operator-gvenlik-bildirimi,grafana,2026-06-15 08:22:05.88943
 tr-26-0378-avira-antiviruspassword-manager-gvenlik-bildirimi,avira,2026-06-15 08:19:52.391673
 tr-26-0377-yealink-sip-t46u-gvenlik-bildirimi,yealink,2026-06-15 08:11:21.090335
-tr-26-0376-cloud-foundry-uaa-gvenlik-bildirimi,foundry,2026-06-12 07:51:17.092255
-tr-26-0375-palo-alto-idira-pam-gvenlik-bildirimi-,idira,2026-06-12 07:48:17.792764
-tr-26-0374-check-point-identity-agent-gvenlik-bildirimi,check,2026-06-12 07:45:57.600207
-tr-26-0373-openclaw-gvenlik-bildirimi,openclaw,2026-06-12 07:43:27.498557
-tr-26-0372-mongodb-server-gvenlik-bildirimi,mongodb,2026-06-12 07:39:04.594772
-tr-26-0371-axios-http-client-gvenlik-bildirimi,axios,2026-06-12 07:37:29.265335
