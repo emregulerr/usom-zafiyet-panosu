@@ -1,4 +1,13 @@
 Başlık,Etiketler,Tarih
+tr-26-1093-openstack-ironickeystone-gvenlik-bildirimi,openstack,2026-09-14 07:48:13.703673
+tr-26-1092-google-cloud-gemini-gvenlik-bildirimi,google,2026-09-14 07:45:12.322696
+tr-26-1091-citrix-workspace-gvenlik-bildirimi,citrix,2026-09-14 07:23:29.997263
+tr-26-1090-espnet-gvenlik-zafiyeti,espnet,2026-09-14 07:20:41.405681
+tr-26-1089-arduino-mikrodenetleyici-gvenlik-zafiyeti,arduino,2026-09-14 07:18:00.967638
+tr-26-1088-microchip-techology-oklu-rn-gvenlik-bildirimi,microchip,2026-09-14 07:08:55.210733
+tr-26-1087-microsoft-edge-gvenlik-bildirimi,edge,2026-09-14 07:02:20.097825
+tr-26-1086-wordpress-eklenti-gvenlik-bildirimi,wordpress,2026-09-14 07:00:38.311087
+tr-26-1085-linux-kernel-gvenlik-bildirimi,kernel,2026-09-14 06:59:43.518262
 tr-26-1078-red-hat-keycloak-gvenlik-bildirimi,keycloak,2026-09-11 07:41:54.313838
 tr-26-1077-traefik-gvenlik-zafiyeti,traefik,2026-09-11 07:39:32.865188
 tr-26-1076-tesseract-ocr-gvenlik-zafiyeti,tesseract,2026-09-11 07:38:33.875241
@@ -575,13 +584,3 @@ tr-26-0397-solidworks-visualize-gvenlik-bildirimi,solidworks,2026-06-17 12:16:07
 tr-26-0396-netskope-gvenlik-bildirimi,netskope,2026-06-17 12:11:32.190918
 tr-26-0395-google-chrome-gvenlik-bildirimi,chrome,2026-06-17 12:04:24.500225
 tr-26-0394-oracle-oklu-rn-gvenlik-bildirimi,oracle,2026-06-17 12:02:01.90591
-tr-26-0393-mattermost-uygulama-gvenlik-bildirimi,mattermost,2026-06-16 08:50:31.687148
-tr-26-0392-sony-optical-disc-archive-gvenlik-bildirimi,optical,2026-06-16 08:48:44.687149
-tr-26-0391-redhat-ansible-lightspeed-gvenlik-bildirimi,ansible,2026-06-16 08:45:51.407527
-tr-26-0390-cisco-catalyst-sd-wan-manager-gvenlik-bildirimi,cisco,2026-06-16 08:44:24.799936
-tr-26-0389-wordpress-eklenti-gvenlik-bildirimi,wordpress,2026-06-16 08:42:55.998707
-tr-26-0388-libreoffice-gvenlik-bildirimi,libreoffice,2026-06-16 08:39:19.510832
-tr-26-0387-ricoh-companykonica-minolta-japan-oklu-rn-gvenlik-bildirimi,ricoh,2026-06-16 08:37:37.869906
-tr-26-0386-zyxel-gs1900-48hpv2-gvenlik-bildirimi-,zyxel,2026-06-16 08:33:08.697547
-tr-26-0385-hp-one-agent-gvenlik-bildirimi,hp,2026-06-16 08:31:22.689975
-tr-26-0384-nokia-sr-linux-gvenlik-bildirimi,nokia,2026-06-16 08:29:02.104567
