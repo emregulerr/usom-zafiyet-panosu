@@ -1,4 +1,12 @@
 Başlık,Etiketler,Tarih
+tr-26-1101-logitech-logi-options-gvenlik-zafiyeti,logitech,2026-09-15 08:16:25.460439
+tr-26-1100-ffmpeg-gvenlik-zafiyeti,ffmpeg,2026-09-15 08:15:08.320886
+tr-26-1099-zscaler-gvenlik-zafiyeti,zscaler,2026-09-15 08:12:21.102665
+tr-26-1098-misp-gvenlik-zafiyeti,misp,2026-09-15 08:08:38.772408
+tr-26-1097-gimp-gnu-image-manipulation-program-gvenlik-bildirimi,gimp,2026-09-15 07:33:01.698356
+tr-26-1096-d-link-oklu-rn-gvenlik-bildirimi,d-link,2026-09-15 07:26:05.261172
+tr-26-1095-ibm-oklu-rn-gvenlik-bildirimi,ibm,2026-09-15 07:23:10.774777
+tr-26-1094-apple-gvenlik-bildirimi,macos,2026-09-15 07:17:46.702146
 tr-26-1093-openstack-ironickeystone-gvenlik-bildirimi,openstack,2026-09-14 07:48:13.703673
 tr-26-1092-google-cloud-gemini-gvenlik-bildirimi,google,2026-09-14 07:45:12.322696
 tr-26-1091-citrix-workspace-gvenlik-bildirimi,citrix,2026-09-14 07:23:29.997263
@@ -576,11 +584,3 @@ tr-26-0406-dell-oklu-rn-gvenlik-bildirimi,dell,2026-06-19 12:24:30.133014
 tr-26-0405-wordpress-eklenti-gvenlik-bildirimi,wordpress,2026-06-19 12:22:16.299553
 tr-26-0404-hcl-zieicontrol-gvenlik-bildirimi,hcl,2026-06-18 12:49:48.986389
 tr-26-0403-mitsubishi-electric-gvenlik-bildirimi,mitsubishi,2026-06-18 12:45:45.889186
-tr-26-0402-atlassian-jiraconfluencebitbucket-gvenlik-bildirimi,atlassian,2026-06-17 12:43:23.492831
-tr-26-0401-rockwell-automation-compactlogix-5370-gvenlik-bildirimi,compactlogix,2026-06-17 12:37:49.489892
-tr-26-0400-openclaw-gvenlik-bildirimi,openclaw,2026-06-17 12:33:41.893095
-tr-26-0399-apache-dolphinschedulerairflow-gvenlik-bildirimi,apache,2026-06-17 12:27:06.393031
-tr-26-0397-solidworks-visualize-gvenlik-bildirimi,solidworks,2026-06-17 12:16:07.393746
-tr-26-0396-netskope-gvenlik-bildirimi,netskope,2026-06-17 12:11:32.190918
-tr-26-0395-google-chrome-gvenlik-bildirimi,chrome,2026-06-17 12:04:24.500225
-tr-26-0394-oracle-oklu-rn-gvenlik-bildirimi,oracle,2026-06-17 12:02:01.90591
