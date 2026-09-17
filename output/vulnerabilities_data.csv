@@ -1,4 +1,16 @@
 Başlık,Etiketler,Tarih
+tr-26-1113-arista-eos-gvenlik-bildirimi,arista,2026-09-16 07:36:26.313141
+tr-26-1112-freerdp-gvenlik-zafiyeti,freerdp,2026-09-16 07:33:37.226046
+tr-26-1111-tornado-framework-gvenlik-zafiyeti,tornado,2026-09-16 07:30:27.705427
+tr-26-1110-misp-gvenlik-zafiyeti,misp,2026-09-16 07:27:52.63156
+tr-26-1109-dell-wyse-management-suite-gvenlik-bildirimi,dell,2026-09-16 07:26:38.710433
+tr-26-1108-gitlab-ceee-gvenlik-bildirimi-,gitlab,2026-09-16 07:25:27.001954
+tr-26-1107-google-chrome-gvenlik-bildirimi,chrome,2026-09-16 07:22:15.281239
+tr-26-1106-ibm-oklu-rn-gvenlik-bildirimi,ibm,2026-09-16 07:18:20.111323
+tr-26-1105-google-androidpixel-gvenlik-bildirimi,vp9decodeframetag,2026-09-16 07:16:49.854267
+tr-26-1104-hpe-networking-edgeconnect-sd-wan-gvenlik-bildirimi,hpe,2026-09-16 07:08:26.80633
+tr-26-1103-wordpress-eklenti-gvenlik-bildirimi,wordpress,2026-09-16 07:06:02.092549
+tr-26-1102-mozilla-firefox-gvenlik-bildirimi,firefox,2026-09-16 07:04:48.981267
 tr-26-1101-logitech-logi-options-gvenlik-zafiyeti,logitech,2026-09-15 08:16:25.460439
 tr-26-1100-ffmpeg-gvenlik-zafiyeti,ffmpeg,2026-09-15 08:15:08.320886
 tr-26-1099-zscaler-gvenlik-zafiyeti,zscaler,2026-09-15 08:12:21.102665
@@ -582,5 +594,3 @@ tr-26-0408-mitsubishi-electric-gvenlik-bildirimi,mitsubishi,2026-06-19 12:28:51.
 tr-26-0407-octopus-server-gvenlik-bildirimi,octopus,2026-06-19 12:26:44.588416
 tr-26-0406-dell-oklu-rn-gvenlik-bildirimi,dell,2026-06-19 12:24:30.133014
 tr-26-0405-wordpress-eklenti-gvenlik-bildirimi,wordpress,2026-06-19 12:22:16.299553
-tr-26-0404-hcl-zieicontrol-gvenlik-bildirimi,hcl,2026-06-18 12:49:48.986389
-tr-26-0403-mitsubishi-electric-gvenlik-bildirimi,mitsubishi,2026-06-18 12:45:45.889186
