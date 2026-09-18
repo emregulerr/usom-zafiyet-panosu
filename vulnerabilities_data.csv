@@ -1,4 +1,12 @@
 Başlık,Etiketler,Tarih
+tr-26-1121-dell-oklu-bileen-gvenlik-bildirimi,dell,2026-09-17 07:32:33.609188
+tr-26-1120-octopus-server-gvenlik-bildirimi,octopus,2026-09-17 07:30:24.206003
+tr-26-1119-cisco-oklu-rn-gvenlik-bildirimi,cisco,2026-09-17 07:26:57.603707
+tr-26-1118-qualcomm-gvenlik-bildirimi,transient,2026-09-17 07:24:28.755287
+tr-26-1117-advantech-oklu-rn-gvenlik-biildirimi,advantech,2026-09-17 07:14:43.80324
+tr-26-1116-acer-agent-service-gvenlik-bildirimi,acer,2026-09-17 07:09:01.256521
+tr-26-1115-apache-nifizookeeper-gvenlik-bildirimi,apache,2026-09-17 07:06:29.880917
+tr-26-1114-linux-kernel-gvenlik-bildirimi,kernel,2026-09-17 07:02:39.140697
 tr-26-1113-arista-eos-gvenlik-bildirimi,arista,2026-09-16 07:36:26.313141
 tr-26-1112-freerdp-gvenlik-zafiyeti,freerdp,2026-09-16 07:33:37.226046
 tr-26-1111-tornado-framework-gvenlik-zafiyeti,tornado,2026-09-16 07:30:27.705427
@@ -582,15 +590,3 @@ tr-26-0420-easeus-partition-master-gvenlik-zafiyeti,easeus,2026-06-22 06:52:31.2
 tr-26-0419-aomei-gvenlik-zafiyeti,aomei,2026-06-22 06:50:13.590596
 tr-26-0418-apache-apisix-gvenlik-bildirimi,apache,2026-06-22 06:47:22.699046
 tr-26-0417-joomla-gvenlik-bildirimi,joomla,2026-06-22 06:44:10.700775
-tr-26-0416-microsoft-dynamics-365-gvenlik-bildirimi,microsoft,2026-06-19 13:27:19.294773
-tr-26-0415-nvidia-spatial-intelligence-lab-gen3c-gvenlik-bildirimi,nvidia,2026-06-19 13:25:22.288486
-tr-26-0414-geoserver-gvenlik-zafiyeti,geoserver,2026-06-19 13:23:21.688227
-tr-26-0413-inhand-networks-ir912-gvenlik-bildirimi,inhand,2026-06-19 13:20:49.898443
-tr-26-0412-cisco-oklu-rn-gvenlik-bildirimi,cisco,2026-06-19 13:15:25.391596
-tr-26-0411-eclipse-theia4diac-forte-gvenlik-bildirimi,eclipse,2026-06-19 12:37:57.193889
-tr-26-0410-autodesk-revit-gvenlik-bildirimi,autodesk,2026-06-19 12:35:35.691855
-tr-26-0409-openjs-node-js-undici-gvenlik-bildirimi,undici,2026-06-19 12:34:09.19926
-tr-26-0408-mitsubishi-electric-gvenlik-bildirimi,mitsubishi,2026-06-19 12:28:51.596436
-tr-26-0407-octopus-server-gvenlik-bildirimi,octopus,2026-06-19 12:26:44.588416
-tr-26-0406-dell-oklu-rn-gvenlik-bildirimi,dell,2026-06-19 12:24:30.133014
-tr-26-0405-wordpress-eklenti-gvenlik-bildirimi,wordpress,2026-06-19 12:22:16.299553
