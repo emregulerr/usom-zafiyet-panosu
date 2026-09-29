@@ -1,4 +1,17 @@
 Başlık,Etiketler,Tarih
+tr-26-1196-microsoft-outlook-gvenlik-bildirimi,outlook,2026-09-28 07:58:49.235104
+tr-26-1195-citrix-netscaler-gvenlik-bildirimi,citrix,2026-09-28 07:56:39.910731
+tr-26-1194-ghidra-gvenlik-zafiyeti,ghidra,2026-09-28 07:50:22.607723
+tr-26-1193-elasticsearchkibana-gvenlik-bildirimi,elasticsearch,2026-09-28 07:45:20.412727
+tr-26-1192-wordpress-eklenti-gvenlik-bildirimi,wordpress,2026-09-28 07:40:20.50513
+tr-26-1191-openclaw-gvenlik-bildirimi,openclaw,2026-09-28 07:37:21.133717
+tr-26-1190-glpi-gvenlik-bildirimi,glpi,2026-09-28 07:34:27.854774
+tr-26-1189-adminer-gvenlik-zafiyeti,adminer,2026-09-28 07:31:22.98226
+tr-26-1188-budibase-gvenlik-zafiyeti,budibase,2026-09-28 07:29:28.506945
+tr-26-1187-rabbitmq-gvenlik-zafiyeti,rabbitmq,2026-09-28 07:26:58.750754
+tr-26-1186-netty-project-gvenlik-zafiyeti,netty,2026-09-28 07:23:42.144
+tr-26-1185-flowise-ai-gvenlik-zafiyeti,flowise,2026-09-28 07:22:00.816074
+tr-26-1184-linux-kernel-gvenlik-bildirimi,kernel,2026-09-28 07:20:49.505998
 tr-26-1183-honeywell-pd45-industrial-printer-gvenlik-zafiyeti,honeywell,2026-09-25 10:33:26.391346
 tr-26-1182-ibm-oklu-rn-gvenlik-bildirimi,ibm,2026-09-25 10:30:32.306292
 tr-26-1181-linux-kernel-gvenlik-bildirimi,kernel,2026-09-25 10:29:31.586095
@@ -594,8 +607,3 @@ tr-26-0471-github-enterprise-server-gvenlik-bildirimi,github,2026-07-01 08:25:58
 tr-26-0470-mediatek-modem​​-gvenlik-bildirimi,modem,2026-07-01 08:23:23.193049
 tr-26-0469-netscaler-adc-gateway-gvenlik-bildirimi,in-netscaler,2026-07-01 08:15:48.091134
 tr-26-0468-ibm-oklu-rn-gvenlik-bildirimi,ibm,2026-07-01 08:09:54.798787
-tr-26-0466-hcl-devops-deploy-launch-gvenlik-bildirimi,hcl,2026-06-30 08:24:37.588629
-tr-26-0465-snowflake-cli-gvenlik-bildirimi,snowflake,2026-06-30 08:21:28.09613
-tr-26-0464-apache-tomcat-gvenlik-bildirimi,apache,2026-06-30 08:18:10.797873
-tr-26-0463-edimax-ew-7478apc-gvenlik-zafiyeti,edimax,2026-06-30 08:16:47.063288
-tr-26-0462-wordpress-eklenti-gvenlik-bildirimi,wordpress,2026-06-30 08:15:23.003491
