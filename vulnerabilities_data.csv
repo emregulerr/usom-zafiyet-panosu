@@ -1,4 +1,10 @@
 Başlık,Etiketler,Tarih
+tr-26-1208-kubernetes-kubectl-gvenlik-zafiyeti,kubernetes,2026-09-29 07:55:49.406581
+tr-26-1207-litellm-gvenlik-zafiyeti,litellm,2026-09-29 07:49:34.586089
+tr-26-1206-canonical-lxd-gvenlik-bildirimi,canonical,2026-09-29 07:47:12.813649
+tr-26-1205-freepbx-gvenlik-zafiyeti,freepbx,2026-09-29 07:37:20.402875
+tr-26-1204-axios-http-client-gvenlik-bildirimi,axios,2026-09-29 07:28:08.380606
+tr-26-1203-apache-oklu-rn-gvenlik-bildirimi,apache,2026-09-29 07:26:53.529911
 tr-26-1196-microsoft-outlook-gvenlik-bildirimi,outlook,2026-09-28 07:58:49.235104
 tr-26-1195-citrix-netscaler-gvenlik-bildirimi,citrix,2026-09-28 07:56:39.910731
 tr-26-1194-ghidra-gvenlik-zafiyeti,ghidra,2026-09-28 07:50:22.607723
@@ -600,10 +606,3 @@ tr-26-0479-microsoft-edge-gvenlik-bildirimi,microsoft,2026-07-02 07:48:37.295305
 tr-26-0478-wikimedia-foundation-mediawiki-gvenlik-zafiyeti,mediawiki,2026-07-02 07:47:12.79153
 tr-26-0477-geovision-geowebplayer-gvenlik-bildirimi,geovision,2026-07-02 07:44:28.895685
 tr-26-0476-google-chrome-gvenlik-bildirimi,chrome,2026-07-02 07:38:59.807526
-tr-26-0474-mendix-studio-pro-gvenlik-bildirimi,mendix,2026-07-01 08:31:17.298768
-tr-26-0473-solarwinds-database-performance-analyzer-gvenlik-bildirimi,solarwinds,2026-07-01 08:28:46.29555
-tr-26-0472-wordpress-eklenti-gvenlik-bildirimi,wordpress,2026-07-01 08:27:38.301949
-tr-26-0471-github-enterprise-server-gvenlik-bildirimi,github,2026-07-01 08:25:58.793408
-tr-26-0470-mediatek-modem​​-gvenlik-bildirimi,modem,2026-07-01 08:23:23.193049
-tr-26-0469-netscaler-adc-gateway-gvenlik-bildirimi,in-netscaler,2026-07-01 08:15:48.091134
-tr-26-0468-ibm-oklu-rn-gvenlik-bildirimi,ibm,2026-07-01 08:09:54.798787
