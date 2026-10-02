@@ -1,4 +1,12 @@
 Başlık,Etiketler,Tarih
+tr-26-1233-anthropic-claude-gvenlik-bildirimi,claude,2026-10-01 08:18:19.002021
+tr-26-1232-asus-oklu-rn-gvenlik-bildirimi-,asus,2026-10-01 08:08:18.681278
+tr-26-1231-cato-networks-sdp-client-gvenlik-bildirimi,cato,2026-10-01 08:01:27.308758
+tr-26-1230-deno-runtime-gvenlik-zafiyeti,deno,2026-10-01 07:42:03.663127
+tr-26-1229-misp-gvenlik-zafiyeti,misp,2026-10-01 07:40:15.811757
+tr-26-1228-openclaw-gvenlik-bildirimi,openclaw,2026-10-01 07:38:20.67105
+tr-26-1227-kiteworks-oklu-bileen-gvenlik-zafiyeti,kiteworks,2026-10-01 07:36:00.913496
+tr-26-1226-jetbrains-oklu-rn-gvenlik-bildirimi,jetbrains,2026-10-01 07:29:39.517676
 tr-26-1222-hitachi-energy-rtu500-gvenlik-bildirimi,hitachi,2026-09-30 07:53:39.770663
 tr-26-1221-gitlab-ceee-gvenlik-bildirimi-,gitlab,2026-09-30 07:52:26.946702
 tr-26-1220-wordpress-eklenti-gvenlik-bildirimi,wordpress,2026-09-30 07:48:54.02886
@@ -599,11 +607,3 @@ tr-26-0508-microsoft-edge-gvenlik-bildirimi,microsoft,2026-07-08 06:30:17.594524
 tr-26-0507-coolify-gvenlik-zafiyeti,coolify,2026-07-08 06:13:55.593809
 tr-26-0506-gitea-gvenlik-zafiyeti,gitea,2026-07-08 06:09:57.992943
 tr-26-0505-wordpress-eklenti-gvenlik-bildirimi,wordpress,2026-07-08 06:03:14.499593
-tr-26-0496-apache-lucene-net-gvenlik-bildirimi,apache,2026-07-03 12:34:02.594703
-tr-26-0495-microsoft-entra-provisioning-service-syncfabric-gvenlik-bildirimi,microsoft,2026-07-03 12:32:38.493368
-tr-26-0494-microsoft-exchange-online-gvenlik-bildirimi,exchange,2026-07-03 12:31:35.89558
-tr-26-0493-apereo-cas-gvenlik-zafiyeti,apereo,2026-07-03 12:29:39.797745
-tr-26-0492-stormshield-network-security-sns-gvenlik-bildirimi,stormshield,2026-07-03 12:27:40.405553
-tr-26-0491-microsoft-azure-gvenlik-bildirimi,azure,2026-07-03 12:24:41.779483
-tr-26-0490-ubiquiti-unifi-gvenlik-bildirimi,unifi,2026-07-03 12:21:44.39638
-tr-26-0489-wordpress-eklenti-gvenlik-bildirimi,wordpress,2026-07-03 12:16:51.60754
