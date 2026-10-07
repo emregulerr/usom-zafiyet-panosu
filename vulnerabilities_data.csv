@@ -1,4 +1,10 @@
 Başlık,Etiketler,Tarih
+tr-26-1255-zabbix-gvenlik-bildirimi,zabbix,2026-10-06 07:24:33.035845
+tr-26-1254-progress-telerik-fiddler-gvenlik-bildirimi,telerik,2026-10-06 07:21:46.506134
+tr-26-1253-android-gvenlik-bildirimi,possible,2026-10-06 07:18:49.167549
+tr-26-1252-libreoffice-gvenlik-bildirimi,libreoffice,2026-10-06 07:14:20.311782
+tr-26-1251-ghost-platformu-gvenlik-bildirimi,ghost,2026-10-06 07:10:39.150341
+tr-26-1250-amd-gvenlik-bildirimi,amd,2026-10-06 07:09:14.70287
 tr-26-1249-misp-gvenlik-zafiyeti,misp,2026-10-05 07:21:19.354045
 tr-26-1248-react-next-js-framework-gvenlik-zafiyeti,next-js,2026-10-05 07:17:00.169087
 tr-26-1247-apache-thrift-gvnelik-zafiyeti,thrift,2026-10-05 07:10:26.244533
@@ -607,14 +613,3 @@ tr-26-0532-rabbitmq-gvenlik-zafiyeti,rabbitmq,2026-07-13 07:42:28.392361
 tr-26-0531-litellm-gvenlik-zafiyeti,litellm,2026-07-13 07:39:06.890763
 tr-26-0530-praisonai-gvenlik-zafiyeti-,praisonai,2026-07-13 07:35:50.898173
 tr-26-0529-wordpress-eklenti-gvenlik-bildirimi,wordpress,2026-07-13 07:31:44.115831
-tr-26-0515-traefik-proxy-gvenlik-zafiyeti,traefik,2026-07-08 06:56:19.094257
-tr-26-0514-openvpn-gvenlik-bildirimi,openvpn,2026-07-08 06:52:48.338455
-tr-26-0513-seiko-epson-gvenlik-bildirimi,seiko,2026-07-08 06:49:26.290467
-tr-26-0512-msi-feature-manager-gvenlik-zafiyeti-,msi,2026-07-08 06:47:52.289222
-tr-26-0511-esri-arcgis-gvenlik-bildirimi,arcgis,2026-07-08 06:43:59.597442
-tr-26-0510-dell-powerprotect-data-domain-gvenlik-bildirimi,dell,2026-07-08 06:37:52.801395
-tr-26-0509-gimp-gnu-image-manipulation-program-gvenlik-zafiyeti,gimp,2026-07-08 06:35:56.386564
-tr-26-0508-microsoft-edge-gvenlik-bildirimi,microsoft,2026-07-08 06:30:17.594524
-tr-26-0507-coolify-gvenlik-zafiyeti,coolify,2026-07-08 06:13:55.593809
-tr-26-0506-gitea-gvenlik-zafiyeti,gitea,2026-07-08 06:09:57.992943
-tr-26-0505-wordpress-eklenti-gvenlik-bildirimi,wordpress,2026-07-08 06:03:14.499593
