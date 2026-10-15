@@ -1,4 +1,19 @@
 Başlık,Etiketler,Tarih
+tr-26-1325-ubiquiti-unifi-gvenlik-bildirimi,unifi,2026-10-14 07:55:18.738998
+tr-26-1324-mozilla-firefox-gvenlik-bildirimi,firefox,2026-10-14 07:53:34.509046
+tr-26-1323-microsoft-sql-server-gvenlik-zafiyeti,sql,2026-10-14 07:52:17.251911
+tr-26-1322-ivanti-oklu-rn-gvenlik-bildirimi,ivanti,2026-10-14 07:49:10.551037
+tr-26-1321-epic-games-unreal-engine-gvenlik-bildirimi-,epic,2026-10-14 07:46:06.208698
+tr-26-1320-netbird-client-gvenlik-bildirimi,netbird,2026-10-14 07:31:54.99242
+tr-26-1319-ibm-websphere-application-server-gvenlik-bildirimi,ibm,2026-10-14 07:29:52.448111
+tr-26-1318-siemens-ruggedcom-gvenlik-bildirimi,ruggedcom,2026-10-14 07:28:27.053767
+tr-26-1317-wazuh-gvenlik-zafiyeti,wazuh,2026-10-14 07:26:16.288252
+tr-26-1316-zoom-gvenlik-bildirimi,zoom,2026-10-14 07:24:44.731966
+tr-26-1315-hypr-passwordless-gvenlik-bildirimi,hypr,2026-10-14 07:23:08.76884
+tr-26-1314-nix-ve-lix-paket-yneticisi-gvenlik-bildirimi,nix,2026-10-14 07:18:11.707258
+tr-26-1313-adobe-oklu-rn-gvenlik-bildirimi-,adobe,2026-10-14 07:14:42.897091
+tr-26-1312-inductive-automation-ignition-perspective-gvenlik-bildirimi,ignition,2026-10-14 07:11:50.864466
+tr-26-1311-wordpress-eklenti-gvenlik-bildirimi,wordpress,2026-10-14 07:06:59.906167
 tr-26-1308-progress-marklogic-server-gvenlik-bildirimi,progress,2026-10-13 07:29:21.505869
 tr-26-1307-edimax-br-6208ac-gvenlik-zafiyeti,edimax,2026-10-13 07:25:56.741202
 tr-26-1306-otrs-gvenlik-bildirimi,otrs,2026-10-13 07:23:16.763829
@@ -619,14 +634,3 @@ tr-26-0566-perforce-delphix-gvenlik-bildirimi,in-delphix-continous-data,2026-07-
 tr-26-0565-pipewire-gvenlik-zafiyeti,pipewire,2026-07-17 07:57:36.398
 tr-26-0564-hcl-travelerdfxanalytics-gvenlik-bildirimi,hcl,2026-07-17 07:53:09.886309
 tr-26-0563-wordpress-eklenti-gvenlik-bildirimi,wordpress,2026-07-17 07:50:50.301557
-tr-26-0562-ivanti-xtraction-gvenlik-bildirimi,ivanti,2026-07-16 13:30:23.202785
-tr-26-0561-nvidia-tensorrt-gvenlik-bildirimi,nvidia,2026-07-16 13:28:22.296673
-tr-26-0560-adobe-experience-manager-gvenlik-bildirimi-,adobe,2026-07-16 12:50:03.817944
-tr-26-0559-cisco-oklu-rn-gvenlik-bildirimi,cisco,2026-07-16 12:47:58.503444
-tr-26-0558-absolute-secure-access-gvenlik-bildirimi,secure,2026-07-16 12:42:19.79542
-tr-26-0557-wordpress-eklenti-gvenlik-bildirimi,wordpress,2026-07-16 12:39:50.707851
-tr-26-0556-fortinet-oklu-rn-gvenlik-bildirimi,fortinet,2026-07-16 12:36:50.106097
-tr-26-0555-eset-oklu-rn-gvenlik-bildirimi,eset,2026-07-16 12:32:22.59283
-tr-26-0554-adobe-illustrator-gvenlik-bildirimi-,illustrator,2026-07-16 12:30:29.297829
-tr-26-0553-n8n-gvenlik-bildirimi,n8n,2026-07-16 12:28:43.491058
-tr-26-0552-splunk-enterprise-gvenlik-bildirimi,splunk,2026-07-16 12:26:34.901536
