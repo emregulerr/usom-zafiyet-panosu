@@ -1,4 +1,16 @@
 Başlık,Etiketler,Tarih
+tr-26-1339-netgate-pfsense-gvenlik-bildirimi-,netgate,2026-10-15 07:13:14.399485
+tr-26-1338-openssh-gvenlik-bildirimi,openssh,2026-10-15 07:09:06.308413
+tr-26-1337-progress-software-moveit-gvenlik-bildirimi,moveit,2026-10-15 07:06:55.703155
+tr-26-1336-tp-link-oklu-rn-gvenlik-bildirimi,multiple-tp-link,2026-10-15 07:05:06.017829
+tr-26-1335-wordpress-eklenti-gvenlik-bildirimi,wordpress,2026-10-15 07:02:47.44769
+tr-26-1334-linux-kernel-gvenlik-bildirimi,kernel,2026-10-15 07:02:02.912408
+tr-26-1333-zimbra-collaboration-gvenlik-bildirimi,zimbra,2026-10-15 07:01:03.059297
+tr-26-1332-palo-alto-oklu-rn-gvenlik-bildirimi,palo,2026-10-15 06:56:38.516846
+tr-26-1331-sodola-sl902-swtgw124as-gvenlik-zafiyeti,sodola,2026-10-15 06:51:58.21788
+tr-26-1330-hpe-nonstop-gvenlik-bildirimi,hpe,2026-10-15 06:48:23.704601
+tr-26-1329-gitea-gvenlik-zafiyeti,gitea,2026-10-15 06:45:25.043791
+tr-26-1328-juniper-networks-junos-os-gvenlik-bildirimi,juniper,2026-10-15 06:44:03.020362
 tr-26-1325-ubiquiti-unifi-gvenlik-bildirimi,unifi,2026-10-14 07:55:18.738998
 tr-26-1324-mozilla-firefox-gvenlik-bildirimi,firefox,2026-10-14 07:53:34.509046
 tr-26-1323-microsoft-sql-server-gvenlik-zafiyeti,sql,2026-10-14 07:52:17.251911
@@ -627,10 +639,3 @@ tr-26-0578-hcl-oklu-rn-gvenlik-bildirimi,hcl,2026-07-20 08:21:12.997988
 tr-26-0577-ibm-oklu-rn-gvenlik-bildirimi,ibm,2026-07-20 08:18:54.401729
 tr-26-0576-linux-kernel-gvenlik-bildirimi,kernel,2026-07-20 08:15:31.109903
 tr-26-0575-cursor-ai-gvenlik-zafiyeti,cursor,2026-07-20 08:14:22.599479
-tr-26-0569-red-hat-keycloak-gvenlik-bildirimi,keycloak,2026-07-17 08:04:20.695424
-tr-26-0568-wireguard-easy-gvenlik-zafiyeti,wireguard,2026-07-17 08:03:02.396193
-tr-26-0567-zoom-gvenlik-bildirimi,zoom,2026-07-17 08:01:03.893239
-tr-26-0566-perforce-delphix-gvenlik-bildirimi,in-delphix-continous-data,2026-07-17 07:59:42.296357
-tr-26-0565-pipewire-gvenlik-zafiyeti,pipewire,2026-07-17 07:57:36.398
-tr-26-0564-hcl-travelerdfxanalytics-gvenlik-bildirimi,hcl,2026-07-17 07:53:09.886309
-tr-26-0563-wordpress-eklenti-gvenlik-bildirimi,wordpress,2026-07-17 07:50:50.301557
