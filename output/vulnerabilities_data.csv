@@ -1,4 +1,9 @@
 Başlık,Etiketler,Tarih
+tr-26-1355-dell-alienware-command-center-awcc-gvenlik-bildirimi,dell,2026-10-19 07:17:04.813282
+tr-26-1354-wordpress-eklenti-gvenlik-bildirimi,wordpress,2026-10-19 07:11:01.691351
+tr-26-1353-mariadb-gvenlik-zafiyeti,mariadb,2026-10-19 07:07:43.638405
+tr-26-1352-mattermost-uygulama-gvenlik-bildirimi,mattermost,2026-10-19 07:06:19.011904
+tr-26-1351-linux-kernel-gvenlik-bildirimi,kernel,2026-10-19 07:03:30.724259
 tr-26-1347-mitsubishi-electric-gvenlik-bildirimi,mitsubishi,2026-10-16 07:17:37.451359
 tr-26-1346-lenovo-oklu-rn-gvenlik-bildirimi,lenovo,2026-10-16 07:14:17.464436
 tr-26-1345-frappe-frameworkhrms-gvenlik-zafiyeti,frappe,2026-10-16 07:10:51.366609
@@ -632,11 +637,3 @@ tr-26-0598-canonical-snapd-gvenlik-bildirimi,canonical,2026-07-22 10:48:14.99479
 tr-26-0597-praisonai-gvenlik-zafiyeti-,praisonai,2026-07-22 10:45:11.400233
 tr-26-0596-wordpress-eklenti-gvenlik-bildirimi,wordpress,2026-07-22 10:43:36.30568
 tr-26-0595-oracle-oklu-rn-gvenlik-bildirimi,oracle,2026-07-22 10:40:14.213289
-tr-26-0592-zohocorp-manageengine-gvenlik-bildirimi,zohocorp,2026-07-21 11:24:15.997541
-tr-26-0591-hcl-devops-plan-gvenlik-bildirimi,hcl,2026-07-21 11:22:12.193682
-tr-26-0590-linux-kernel-gvenlik-bildirimi,kernel,2026-07-21 11:20:02.411944
-tr-26-0589-d-link-dns-320-gvenlik-bildirimi,d-link,2026-07-21 11:18:37.101312
-tr-26-0588-google-chrome-gvenlik-bildirimi,chrome,2026-07-21 11:15:46.699412
-tr-26-0587-tenda-ac10-gvenlik-bildirimi,tenda,2026-07-21 11:12:01.092692
-tr-26-0586-apache-syncope-gvenlik-bildirimi,apache,2026-07-21 11:10:07.909296
-tr-26-0585-wordpress-eklenti-gvenlik-bildirimi,wordpress,2026-07-21 11:06:42.718116
