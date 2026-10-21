@@ -1,4 +1,11 @@
 Başlık,Etiketler,Tarih
+tr-26-1363-mobatek-mobaxterm-gvenlik-bildirimi,mobaxterm,2026-10-20 06:57:35.502578
+tr-26-1362-pillow-python-ktphanesi-gvenlik-zafiyeti,pillow,2026-10-20 06:48:18.76679
+tr-26-1361-apache-oklu-proje-gvnelik-zafiyeti,apache,2026-10-20 06:38:29.365461
+tr-26-1360-asus-oklu-rn-gvenlik-bildirimi-,asus,2026-10-20 06:36:06.918962
+tr-26-1359-misp-gvenlik-zafiyeti,misp,2026-10-20 06:33:21.543634
+tr-26-1358-wordpress-eklenti-gvenlik-bildirimi,wordpress,2026-10-20 06:28:41.062407
+tr-26-1357-ibm-oklu-rn-gvenlik-bildirimi,ibm,2026-10-20 06:27:28.284827
 tr-26-1355-dell-alienware-command-center-awcc-gvenlik-bildirimi,dell,2026-10-19 07:17:04.813282
 tr-26-1354-wordpress-eklenti-gvenlik-bildirimi,wordpress,2026-10-19 07:11:01.691351
 tr-26-1353-mariadb-gvenlik-zafiyeti,mariadb,2026-10-19 07:07:43.638405
@@ -625,15 +632,3 @@ tr-26-0613-ansible-awx-gvenlik-bildirimi,awx,2026-07-23 08:07:31.898779
 tr-26-0612-n8n-gvenlik-zafiyeti,n8n,2026-07-23 08:04:20.949961
 tr-26-0611-wordpress-eklenti-gvenlik-bildirimi,wordpress,2026-07-23 08:01:27.005103
 tr-26-0610-progress-telerik-ui-gvenlik-bildirimi,telerik,2026-07-23 07:59:55.798294
-tr-26-0606-eclipse-openj9-gvenlik-bildirimi,eclipse,2026-07-22 11:07:30.595459
-tr-26-0605-veeam-updater-gvenlik-bildirimi,veeam,2026-07-22 11:05:49.097961
-tr-26-0604-elasticsearch-gvenlik-bildirimi,elasticsearch,2026-07-22 11:03:36.298738
-tr-26-0603-kibana-gvenlik-bildirimi,kibana,2026-07-22 11:00:52.994759
-tr-26-0602-zephyr-project-gvenlik-zafiyeti,zephyr,2026-07-22 10:59:05.498991
-tr-26-0601-libssh-gvenlik-zafiyeti,libssh,2026-07-22 10:57:15.109718
-tr-26-0600-mozilla-firefox-gvenlik-bildirimi,firefox,2026-07-22 10:53:48.308504
-tr-26-0599-fuxa-gvenlik-zafiyeti,fuxa,2026-07-22 10:50:10.797541
-tr-26-0598-canonical-snapd-gvenlik-bildirimi,canonical,2026-07-22 10:48:14.994791
-tr-26-0597-praisonai-gvenlik-zafiyeti-,praisonai,2026-07-22 10:45:11.400233
-tr-26-0596-wordpress-eklenti-gvenlik-bildirimi,wordpress,2026-07-22 10:43:36.30568
-tr-26-0595-oracle-oklu-rn-gvenlik-bildirimi,oracle,2026-07-22 10:40:14.213289
