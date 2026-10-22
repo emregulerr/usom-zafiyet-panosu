@@ -1,4 +1,10 @@
 Başlık,Etiketler,Tarih
+tr-26-1370-solarwinds-observability-gvenlik-bildirimi,solarwinds,2026-10-21 07:33:57.823804
+tr-26-1369-mozilla-firefox-gvenlik-bildirimi,firefox,2026-10-21 07:31:45.747841
+tr-26-1368-sharp-node-js-image-processing-gvenlik-bildirimi,sharp,2026-10-21 07:26:58.440566
+tr-26-1367-vllm-gvenlik-zafiyeti,vllm,2026-10-21 07:20:27.748525
+tr-26-1366-freerdp-gvenlik-zafiyeti,freerdp,2026-10-21 07:14:16.911386
+tr-26-1365-oracle-oklu-rn-gvenlik-bildirimi,oracle,2026-10-21 07:07:19.366781
 tr-26-1363-mobatek-mobaxterm-gvenlik-bildirimi,mobaxterm,2026-10-20 06:57:35.502578
 tr-26-1362-pillow-python-ktphanesi-gvenlik-zafiyeti,pillow,2026-10-20 06:48:18.76679
 tr-26-1361-apache-oklu-proje-gvnelik-zafiyeti,apache,2026-10-20 06:38:29.365461
@@ -622,13 +628,3 @@ tr-26-0624-zohocorp-manageengine-gvenlik-bildirimi,zohocorp,2026-07-24 06:59:51.
 tr-26-0623-gfi-archiver-gvenlik-bildirimi,archiver,2026-07-24 06:58:55.894061
 tr-26-0622-wordpress-eklenti-gvenlik-bildirimi,wordpress,2026-07-24 06:56:32.794143
 tr-26-0621-dompurify-gvenlik-zafiyeti,dompurify,2026-07-24 06:54:09.597585
-tr-26-0619-check-point-oklu-bileen-gvenlik-bildirimi,check,2026-07-23 08:24:51.29954
-tr-26-0618-dell-powerprotect-data-manager-gvenlik-bildirimi,dell,2026-07-23 08:22:51.796708
-tr-26-0617-hikvision-gvenlik-bildirimi,hikvision,2026-07-23 08:20:20.694619
-tr-26-0616-traefik-proxy-gvenlik-zafiyeti,traefik,2026-07-23 08:18:39.00347
-tr-26-0615-mongodb-gvenlik-bildirimi,mongodb,2026-07-23 08:17:02.599852
-tr-26-0614-oracle-platform-security-gvenlik-bildirimi,oracle,2026-07-23 08:09:47.706886
-tr-26-0613-ansible-awx-gvenlik-bildirimi,awx,2026-07-23 08:07:31.898779
-tr-26-0612-n8n-gvenlik-zafiyeti,n8n,2026-07-23 08:04:20.949961
-tr-26-0611-wordpress-eklenti-gvenlik-bildirimi,wordpress,2026-07-23 08:01:27.005103
-tr-26-0610-progress-telerik-ui-gvenlik-bildirimi,telerik,2026-07-23 07:59:55.798294
