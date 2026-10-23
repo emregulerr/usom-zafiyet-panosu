@@ -1,4 +1,15 @@
 Başlık,Etiketler,Tarih
+tr-26-1383-mikrotik-routeros-gvenlik-bildirimi,mikrotik,2026-10-22 10:14:18.969194
+tr-26-1382-gimp-gnu-image-manipulation-program-gvenlik-bildirimi,gimp,2026-10-22 10:10:11.419054
+tr-26-1381-airbyte-gvenlik-zafiyeti,airbyte,2026-10-22 10:08:10.149326
+tr-26-1380-red-hat-keycloak-gvenlik-bildirimi,keycloak,2026-10-22 10:05:14.827209
+tr-26-1379-nomachine-gvenlik-zafiyeti,nomachine,2026-10-22 10:03:17.485204
+tr-26-1378-electron-framework-gvenlik-zafiyeti,electron,2026-10-22 09:58:07.672613
+tr-26-1377-wordpress-eklenti-gvenlik-bildirimi,wordpress,2026-10-22 09:56:23.6201
+tr-26-1376-gitlab-ceee-gvenlik-bildirimi-,gitlab,2026-10-22 09:53:28.262077
+tr-26-1375-ntpsec-gvenlik-zafiyeti,ntpsec,2026-10-22 09:51:10.383765
+tr-26-1374-cisco-oklu-rn-gvenlik-bildirimi,cisco,2026-10-22 09:45:57.115267
+tr-26-1373-drupal-gvenlik-bildirimi-,drupal,2026-10-22 09:34:33.834951
 tr-26-1370-solarwinds-observability-gvenlik-bildirimi,solarwinds,2026-10-21 07:33:57.823804
 tr-26-1369-mozilla-firefox-gvenlik-bildirimi,firefox,2026-10-21 07:31:45.747841
 tr-26-1368-sharp-node-js-image-processing-gvenlik-bildirimi,sharp,2026-10-21 07:26:58.440566
@@ -615,16 +626,3 @@ tr-26-0639-microsoft-edge-gvenlik-bildirimi,edge,2026-07-27 11:22:26.092953
 tr-26-0638-google-cloud-looker-gvenlik-bildirimi,looker,2026-07-27 11:20:44.289008
 tr-26-0637-loytec-oklu-rn-gvenlik-bildirimi,loytec,2026-07-27 11:17:20.799702
 tr-26-0636-linux-kernel-gvenlik-bildirimi,kernel,2026-07-27 11:14:00.901222
-tr-26-0633-bosch-configuration-managerip-camera-gvenlik-bildirimi,bosch,2026-07-24 07:26:34.994452
-tr-26-0632-microsoft-azure-gvenlik-bildirimi,azure,2026-07-24 07:23:35.49428
-tr-26-0631-amazon-aws-gvenlik-bildirimi,aws,2026-07-24 07:20:50.292476
-tr-26-0630-microsoft-oklu-rn-gvenlik-bildirimi,microsoft,2026-07-24 07:16:08.395219
-tr-26-0629-pytorch-torchvision-gvenlik-zafiyeti,pytorch,2026-07-24 07:13:25.991677
-tr-26-0628-ffmpeg-gvenlik-zafiyeti,ffmpeg,2026-07-24 07:10:17.693987
-tr-26-0627-pronetiqs-intravue-gvenlik-bildirimi,intravue,2026-07-24 07:06:19.706002
-tr-26-0626-progress-software-moveit-gvenlik-bildirimi,moveit,2026-07-24 07:02:50.897556
-tr-26-0625-google-chrome-gvenlik-bildirimi,chrome,2026-07-24 07:01:38.694195
-tr-26-0624-zohocorp-manageengine-gvenlik-bildirimi,zohocorp,2026-07-24 06:59:51.093982
-tr-26-0623-gfi-archiver-gvenlik-bildirimi,archiver,2026-07-24 06:58:55.894061
-tr-26-0622-wordpress-eklenti-gvenlik-bildirimi,wordpress,2026-07-24 06:56:32.794143
-tr-26-0621-dompurify-gvenlik-zafiyeti,dompurify,2026-07-24 06:54:09.597585
