@@ -619,14 +619,3 @@ tr-26-0650-mercusys-mb115-4g-gvenlik-zafiyeti,mercusys,2026-07-28 07:12:10.99790
 tr-26-0649-linux-kernel-gvenlik-bildirimi,kernel,2026-07-28 07:10:45.50186
 tr-26-0648-apache-oklu-rn-gvenlik-bildirimi,apache,2026-07-28 07:09:51.394574
 tr-26-0647-apple-oklu-rn-gvenlik-bildirimi,macos,2026-07-28 07:04:20.9032
-tr-26-0646-apereo-cas-gvenlik-zafiyeti,apereo,2026-07-27 11:37:10.597665
-tr-26-0645-eclipse-basyx-go-components-gvenlik-bildirimi,eclipse,2026-07-27 11:35:47.596671
-tr-26-0644-apache-oklu-rn-gvenlik-bildirimi,apache,2026-07-27 11:33:39.996071
-tr-26-0643-eset-gvenlik-bildirimi,escalation-potentially,2026-07-27 11:31:15.597008
-tr-26-0642-red-hat-keycloak-gvenlik-bildirimi,keycloak,2026-07-27 11:27:49.294067
-tr-26-0641-wordpress-eklenti-gvenlik-bildirimi,wordpress,2026-07-27 11:25:04.634625
-tr-26-0640-microsoft-azure-gvenlik-bildirimi,azure,2026-07-27 11:23:54.397474
-tr-26-0639-microsoft-edge-gvenlik-bildirimi,edge,2026-07-27 11:22:26.092953
-tr-26-0638-google-cloud-looker-gvenlik-bildirimi,looker,2026-07-27 11:20:44.289008
-tr-26-0637-loytec-oklu-rn-gvenlik-bildirimi,loytec,2026-07-27 11:17:20.799702
-tr-26-0636-linux-kernel-gvenlik-bildirimi,kernel,2026-07-27 11:14:00.901222
