@@ -1,4 +1,11 @@
 Başlık,Etiketler,Tarih
+tr-26-1404-mattermost-uygulama-gvenlik-bildirimi,mattermost,2026-10-27 07:55:56.44429
+tr-26-1403-tornado-framework-gvenlik-zafiyeti,tornado,2026-10-27 07:54:42.644715
+tr-26-1402-open-neural-network-exchange-onnx-gvenlik-zafiyeti,onnx,2026-10-27 07:52:36.508382
+tr-26-1401-vllm-gvenlik-zafiyeti,vllm,2026-10-27 07:50:16.667446
+tr-26-1400-ubiquiti-oklu-rn-gvenlik-zafiyeti,solarpoint,2026-10-27 07:45:30.735043
+tr-26-1399-mozilla-firefox-gvenlik-bildirimi,firefox,2026-10-27 07:42:20.11476
+tr-26-1398-apple-oklu-rn-gvenlik-zafiyeti,macos,2026-10-27 07:40:57.043841
 tr-26-1395-amazon-aws-multi-model-server-gvenlik-bildirimi,amazon,2026-10-26 07:54:17.603826
 tr-26-1394-wordpress-eklenti-gvenlik-bildirimi,wordpress,2026-10-26 07:51:07.687544
 tr-26-1393-dji-gvenlik-bildirimi,dji,2026-10-26 07:49:48.013104
@@ -596,16 +603,3 @@ tr-26-0682-wordpress-eklenti-gvenlik-bildirimi,wordpress,2026-07-30 11:34:33.004
 tr-26-0681-eaton-tripp-lite-series-padm-gvenlik​​-bildirimi,eaton,2026-07-30 11:32:43.505553
 tr-26-0680-drivelock-gvenlik-bildirimi,drivelock,2026-07-30 11:29:31.196758
 tr-26-0679-apache-traffic-server-gvenlik-bildirimi,apache,2026-07-30 11:25:54.497282
-tr-26-0678-moodle-gvenlik-bildirimi,moodle,2026-07-29 08:06:17.498098
-tr-26-0677-microsoft-edge-gvenlik-bildirimi,edge,2026-07-29 08:03:46.194215
-tr-26-0676-xen-project-gvenlik-bildirimi,xen,2026-07-29 08:02:12.692493
-tr-26-0675-sap-netweaver-application-server-gvenlik-bildirimi,netweaver,2026-07-29 07:59:32.06368
-tr-26-0674-elecom-gvenlik-bildirimi,elecom,2026-07-29 07:55:42.294469
-tr-26-0673-nvidia-dcgm-exporter-gvenlik-bildirimi,nvidia,2026-07-29 07:53:40.3119
-tr-26-0672-anchore-enterprise-gvenlik-bildirimi,anchore,2026-07-29 07:51:46.716946
-tr-26-0671-misp-gvenlik-zafiyeti,misp,2026-07-29 07:44:39.591304
-tr-26-0670-apache-oklu-rn-gvenlik-bildirimi,apache,2026-07-29 07:43:26.396121
-tr-26-0669-samsung-mobile-gvenlik-bildirimi,smr,2026-07-29 07:40:44.992324
-tr-26-0668-adobe-photoshopbridge-gvenlik-bildirimi-,adobe,2026-07-29 07:29:24.198221
-tr-26-0667-ibm-oklu-rn-gvenlik-bildirimi,ibm,2026-07-29 07:26:27.706375
-tr-26-0666-wordpress-eklenti-gvenlik-bildirimi,wordpress,2026-07-29 07:22:23.00555
