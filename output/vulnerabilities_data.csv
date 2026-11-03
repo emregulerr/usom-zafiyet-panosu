@@ -1,4 +1,11 @@
 Başlık,Etiketler,Tarih
+tr-26-1439-gitea-gvenlik-zafiyeti,gitea,2026-11-02 08:18:49.403237
+tr-26-1438-moodle-gvenlik-bildirimi,moodle,2026-11-02 08:15:40.006055
+tr-26-1437-wavlink-oklu-rn-gvenlik-zafiyeti,wavlink,2026-11-02 08:09:46.907408
+tr-26-1436-traefik-gvenlik-zafiyeti,traefik,2026-11-02 08:05:31.218049
+tr-26-1435-dell-openmanage-enterprise-gvenlik-bildirimi,dell,2026-11-02 08:04:04.715157
+tr-26-1434-mediatek-oklu-rn-gvenlik-bildirimi,possible,2026-11-02 08:01:24.019975
+tr-26-1433-wordpress-eklenti-gvenlik-bildirimi,wordpress,2026-11-02 06:56:30.419837
 tr-26-1431-progress-telerik-gvenlik-bildirimi,progress,2026-10-30 08:44:54.407708
 tr-26-1430-kaspersky-network-agent-gvenlik-bildirimi,kaspersky,2026-10-30 08:42:47.204578
 tr-26-1429-microsoft-edge-gvenlik-bildirimi,edge,2026-10-30 08:40:14.403148
@@ -568,11 +575,3 @@ tr-26-0745-apache-qpid-gvenlik-bildirimi,apache,2026-08-05 12:49:37.082515
 tr-26-0744-wordpress-eklenti-gvenlik-bildirimi,wordpress,2026-08-05 12:45:58.903005
 tr-26-0743-nvidia-dynamotriton-gvenlik-bildirimi,nvidia,2026-08-05 12:45:05.939961
 tr-26-0742-linux-kernel-gvenlik-bildirimi,kernel,2026-08-05 12:40:44.297527
-tr-26-0739-dell-monitor-driverdisplay-and-peripheral-manager-ddpm-gvenlik-bildirimi,dell,2026-08-04 10:14:55.20124
-tr-26-0738-zyxel-atp-gvenlik-bildirimi-,zyxel,2026-08-04 10:11:56.599243
-tr-26-0736-line-android-gvenlik-zafiyeti,line,2026-08-04 07:03:05.098076
-tr-26-0735-opnsense-gvenlik-zafiyeti,opnsense,2026-08-04 07:01:23.289746
-tr-26-0734-amazon-strands-agents-tools-gvenlik-bildirimi,amazon,2026-08-04 06:56:53.090335
-tr-26-0733-gl-inet-gl-mt3000-gvenlik-zafiyeti,gl-inet,2026-08-04 06:51:03.713551
-tr-26-0732-unisoc​​-gvenlik-bildirimi,modem,2026-08-04 06:47:28.79218
-tr-26-0731-node-js-gvenlik-bildirimi-,node-js,2026-08-04 06:44:18.292504
