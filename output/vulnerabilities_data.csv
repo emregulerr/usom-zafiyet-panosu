@@ -1,4 +1,9 @@
 Başlık,Etiketler,Tarih
+tr-26-1447-fastify-gvenlik-zafiyeti,fastify,2026-11-03 07:14:53.499831
+tr-26-1446-android-gvenlik-bildirimi,android,2026-11-03 07:10:14.613446
+tr-26-1445-zohocorp-manageengine-gvenlik-bildirimi,zohocorp,2026-11-03 07:08:30.603502
+tr-26-1444-dell-openmanage-enterprise-gvenlik-bildirimi,dell,2026-11-03 07:05:04.709787
+tr-26-1443-wordpress-eklenti-gvenlik-bildirimi,wordpress,2026-11-03 07:02:36.012354
 tr-26-1439-gitea-gvenlik-zafiyeti,gitea,2026-11-02 08:18:49.403237
 tr-26-1438-moodle-gvenlik-bildirimi,moodle,2026-11-02 08:15:40.006055
 tr-26-1437-wavlink-oklu-rn-gvenlik-zafiyeti,wavlink,2026-11-02 08:09:46.907408
@@ -564,14 +569,3 @@ tr-26-0757-electron-framework-gvenlik-zafiyeti,electron,2026-08-06 07:59:06.9971
 tr-26-0756-hdf5-gvenlik-zafiyeti,hdf5,2026-08-06 07:56:26.300394
 tr-26-0755-apache-answer-gvenlik-bildirimi,apache,2026-08-06 07:54:02.696838
 tr-26-0754-cisco-oklu-bileen-gvenlik-bildirimi,cisco,2026-08-06 07:52:42.109195
-tr-26-0752-mozilla-firefox-gvenlik-bildirimi,firefox,2026-08-05 13:27:52.796263
-tr-26-0751-h3c-nx15-gvenlik-zafiyeti,h3c,2026-08-05 13:26:47.422561
-tr-26-0750-open-webui-gvenlik-bildirimi,webui,2026-08-05 13:24:15.802398
-tr-26-0749-openstack-ironicswift-gvenlik-bildirimi,openstack,2026-08-05 13:22:57.493606
-tr-26-0748-m-files-server-gvenlik-bildirimi,m-files,2026-08-05 13:17:12.893624
-tr-26-0747-flowise-ai-gvenlik-zafiyeti,flowise,2026-08-05 13:01:56.492028
-tr-26-0746-suse-rancher-gvenlik-bildirimi,rancher,2026-08-05 12:51:45.695442
-tr-26-0745-apache-qpid-gvenlik-bildirimi,apache,2026-08-05 12:49:37.082515
-tr-26-0744-wordpress-eklenti-gvenlik-bildirimi,wordpress,2026-08-05 12:45:58.903005
-tr-26-0743-nvidia-dynamotriton-gvenlik-bildirimi,nvidia,2026-08-05 12:45:05.939961
-tr-26-0742-linux-kernel-gvenlik-bildirimi,kernel,2026-08-05 12:40:44.297527
