@@ -1,4 +1,12 @@
 Başlık,Etiketler,Tarih
+tr-26-1455-nagios-xi-gvenlik-bildirimi,nagios,2026-11-04 07:01:15.811002
+tr-26-1454-glpi-gvenlik-bildirimi,glpi,2026-11-04 06:59:37.902549
+tr-26-1453-zohocorp-manageengine-gvenlik-bildirimi,manageengine,2026-11-04 06:57:53.610698
+tr-26-1452-wordpress-eklenti-gvenlik-bildirimi,wordpress,2026-11-04 06:53:17.51064
+tr-26-1451-linux-kernel-gvenlik-bildirimi,kernel,2026-11-04 06:52:11.711925
+tr-26-1450-solarwinds-dameware-gvenlik-bildirimi,solarwinds,2026-11-04 06:51:15.409397
+tr-26-1449-nvidia-slurm-gvenlik-bildirimi,nvidia,2026-11-04 06:49:21.008093
+tr-26-1448-google-chrome-gvenlik-bildirimi,chrome,2026-11-04 06:43:33.117233
 tr-26-1447-fastify-gvenlik-zafiyeti,fastify,2026-11-03 07:14:53.499831
 tr-26-1446-android-gvenlik-bildirimi,android,2026-11-03 07:10:14.613446
 tr-26-1445-zohocorp-manageengine-gvenlik-bildirimi,zohocorp,2026-11-03 07:08:30.603502
@@ -554,18 +562,3 @@ tr-26-0776-github-cli-gvenlik-bildirimi,github,2026-08-07 07:59:17.295898
 tr-26-0775-wso2-schemavalidator-mediator-gvenlik-zafiyeti,schemavalidator,2026-08-07 07:57:40.301249
 tr-26-0774-apache-oklu-rn-gvenlik-bildirimi,apache,2026-08-07 07:52:29.705068
 tr-26-0773-wordpress-eklenti-gvenlik-bildirimi,wordpress,2026-08-07 07:47:01.606297
-tr-26-0768-rclone-gvelik-zafiyeti,rclone,2026-08-06 08:27:56.458348
-tr-26-0767-milvus-database-gvenlik-zafiyeti,milvus,2026-08-06 08:25:20.895981
-tr-26-0766-sonicwall-sonicos-gvenlik-bildirimi-,sonicos,2026-08-06 08:22:25.998333
-tr-26-0765-ghost-cms-gvenlik-zafiyeti,ghost,2026-08-06 08:20:26.608097
-tr-26-0764-amazon-aws-transform-mcp-server-gvenlik-bildirimi,amazon,2026-08-06 08:16:13.300449
-tr-26-0763-directus-gvenlik-zafiyeti,directus,2026-08-06 08:13:14.493385
-tr-26-0762-wordpress-eklenti-gvenlik-bildirimi,wordpress,2026-08-06 08:11:33.70284
-tr-26-0761-red-hat-keycloak-gvenlik-bildirimi,keycloak,2026-08-06 08:08:33.201681
-tr-26-0760-red-hat-openshiftoauth-proxy-gvenlik-bildirimi,openshift-oauth-proxy,2026-08-06 08:06:58.403089
-tr-26-0759-ibm-oklu-rn-gvenlik-bildirimi,ibm,2026-08-06 08:04:18.496308
-tr-26-0758-gitea-gvenlik-zafiyeti,gitea,2026-08-06 08:01:31.794887
-tr-26-0757-electron-framework-gvenlik-zafiyeti,electron,2026-08-06 07:59:06.997127
-tr-26-0756-hdf5-gvenlik-zafiyeti,hdf5,2026-08-06 07:56:26.300394
-tr-26-0755-apache-answer-gvenlik-bildirimi,apache,2026-08-06 07:54:02.696838
-tr-26-0754-cisco-oklu-bileen-gvenlik-bildirimi,cisco,2026-08-06 07:52:42.109195
