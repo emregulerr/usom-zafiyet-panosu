@@ -1,4 +1,12 @@
 Başlık,Etiketler,Tarih
+tr-26-1464-yealink-meetingboard-pro-gvenlik-bildirimi,yealink,2026-11-05 06:59:02.706131
+tr-26-1463-glpi-gvenlik-bildirimi,glpi,2026-11-05 06:56:16.208983
+tr-26-1462-cisco-oklu-rn-gvenlik-bildirimi,cisco,2026-11-05 06:53:44.915988
+tr-26-1461-node-version-manager-nvm-gvenlik-zafiyeti,nvm,2026-11-05 06:50:50.503895
+tr-26-1460-freerdp-gvenlik-zafiyeti,freerdp,2026-11-05 06:46:27.604912
+tr-26-1459-ibm-mq-gvenlik-bildirimi,ibm,2026-11-05 06:45:13.052122
+tr-26-1458-parse-server-for-node-jsexpress-gvenlik-zafiyeti,parse,2026-11-05 06:43:29.411144
+tr-26-1457-samsung-oklu-rn-gvenlik-bildirimi,samsung,2026-11-05 06:41:11.313204
 tr-26-1455-nagios-xi-gvenlik-bildirimi,nagios,2026-11-04 07:01:15.811002
 tr-26-1454-glpi-gvenlik-bildirimi,glpi,2026-11-04 06:59:37.902549
 tr-26-1453-zohocorp-manageengine-gvenlik-bildirimi,manageengine,2026-11-04 06:57:53.610698
@@ -544,21 +552,3 @@ tr-26-0794-frappe-framework-gvenlik-zafiyeti,frappe,2026-08-10 08:01:54.494105
 tr-26-0793-hashicorp-consul-gvenlik-bildirimi,consul,2026-08-10 07:59:49.690815
 tr-26-0792-d-link-dwr-m961-gvenlik-bildirimi,d-link,2026-08-10 07:54:33.228658
 tr-26-0791-wordpress-eklenti-gvenlik-bildirimi,wordpress,2026-08-10 07:48:17.723995
-tr-26-0790-microsoft-office-sharepoint-gvenlik-bildirimi,sharepoint,2026-08-07 11:26:45.994805
-tr-26-0789-imagination-tech-gpu-driver-gvenlik-bildirimi,gpu,2026-08-07 11:24:44.49807
-tr-26-0788-autodesk-bileenleri-gvenlik-bildirimi,autodesk,2026-08-07 08:30:20.604322
-tr-26-0787-frappe-framework-gvenlik-zafiyeti,frappe,2026-08-07 08:27:15.799536
-tr-26-0786-traefik-gvenlik-zafiyeti,traefik,2026-08-07 08:21:05.499589
-tr-26-0785-mermaid-js-gvenlik-zafiyeti,mermaid,2026-08-07 08:19:31.290779
-tr-26-0784-power-sofware-poweriso-gvenlik-zafiyeti,poweriso,2026-08-07 08:15:27.090581
-tr-26-0783-sophos-gvenlik-bildirimi,sophos,2026-08-07 08:11:27.699993
-tr-26-0782-jiangmin-antivirus-21-gvenlik-bildirimi,jiangmin,2026-08-07 08:09:53.488494
-tr-26-0781-dell-virtual-storage-integratorrvtools-gvenlik-bildirimi,dell,2026-08-07 08:06:44.695314
-tr-26-0780-linux-kernel-gvenlik-bildirimi,kernel,2026-08-07 08:04:53.693972
-tr-26-0779-flowise-ai-gvenlik-zafiyeti,flowise,2026-08-07 08:03:45.597563
-tr-26-0778-ffmpeg-gvenlik-zafiyeti,ffmpeg,2026-08-07 08:02:14.907113
-tr-26-0777-google-chrome-gvenlik-bildirimi,chrome,2026-08-07 08:00:53.297384
-tr-26-0776-github-cli-gvenlik-bildirimi,github,2026-08-07 07:59:17.295898
-tr-26-0775-wso2-schemavalidator-mediator-gvenlik-zafiyeti,schemavalidator,2026-08-07 07:57:40.301249
-tr-26-0774-apache-oklu-rn-gvenlik-bildirimi,apache,2026-08-07 07:52:29.705068
-tr-26-0773-wordpress-eklenti-gvenlik-bildirimi,wordpress,2026-08-07 07:47:01.606297
