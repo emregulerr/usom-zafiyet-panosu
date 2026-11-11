@@ -1,4 +1,10 @@
 Başlık,Etiketler,Tarih
+tr-26-1497-apple-gvenlik-bildirimi,macos,2026-11-10 07:53:10.403209
+tr-26-1496-asus-router-gvenlik-bildirimi-,asus,2026-11-10 07:44:21.705026
+tr-26-1495-sap-oklu-bileen-gvenlik-bildirimi,sap,2026-11-10 07:42:47.016513
+tr-26-1494-illumio-ven-gvenlik-bildirimi,illumio,2026-11-10 07:41:13.303582
+tr-26-1493-geovision-oklu-rn-gvenlik-bildirimi,gv-face,2026-11-10 07:37:03.812446
+tr-26-1492-axis-communications-gvenlik-bildirimi,vapix,2026-11-10 07:33:53.412115
 tr-26-1491-apache-oklu-proje-gvnelik-zafiyeti,apache,2026-11-10 06:45:13.999188
 tr-26-1490-modsecurity-waf-engine-gvenlik-zafiyeti,modsecurity,2026-11-10 06:43:26.005798
 tr-26-1483-jupyterlab-gvenlik-zafiyeti,jupyterlab,2026-11-09 07:54:51.015775
@@ -541,10 +547,3 @@ tr-26-0822-dell-display-and-peripheral-manager-ddpm-windows-gvenlik-bildirimi,de
 tr-26-0821-palo-alto-oklu-rn-gvenlik-bildirimi-,palo,2026-08-13 07:30:42.958425
 tr-26-0820-wordpress-eklenti-gvenlik-bildirimi,wordpress,2026-08-13 07:27:16.10775
 tr-26-0819-ibm-oklu-rn-gvenlik-bildirimi,ibm,2026-08-13 07:25:01.408413
-tr-26-0817-sonicwall-email-security-gvenlik-bildirimi-,sonicwall,2026-08-12 13:20:15.529889
-tr-26-0816-vim-gvenlik-bildirimi,vim,2026-08-12 13:18:14.500323
-tr-26-0815-wordpress-eklenti-gvenlik-bildirimi,wordpress,2026-08-12 13:15:09.503474
-tr-26-0814-google-chrome-gvenlik-bildirimi,chrome,2026-08-12 13:13:51.004625
-tr-26-0813-ivanti-endpoint-manager-gvenlik-bildirimi,ivanti,2026-08-12 13:12:31.511262
-tr-26-0812-mongodb-gvenlik-bildirimi,mongodb,2026-08-12 13:10:52.085298
-tr-26-0811-intel-xeon-gvenlik-bildirimi,intel,2026-08-12 13:07:08.297092
