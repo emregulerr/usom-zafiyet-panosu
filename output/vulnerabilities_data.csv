@@ -1,4 +1,11 @@
 Başlık,Etiketler,Tarih
+tr-26-1530-lenovo-oklu-rn-gvenlik-bildirimi,lenovo,2026-11-12 07:59:26.511079
+tr-26-1529-progress-telerik-gvenlik-bildirimi,progress,2026-11-12 07:55:20.511348
+tr-26-1528-google-chrome-gvenlik-bildirimi,chrome,2026-11-12 07:53:14.381512
+tr-26-1527-owasp-crs-gvenlik-zafiyeti,owasp,2026-11-12 07:51:45.51741
+tr-26-1526-amd-gvenlik-bildirimi,amd,2026-11-12 07:50:03.715989
+tr-26-1525-dell-oklu-rn-gvenlik-bildirimi,dell,2026-11-12 07:46:46.013717
+tr-26-1524-palo-alto-networks-pan-os-gvenlik-bildirimi,palo,2026-11-12 07:44:06.822354
 tr-26-1523-synology-diskstation-manager-dsm-gvenlik-bildirimi,synology,2026-11-12 06:44:30.502076
 tr-26-1522-fortinet-oklu-rn-gvenlik-bildirimi,fortinet,2026-11-12 06:41:52.515762
 tr-26-1519-octopus-server-gvenlik-bildirimi,octopus,2026-11-11 09:54:22.20669
@@ -541,13 +548,3 @@ tr-26-0857-grav-cms-gvenlik-zafiyeti,grav,2026-08-19 08:21:22.456743
 tr-26-0856-google-chrome-gvenlik-bildirimi,chrome,2026-08-19 08:16:55.806649
 tr-26-0855-tenable-security-center-gvenlik-bildirimi-,security,2026-08-19 08:14:22.914564
 tr-26-0854-linux-kernel-gvenlik-bildirimi,kernel,2026-08-19 08:00:45.650624
-tr-26-0845-linux-kernel-gvenlik-bildirimi,kernel,2026-08-14 07:20:39.557985
-tr-26-0844-tenda-oklu-rn-gvenlik-bildirimi,tenda,2026-08-14 07:17:39.501479
-tr-26-0843-ibm-oklu-rn-gvenlik-bildirimi,ibm,2026-08-14 07:15:45.558885
-tr-26-0842-zohocorp-manageengine-gvenlik-bildirimi,zohocorp,2026-08-14 07:13:48.86664
-tr-26-0841-hcl-aion-gvenlik-bildirimi,hcl,2026-08-14 07:11:16.304502
-tr-26-0840-file-browser-gvenlik-zafiyeti,filebrowser,2026-08-14 07:07:53.104942
-tr-26-0839-flowise-ai-gvenlik-zafiyeti,flowise,2026-08-14 07:04:36.642764
-tr-26-0838-freepbx-gvenlik-zafiyeti,freepbx,2026-08-14 07:02:39.408561
-tr-26-0837-wordpress-eklenti-gvenlik-bildirimi,wordpress,2026-08-14 06:59:53.71072
-tr-26-0836-zimbra-collaboration-gvenlik-bildirimi,zimbra,2026-08-14 06:58:29.401028
