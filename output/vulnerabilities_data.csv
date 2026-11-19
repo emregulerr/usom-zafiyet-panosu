@@ -1,4 +1,15 @@
 Başlık,Etiketler,Tarih
+tr-26-1569-mattermost-uygulama-gvenlik-bildirimi,mattermost,2026-11-19 06:52:54.525429
+tr-26-1568-imagemagick-gvenlik-zafiyeti,imagemagick,2026-11-19 06:51:01.419512
+tr-26-1567-wordpress-eklenti-gvenlik-bildirimi,wordpress,2026-11-19 06:49:10.744545
+tr-26-1563-netgate-pfsense-gvenlik-bildirimi-,pfsense,2026-11-18 07:25:17.251102
+tr-26-1562-autodesk-autocad-gvenlik-bildirimi,autocad,2026-11-18 07:23:03.901834
+tr-26-1561-dell-supportassist-os-recovery-gvenlik-bildirimi,dell,2026-11-18 07:21:47.303425
+tr-26-1560-github-enterprise-server-gvenlik-bildirimi,github,2026-11-18 07:20:18.53903
+tr-26-1559-broadcom-autosys-workload-automation-gvenlik-bildirimi,broadcom,2026-11-18 07:12:36.006893
+tr-26-1558-gnu-c-library-gvenlik-bildirimi,gnu,2026-11-18 07:10:38.663005
+tr-26-1557-google-chrome-gvenlik-bildirimi,chrome,2026-11-18 07:05:00.415838
+tr-26-1556-oracle-oklu-rn-gvenlik-bildirimi,oracle,2026-11-18 07:02:53.926633
 tr-26-1553-microsoft-office-gvenlik-bildirimi,microsoft,2026-11-17 08:20:44.106354
 tr-26-1552-phison-ssd-firmware-gvenlik-zafiyeti,phison,2026-11-17 08:19:20.903074
 tr-26-1551-dassault-systemes-3dexperience-gvenlik-bildirimi,3dexperience,2026-11-17 08:14:39.705902
@@ -506,7 +517,6 @@ tr-26-0925-ubiquiti-unifi-gvenlik-bildirimi,unifi,2026-08-27 11:57:31.072062
 tr-26-0924-tp-link-oklu-rn-gvenlik-bildirimi,tp-link,2026-08-27 11:54:03.671241
 tr-26-0923-wibukey-gvenlik-bildirimi,wibukey,2026-08-27 11:51:29.921411
 tr-26-0922-dell-oklu-rn-gvenlik-bildirimi,dell,2026-08-27 11:47:51.768407
-tr-26-0921-gitlab-ceee-gvenlik-bildirimi-,gitlab,2026-08-27 11:45:25.257145
 tr-26-0920-teamviewer-gvenlik-bildirimi,teamviewer,2026-08-27 11:43:23.659083
 tr-26-0919-linux-kernel-gvenlik-bildirimi,kernel,2026-08-27 11:41:52.684388
 tr-26-0915-apple-os-gvenlik-bildirimi,ipados,2026-08-26 08:51:54.16431
@@ -540,12 +550,3 @@ tr-26-0887-gstreamer-gvenlik-zafiyeti,gstreamer,2026-08-21 13:58:55.42558
 tr-26-0886-sony-xav-9500es-gvenlik-bildirimi,sony,2026-08-21 13:56:02.401431
 tr-26-0885-ibm-oklu-rn-gvenlik-bildirimi,ibm,2026-08-21 13:51:40.588312
 tr-26-0884-wordpress-eklenti-gvenlik-bildirimi,wordpress,2026-08-21 13:48:16.71091
-tr-26-0880-seiko-epson-gvenlik-bildirimi,seiko,2026-08-20 13:04:02.329653
-tr-26-0879-etherpad-gvenlik-zafiyeti,etherpad,2026-08-20 13:02:26.213622
-tr-26-0878-ffmpeg-gvenlik-zafiyeti,ffmpeg,2026-08-20 13:00:41.148557
-tr-26-0877-wireshark-gvenlik-bildirimi,dissector,2026-08-20 12:55:43.909153
-tr-26-0876-n8n-gvenlik-zafiyeti,n8n,2026-08-20 12:47:52.103366
-tr-26-0875-splunk-gvenlik-bildirimi,splunk,2026-08-20 12:44:50.825193
-tr-26-0874-cisco-oklu-rn-gvenlik-bildirimi,cisco,2026-08-20 12:39:37.467764
-tr-26-0873-termix-gvenlik-zafiyeti,termix,2026-08-20 12:37:21.437319
-tr-26-0872-ibm-oklu-rn-gvenlik-bildirimi,ibm,2026-08-20 12:34:38.834982
