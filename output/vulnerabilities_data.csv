@@ -1,4 +1,14 @@
 Başlık,Etiketler,Tarih
+tr-26-1613-python-packaging-authority-pip-gvenlik-zafiyeti,pip,2026-11-25 07:33:08.402814
+tr-26-1612-suse-neuvector-gvenlik-bildirimi,suse,2026-11-25 07:31:10.503118
+tr-26-1611-genetec-security-center-gvenlik-bildirimi,genetec,2026-11-25 07:28:40.70906
+tr-26-1610-geovision-gv-ebd4700-gvenlik-bildirimi,geovision,2026-11-25 07:25:52.410594
+tr-26-1609-autodesk-revit-gvenlik-bildirimi,autodesk,2026-11-25 06:58:49.51011
+tr-26-1608-nvidia-oklu-rn-gvenlik-bildirimi,nvidia,2026-11-25 06:56:15.226841
+tr-26-1607-pytorch-gvenlik-zafiyeti,pytorch,2026-11-25 06:54:15.90222
+tr-26-1606-mozilla-firefox-gvenlik-bildirimi,firefox,2026-11-25 06:52:09.911909
+tr-26-1605-solarwinds-serv-u-gvenlik-bildirimi,solarwinds,2026-11-25 06:51:15.905792
+tr-26-1604-adobe-experience-manager-gvenlik-bildirimi,adobe,2026-11-25 06:49:46.613576
 tr-26-1599-google-chrome-gvenlik-bildirimi,chrome,2026-11-24 07:11:41.362033
 tr-26-1598-dell-enterprise-sonic-distribution-gvenlik-bildirimi,dell,2026-11-24 07:09:35.004774
 tr-26-1597-misp-gvenlik-zafiyeti,misp,2026-11-24 07:06:45.100592
@@ -543,19 +553,3 @@ tr-26-0922-dell-oklu-rn-gvenlik-bildirimi,dell,2026-08-27 11:47:51.768407
 tr-26-0921-gitlab-ceee-gvenlik-bildirimi-,gitlab,2026-08-27 11:45:25.257145
 tr-26-0920-teamviewer-gvenlik-bildirimi,teamviewer,2026-08-27 11:43:23.659083
 tr-26-0919-linux-kernel-gvenlik-bildirimi,kernel,2026-08-27 11:41:52.684388
-tr-26-0915-apple-os-gvenlik-bildirimi,ipados,2026-08-26 08:51:54.16431
-tr-26-0914-drupal-gvenlik-bildirimi-,drupal,2026-08-26 08:44:37.896924
-tr-26-0913-praisonai-gvenlik-zafiyeti-,praisonai,2026-08-26 08:43:12.205074
-tr-26-0912-better-auth-gvenlik-zafiyeti-,better-auth-sso,2026-08-26 08:42:24.064502
-tr-26-0911-danfoss-gvenlik-zafiyeti,danfoss,2026-08-26 08:39:43.312212
-tr-26-0910-adobe-campaign-classic-acc-gvenlik-bildirimi-,adobe,2026-08-26 08:31:48.496899
-tr-26-0909-rustdesk-gvenlik-zafiyeti,rustdesk-amp-039-s,2026-08-26 08:30:17.181622
-tr-26-0908-hcl-hive-gvenlik-bildirimi,hcl,2026-08-26 08:25:49.476326
-tr-26-0907-red-hat-ansible-awx-gvenlik-bildirimi,awx-amp-039-s,2026-08-26 08:23:21.465803
-tr-26-0906-apache-camel-gvenlik-bildirimi,apache,2026-08-26 08:21:15.805539
-tr-26-0905-grav-cms-gvenlik-zafiyeti,grav,2026-08-26 08:18:07.36406
-tr-26-0904-rclone-gvelik-zafiyeti,rclone,2026-08-26 08:15:03.407076
-tr-26-0903-nltk-gvenlik-zafiyeti,nltk,2026-08-26 08:12:37.152395
-tr-26-0902-nvidia-oklu-rn-gvenlik-bildirimi,nvidia,2026-08-26 08:08:07.454498
-tr-26-0901-johnsoncontrols-metasys-1415-gvenlik-bildirimi,johnson,2026-08-26 08:05:00.880726
-tr-26-0900-wordpress-eklenti-gvenlik-bildirimi,wordpress,2026-08-26 07:59:39.505604
